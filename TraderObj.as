@@ -576,12 +576,12 @@
 						this.x += Math.cos(objAngle) * speed;
 						this.y += Math.sin(objAngle) * speed;
 						//trace(objAngle)
-						if (goingToTown == true && fDist1 <= 3)
+						if (goingToTown == true && fDist1 <= hypotDist)
 						{
 							nodeNumber += 1;
 						}
 
-						if (goingToTown == false && fDist1 <= 3)
+						if (goingToTown == false && fDist1 <= hypotDist)
 						{
 							nodeNumber -= 1;
 

@@ -48,7 +48,7 @@
 		var singlePass15_2: Boolean = false;
 
 		var singlePassRandom: Boolean = false;
-		
+
 
 		var randomPosOrNeg: Number = 0;
 		var randomAngleDeg: Number = 0;
@@ -66,6 +66,9 @@
 		var randomXPos: Number = 0;
 		var randomYPos: Number = 0;
 
+		var tickCounter: Number = 0;
+		var frameSkipBool: Boolean = false;
+
 
 		public function cloudObjBoi()
 		{
@@ -78,14 +81,24 @@
 		}
 		public function ExitLoop(e: Event)
 		{
-			
-			
+
+
 		}
 
 		private function GlobalDirMove()
 		{
-			this.x -= Math.cos(mRef.globalDir) * mRef.globalMoveSpeedTest ;
-			this.y -= Math.sin(mRef.globalDir) * mRef.globalMoveSpeedTest ;
+			tickCounter += 1;
+			if (tickCounter > 2)
+			{
+				tickCounter = 0;
+				frameSkipBool = true
+			}
+			if (frameSkipBool == true)
+			{
+				frameSkipBool = false;
+				this.x -= Math.cos(mRef.globalDir) * mRef.globalMoveSpeedTest;
+				this.y -= Math.sin(mRef.globalDir) * mRef.globalMoveSpeedTest;
+			}
 			//this.y -= Math.sin(mRef.globalDir) * mRef.globalMoveSpeed ;
 
 		}
@@ -95,10 +108,39 @@
 
 		}
 
+		public function AnimationHandler()
+		{
+
+			// State refs white / lightGrey / grey / greyStorm
+
+			if (cloudState == "white")
+			{
+
+			}
+
+			if (cloudState == "lightGrey")
+			{
+
+			}
+
+			if (cloudState == "grey")
+			{
+
+			}
+
+			if (cloudState == "greyStorm")
+			{
+
+			}
+
+
+		}
+
 		public function Loop(e: Event)
 		{
-			
+
 			GlobalDirMove();
+			AnimationHandler();
 
 			if (objState == "init")
 			{
@@ -229,7 +271,7 @@
 				this.y += Math.sin(angleDegLocal) * speed;
 
 				HitTestCheck();
-				
+
 				ResetHitTest();
 				//this.alpha = 0.7;
 			}
@@ -448,7 +490,7 @@
 				}
 			}
 
-			
+
 		}
 
 		public function ResetHitTest()
@@ -540,7 +582,7 @@
 
 		}
 
-		
+
 
 		public function HitTestCheck()
 		{

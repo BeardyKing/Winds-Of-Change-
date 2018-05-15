@@ -422,7 +422,7 @@
 
 				////////////////LOGGING TOWN 2
 
-				if (this.name == "bTradeWood2" && mRef.bLoggingTown2.hasTradeCartActive == true)
+				if (this.name == "bTradeWood2_NULL" && mRef.bLoggingTown2.hasTradeCartActive == true)
 				{
 					//this.rotation = objAngle - 45;
 					// nodeNumber 0 = go to bCity
@@ -825,7 +825,7 @@
 				}
 				/////////////////////// FISH 2
 				
-				if (this.name == "bTradeFish2" && mRef.bFishingTown2.hasTradeCartActive == true)
+				if (this.name == "bTradeFish2_NULL" && mRef.bFishingTown2.hasTradeCartActive == true)
 				{
 					//speed = 0.3;
 					//this.rotation = objAngle - 45;

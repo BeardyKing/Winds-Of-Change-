@@ -90,6 +90,8 @@
 
 					if (objState == "goToFishingSpot")
 					{
+						this.scaleX = 1;
+						this.gotoAndStop(1);
 						FindMoveAngle(this.x, this.y, mRef.fishPoint1.x, mRef.fishPoint1.y);
 
 						this.x += Math.cos(objAngle) * speed;
@@ -102,6 +104,8 @@
 
 					if (objState == "collectingFish")
 					{
+						
+						this.gotoAndStop(2);
 
 						if (this.hitTestObject(mRef.fishPoint1) == true)
 						{
@@ -113,18 +117,21 @@
 							}
 						}
 
-						if (this.hitTestObject(mRef.fishPoint1) != true)
-						{
-							//currentRiceAmount += 0.1;
-							if (currentFishAmount <= maxFish)
-							{
-								objState = "goToFishingSpot"
-							}
-						}
+						//if (this.hitTestObject(mRef.fishPoint1) != true)
+						//{
+						//	//currentRiceAmount += 0.1;
+						//	if (currentFishAmount <= maxFish)
+						//	{
+						//		objState = "goToFishingSpot"
+						//	}
+						//}
+						
 					}
 
 					if (objState == "goToFishingTown")
 					{
+						this.scaleX = -1;
+						this.gotoAndStop(1);
 						FindMoveAngle(this.x, this.y, mRef.bFishingTown1.x, mRef.bFishingTown1.y);
 
 						this.x += Math.cos(objAngle) * speed;
@@ -278,7 +285,11 @@
 				/////////////////////////////////////////// FISH 3 ////////////////////////////////////////////
 				if (this.name == "bFisher3")
 				{
-					if (this.x < 570)
+					trace(currentFishAmount + " = currentFishAmount " + this.name)
+					trace(objState + " = objState " + this.name)
+					trace(objAngle + " = objAngle " + this.name)
+					
+					/*if (this.x < 570)
 					{
 						trace(objState + " obj state")
 						this.x = mRef.bFishingTown3.x
@@ -309,7 +320,7 @@
 						trace("")
 						trace("")
 						trace("")
-					}
+					}*/
 
 					//trace(this.name)
 					if (objState == "idle")
@@ -320,6 +331,7 @@
 
 					if (objState == "findFishingSpot")
 					{
+						
 						mRef.fishPoint3.x = mRef.water3.x;
 						mRef.fishPoint3.y = mRef.water3.y;
 						FindNewFishingLoc(200, 100);
@@ -327,6 +339,8 @@
 
 					if (objState == "goToFishingSpot")
 					{
+						this.scaleX = -1;
+						this.gotoAndStop(1);
 						FindMoveAngle(this.x, this.y, mRef.fishPoint3.x, mRef.fishPoint3.y);
 
 						this.x += Math.cos(objAngle) * speed;
@@ -339,7 +353,8 @@
 
 					if (objState == "collectingFish")
 					{
-
+						this.scaleX = -1;
+						this.gotoAndStop(2);
 						if (this.hitTestObject(mRef.fishPoint3) == true)
 						{
 							//trace(currentFishAmount)
@@ -350,18 +365,20 @@
 							}
 						}
 
-						if (this.hitTestObject(mRef.fishPoint3) != true)
-						{
-							//currentRiceAmount += 0.1;
-							if (currentFishAmount <= maxFish)
-							{
-								objState = "goToFishingSpot"
-							}
-						}
+						//if (this.hitTestObject(mRef.fishPoint3) != true)
+						//{
+						//	//currentRiceAmount += 0.1;
+						//	if (currentFishAmount <= maxFish)
+						//	{
+						//		objState = "goToFishingSpot"
+						//	}
+						//}
 					}
 
 					if (objState == "goToFishingTown")
 					{
+						this.scaleX = 1;
+						this.gotoAndStop(1);
 						FindMoveAngle(this.x, this.y, mRef.bFishingTown3.x, mRef.bFishingTown3.y);
 
 						this.x += Math.cos(objAngle) * speed;

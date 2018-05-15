@@ -69,6 +69,9 @@
 		var tickCounter: Number = 0;
 		var frameSkipBool: Boolean = false;
 
+		var alphaCounter: Number = 0;
+		var alphaBoolSwitch: Boolean = false;
+
 
 		public function cloudObjBoi()
 		{
@@ -115,22 +118,44 @@
 
 			if (cloudState == "white")
 			{
-
+				this.gotoAndStop(1);
+				this.visible = true;
 			}
 
 			if (cloudState == "lightGrey")
 			{
-
+				this.gotoAndStop(2);
+				this.visible = true;
 			}
 
 			if (cloudState == "grey")
 			{
-
+				this.gotoAndStop(3);
+				this.visible = true;
 			}
 
 			if (cloudState == "greyStorm")
 			{
+				// alphaCounter : Number = 0;
+				//var alphaBoolSwitch
+				alphaCounter += 1;
+				this.gotoAndStop(3);
+				if (alphaCounter > 3)
+				{
+					alphaCounter = 0;
+					alphaBoolSwitch = !alphaBoolSwitch;
+				}
+				if (alphaBoolSwitch == true)
+				{
+					this.visible = true;
+				}
+				else
+				{
+					this.visible = false;
 
+				}
+				// add rain obj
+				// maybe make an active hitbox for whole obj
 			}
 
 
@@ -160,11 +185,11 @@
 					objState = "idle"
 				}
 
-				randomChangeLightGrey = Math.round(Math.random() * 5 + 2);
+				randomChangeLightGrey = Math.round(Math.random() * 15 + 2);
 
-				randomChangeGrey = Math.round(Math.random() * 5 + 2)
-				randomChangeGreyStorm = Math.round(Math.random() * 5 + 1)
-				randomChangeReset = Math.round(Math.random() * 20 + 3)
+				randomChangeGrey = Math.round(Math.random() * 20 + 2)
+				randomChangeGreyStorm = Math.round(Math.random() * 10 + 8)
+				randomChangeReset = Math.round(Math.random() * 8 + 3)
 				//trace(randomChangeLightGrey + " RANDOM " + this.name)
 				//trace("startUp")
 

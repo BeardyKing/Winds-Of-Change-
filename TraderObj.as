@@ -33,6 +33,7 @@
 
 		public function Loop(e: Event)
 		{
+			this.rotation = 0;
 			if (mRef.objState == "play")
 			{
 				//trace(this.x + "     " +this.name)
@@ -76,6 +77,7 @@
 						this.y += Math.sin(objAngle) * speed;
 						if (goingToTown == true && fDist1 <= hypotDist)
 						{
+							
 							nodeNumber += 1;
 						}
 

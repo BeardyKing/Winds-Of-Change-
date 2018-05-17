@@ -10,10 +10,14 @@
 	{
 
 		var objState = "init"
-		var animCounter: Number = 0;
+		
 		var animSwitch: Boolean = false;
 		var MainGlobalDir: Number = 45;
 		var mRef: MovieClip;
+		var isActive : Boolean = false;
+		var singlePass : Boolean = false;
+		var animCounter: Number = 0;
+		var animCounter2 : Number = 0;
 		public function FireObj()
 		{
 			// constructor code
@@ -24,23 +28,28 @@
 		}
 		public function MouseD(md: MouseEvent)
 		{
+			
+			
 			trace(this.name)
 			objState = "onFire";
 			mRef.fireManager1.startingFire = this;
 		}
 		public function Loop(e: Event)
 		{
+			
 			if (this.name == "fire1" || this.name == "fire2")
 			{
 				if (this.hitTestObject(mRef.expandBox1) == true)
 				{
 					objState = "onFire"
+					isActive = true;
 				}
 			}
 			if (this.hitTestObject(mRef.expandConnector1) == true)
-				{
-					objState = "onFire"
-				}
+			{
+				isActive = true;
+				objState = "onFire"
+			}
 			if (objState == "init")
 			{
 				SetRandomTimer();
@@ -49,12 +58,13 @@
 			if (objState == "idle")
 			{
 				this.alpha = 0;
+				this.gotoAndStop(1);
 			}
 			if (objState == "onFire")
 			{
-				if(this.name == "fire2")
+				if (this.name == "fire2")
 				{
-					
+
 				}
 				this.alpha = 1;
 				DoAnim();
@@ -71,23 +81,23 @@
 
 		public function DoAnim()
 		{
-			animCounter++;
-			//trace(animSwitch)
-
-			if (animCounter >= 5)
+			trace(currentFrame);
+			
+			animCounter += 1;
+			if(animCounter >= 3)
 			{
-				animSwitch = !animSwitch;
 				animCounter = 0;
+				animCounter2 += 1;
 			}
-
-			if (animSwitch == false)
+			
+			this.gotoAndStop(animCounter2);
+			if(this.currentFrame >= 20)
 			{
-				this.scaleX = -1;
+				animCounter2 = 1;
 			}
-			if (animSwitch == true)
-			{
-				this.scaleX = 1;
-			}
+		
+			 
+		
 
 
 

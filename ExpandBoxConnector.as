@@ -31,7 +31,7 @@
 			{
 				if(singlePass == false)
 				{
-					this.alpha = 0.2;
+					this.alpha = 0;
 					singlePass = true;
 					this.x = mRef.fire2.x;
 					this.y = mRef.fire2.y;

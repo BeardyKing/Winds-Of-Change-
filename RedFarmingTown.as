@@ -27,6 +27,9 @@
 		var isBeingCaptured: Boolean = false;
 
 
+		var frameTimer: Number = 0;
+		var riceSendBool: Boolean = false;
+
 
 
 
@@ -49,15 +52,26 @@
 				{
 					currentRiceAmount = maxRice;
 				}
-				
+
 				if (this.name == "rFarmTown1")
 				{
-					
+					if (currentRiceAmount > 1)
+					{
+						riceSendBool = true;
+					}
+					else
+					{
+						riceSendBool = false;
+					}
+					if (riceSendBool == true)
+					{
+						trace(this.name)
+						mRef.rCity.riceTotal += 0.01
+						currentRiceAmount -= 0.001
+					}
 				}
-				if (this.name == "rFarmTown2")
-				{
-					
-				}
+				
+				
 				if (objState == "boot")
 				{
 					mRef.bCity.tradecartCounter += 1;

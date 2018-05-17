@@ -22,6 +22,10 @@
 		var isOnFire: Boolean = false;
 		var captureCounter: Number = 0;
 		var isBeingCaptured: Boolean = false;
+		
+		var frameTimer: Number = 0;
+		var woodSendBool: Boolean = false;
+
 
 		public function RedLoggingTown()
 		{
@@ -41,11 +45,35 @@
 				
 				if (this.name == "rLog1")
 				{
-					
+					if (currentWoodAmount > 1)
+					{
+						woodSendBool = true;
+					}
+					else
+					{
+						woodSendBool = false;
+					}
+					if (woodSendBool == true)
+					{
+						mRef.rCity.woodTotal += 0.005
+						currentWoodAmount -= 0.005
+					}
 				}
-				if (this.name == "rrLog2")
+				if (this.name == "rLog2")
 				{
-					
+					if (currentWoodAmount > 1)
+					{
+						woodSendBool = true;
+					}
+					else
+					{
+						woodSendBool = false;
+					}
+					if (woodSendBool == true)
+					{
+						mRef.rCity.woodTotal += 0.005
+						currentWoodAmount -= 0.005
+					}
 				}
 
 				if (objState == "boot")

@@ -56,6 +56,7 @@
 		var objStateCounter: Number = 0;
 		var objStateCounterSeconds: Number = 0;
 
+
 		var cloudState: String = "white"
 
 		var randomChangeLightGrey: Number;
@@ -193,9 +194,9 @@
 				//trace(randomChangeLightGrey + " RANDOM " + this.name)
 				//trace("startUp")
 
-
-				this.x = randomXPos;
-				this.y = randomYPos;
+				// REMOVED CLOUD LOC
+				//this.x = randomXPos;
+				//this.y = randomYPos;
 			}
 
 			objStateCounter += 1;

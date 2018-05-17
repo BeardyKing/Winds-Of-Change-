@@ -30,7 +30,7 @@
 
 		public function BWorkerFisher()
 		{
-			trace("inside " + this.name);
+			////trace("inside " + this.name);
 			mRef = MovieClip(this.parent);
 
 
@@ -48,33 +48,33 @@
 					if (this.x < 115)
 				{
 					objState = "idle"
-					trace("")
-					trace(objAngle + "  " + this.name)
-					trace(mRef.fishPoint1.x + "  fishpoint1 x ")
-					trace(mRef.fishPoint1.y + "  fishpoint1 y ")
-					trace(mRef.bFishingTown1.x + "  bFishingTown1 x ")
-					trace(mRef.bFishingTown1.y + "  bFishingTown1 y ")
-					trace(this.x + "  this x ")
-					trace(this.y + "  this y ")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
-					trace("")
+					////trace("")
+					////trace(objAngle + "  " + this.name)
+					////trace(mRef.fishPoint1.x + "  fishpoint1 x ")
+					////trace(mRef.fishPoint1.y + "  fishpoint1 y ")
+					////trace(mRef.bFishingTown1.x + "  bFishingTown1 x ")
+					////trace(mRef.bFishingTown1.y + "  bFishingTown1 y ")
+					////trace(this.x + "  this x ")
+					////trace(this.y + "  this y ")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
+					////trace("")
 				}
-					//trace(this.name)
+					//////trace(this.name)
 					if (objState == "idle")
 					{
 
@@ -109,7 +109,7 @@
 
 						if (this.hitTestObject(mRef.fishPoint1) == true)
 						{
-							//trace(currentFishAmount)
+							//////trace(currentFishAmount)
 							currentFishAmount += 0.1;
 							if (currentFishAmount >= maxFish)
 							{
@@ -169,33 +169,33 @@
 					if (this.x < 370)
 					{
 						objState = "idle"
-						trace("")
-						trace(objAngle + "  " + this.name)
-						trace(mRef.fishPoint2.x + "  fishpoint2 x ")
-						trace(mRef.fishPoint2.y + "  fishpoint2 y ")
-						trace(mRef.bFishingTown2.x + "  bFishingTown2 x ")
-						trace(mRef.bFishingTown2.y + "  bFishingTown2 y ")
-						trace(this.x + "  this x ")
-						trace(this.y + "  this y ")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
+						////trace("")
+						////trace(objAngle + "  " + this.name)
+						////trace(mRef.fishPoint2.x + "  fishpoint2 x ")
+						////trace(mRef.fishPoint2.y + "  fishpoint2 y ")
+						////trace(mRef.bFishingTown2.x + "  bFishingTown2 x ")
+						////trace(mRef.bFishingTown2.y + "  bFishingTown2 y ")
+						////trace(this.x + "  this x ")
+						////trace(this.y + "  this y ")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
 					}
-					//trace(this.name)
+					//////trace(this.name)
 					if (objState == "idle")
 					{
 
@@ -226,7 +226,7 @@
 
 						if (this.hitTestObject(mRef.fishPoint2) == true)
 						{
-							//trace(currentFishAmount)
+							//////trace(currentFishAmount)
 							currentFishAmount += 0.1;
 							if (currentFishAmount >= maxFish)
 							{
@@ -285,44 +285,44 @@
 				/////////////////////////////////////////// FISH 3 ////////////////////////////////////////////
 				if (this.name == "bFisher3")
 				{
-					trace(currentFishAmount + " = currentFishAmount " + this.name)
-					trace(objState + " = objState " + this.name)
-					trace(objAngle + " = objAngle " + this.name)
+					////trace(currentFishAmount + " = currentFishAmount " + this.name)
+					////trace(objState + " = objState " + this.name)
+					////trace(objAngle + " = objAngle " + this.name)
 					
 					/*if (this.x < 570)
 					{
-						trace(objState + " obj state")
+						////trace(objState + " obj state")
 						this.x = mRef.bFishingTown3.x
 						this.y = mRef.bFishingTown3.y
 						objState = "idle"
-						trace("")
-						trace(objAngle + "  " + this.name)
-						trace(mRef.fishPoint3.x + "  fishpoint3 x ")
-						trace(mRef.fishPoint3.y + "  fishpoint3 y ")
-						trace(mRef.bFishingTown3.x + "  bFishingTown3 x ")
-						trace(mRef.bFishingTown3.y + "  bFishingTown3 y ")
-						trace(this.x + "  this x ")
-						trace(this.y + "  this y ")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
-						trace("")
+						////trace("")
+						////trace(objAngle + "  " + this.name)
+						////trace(mRef.fishPoint3.x + "  fishpoint3 x ")
+						////trace(mRef.fishPoint3.y + "  fishpoint3 y ")
+						////trace(mRef.bFishingTown3.x + "  bFishingTown3 x ")
+						////trace(mRef.bFishingTown3.y + "  bFishingTown3 y ")
+						////trace(this.x + "  this x ")
+						////trace(this.y + "  this y ")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
+						////trace("")
 					}*/
 
-					//trace(this.name)
+					//////trace(this.name)
 					if (objState == "idle")
 					{
 
@@ -357,7 +357,7 @@
 						this.gotoAndStop(2);
 						if (this.hitTestObject(mRef.fishPoint3) == true)
 						{
-							//trace(currentFishAmount)
+							//////trace(currentFishAmount)
 							currentFishAmount += 0.1;
 							if (currentFishAmount >= maxFish)
 							{
@@ -451,9 +451,9 @@
 
 				mRef.fishPoint1.x = newRandomX + mRef.water1.x
 				mRef.fishPoint1.y = newRandomY + mRef.water1.y
-				//trace(newRandomX + " " + this.name);
-				//trace(newRandomY + " " + this.name);
-				//trace("")
+				//////trace(newRandomX + " " + this.name);
+				//////trace(newRandomY + " " + this.name);
+				//////trace("")
 
 			}
 
@@ -466,9 +466,9 @@
 
 				mRef.fishPoint2.x = newRandomX + mRef.water2.x
 				mRef.fishPoint2.y = newRandomY + mRef.water2.y
-				//trace(newRandomX + " " + this.name);
-				//trace(newRandomY + " " + this.name);
-				//trace("")
+				////trace(newRandomX + " " + this.name);
+				////trace(newRandomY + " " + this.name);
+				////trace("")
 
 			}
 

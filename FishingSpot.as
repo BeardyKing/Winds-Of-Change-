@@ -15,7 +15,7 @@
 		
 		public function Loop (e : Event )
 		{
-			trace("hello from" + this.name)
+			//trace("hello from" + this.name)
 		}
 	}
 	

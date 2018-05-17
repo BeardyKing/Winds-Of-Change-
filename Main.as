@@ -25,9 +25,9 @@
 		
 		public function Loop(e: Event)
 		{
-			trace(globalDir + "globalDir")
-			trace(globalMoveSpeedTest + "globalMoveSpeedTest ")
-			trace(stage.frameRate);
+			//trace(globalDir + "globalDir")
+		//	trace(globalMoveSpeedTest + "globalMoveSpeedTest ")
+		//	trace(stage.frameRate);
 			//trace(globalDir)
 			//trace(testCounter)
 			i++;

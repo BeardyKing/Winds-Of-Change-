@@ -43,7 +43,7 @@
 					//trace(currentWoodAmount + "   " + hasTradeCartActive)
 					if (currentWoodAmount >= 40 && hasTradeCartActive == false)
 					{
-						mRef.bCity.AddTradeCart(this.name)
+						//mRef.bCity.AddTradeCart(this.name)
 					}
 				}
 				if (this.name == "bLoggingTown2")
@@ -51,7 +51,7 @@
 					//trace(currentWoodAmount + "   " + hasTradeCartActive)
 					if (currentWoodAmount >= 50 && hasTradeCartActive == false)
 					{
-						mRef.bCity.AddTradeCart(this.name)
+						//mRef.bCity.AddTradeCart(this.name)
 					}
 				}
 				if (this.name == "bLoggingTown3")
@@ -59,7 +59,7 @@
 					//trace(currentWoodAmount + "   " + hasTradeCartActive)
 					if (currentWoodAmount >= 45 && hasTradeCartActive == false)
 					{
-						mRef.bCity.AddTradeCart(this.name)
+						//mRef.bCity.AddTradeCart(this.name)
 					}
 				}
 

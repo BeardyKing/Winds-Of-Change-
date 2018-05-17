@@ -42,7 +42,7 @@
 
 		public function Loop(e: Event)
 		{
-			trace(currentRiceAmount + " " + this.name + "currentRiceAmount")
+			//trace(currentRiceAmount + " " + this.name + "currentRiceAmount")
 			if (mRef.objState == "play")
 			{
 				if (currentRiceAmount > maxRice)

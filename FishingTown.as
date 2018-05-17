@@ -61,6 +61,15 @@
 					}
 				}
 				
+				if (this.name == "bFishingTown3")
+				{
+					//trace(currentFishAmount + "   " + hasTradeCartActive)
+					if (currentFishAmount >= 0 && hasTradeCartActive == false)
+					{
+						mRef.bCity.AddTradeCart(this.name)
+					}
+				}
+				
 				
 				
 				if (objState == "boot")

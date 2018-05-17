@@ -24,6 +24,9 @@
 		var captureCouunter: Number = 0;
 		var isBeingCaptured: Boolean = false;
 
+		var frameTimer: Number = 0;
+		var foodSendBool: Boolean = false;
+
 
 		public function RedFishingTown()
 		{
@@ -45,14 +48,40 @@
 				}
 				if (this.name == "rFishTown1")
 				{
-					
+					//trace(currentFishAmount)
+					if (currentFishAmount > 1)
+					{
+						foodSendBool = true;
+					}
+					else
+					{
+						foodSendBool = false;
+					}
+					if (foodSendBool == true)
+					{
+						mRef.rCity.fishTotal += 0.005
+						currentFishAmount -= 0.005
+					}
+
 				}
-				
+
 				if (this.name == "rFishTown2")
 				{
-					
+					if (currentFishAmount > 1)
+					{
+						foodSendBool = true;
+					}
+					else
+					{
+						foodSendBool = false;
+					}
+					if (foodSendBool == true)
+					{
+						mRef.rCity.fishTotal += 0.005
+						currentFishAmount -= 0.005
+					}
 				}
-				
+
 				if (objState == "boot")
 				{
 					//mRef.bCity.tradecartCounter += 1;

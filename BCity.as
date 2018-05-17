@@ -110,6 +110,15 @@
 				mRef.bTradeFish2.y = this.y;
 				mRef.bTradeFish2.rotation = 90;
 			}
+			
+			if(objName == "bFishingTown3")
+			{
+				trace(objName + " added trade cart")
+				mRef.bFishingTown3.hasTradeCartActive = true;
+				mRef.bTradeFish3.x = this.x - 10
+				mRef.bTradeFish3.y = this.y;
+				mRef.bTradeFish3.rotation = 90;
+			}
 		}
 
 	}

@@ -265,7 +265,7 @@
 				mRef.redFishPoint1.x = newRandomX + mRef.redWaterObj1.x
 				mRef.redFishPoint1.y = newRandomY + mRef.redWaterObj1.y
 				
-				trace(newRandomX + " " + this.name);
+				/*trace(newRandomX + " " + this.name);
 				trace(newRandomY + " " + this.name);
 				trace("")
 				trace("aaaaaaaaaaaaaaaaaaaaa")
@@ -281,7 +281,7 @@
 				trace("aaaaaaaaaaaaaaaaaaaaa")
 				trace("aaaaaaaaaaaaaaaaaaaaa")
 				trace("aaaaaaaaaaaaaaaaaaaaa")
-				
+				*/
 
 			}
 

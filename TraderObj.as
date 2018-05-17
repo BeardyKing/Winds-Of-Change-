@@ -827,7 +827,7 @@
 				}
 				/////////////////////// FISH 2
 				
-				if (this.name == "bTradeFish2_NULL" && mRef.bFishingTown2.hasTradeCartActive == true)
+				if (this.name == "bTradeFish3" && mRef.bFishingTown3.hasTradeCartActive == true)
 				{
 					//speed = 0.3;
 					//this.rotation = objAngle - 45;
@@ -887,35 +887,12 @@
 					}
 					if (nodeNumber == 2)
 					{
-						fDist1 = Math.sqrt((this.x - mRef.nodeFarm7_1.x) *
-							(this.x - mRef.nodeFarm7_1.x) +
-							(this.y - mRef.nodeFarm7_1.y) *
-							(this.y - mRef.nodeFarm7_1.y))
+						fDist1 = Math.sqrt((this.x - mRef.nodeFarm3_1.x) *
+							(this.x - mRef.nodeFarm3_1.x) +
+							(this.y - mRef.nodeFarm3_1.y) *
+							(this.y - mRef.nodeFarm3_1.y))
 
-						FindMoveAngle(this.x, this.y, mRef.nodeFarm7_1.x, mRef.nodeFarm7_1.y);
-
-						this.x += Math.cos(objAngle) * speed;
-						this.y += Math.sin(objAngle) * speed;
-
-						if (goingToTown == true && fDist1 <= hypotDist)
-						{
-							nodeNumber += 1;
-						}
-
-						if (goingToTown == false && fDist1 <= hypotDist)
-						{
-							nodeNumber -= 1;
-
-						}
-					}
-					if (nodeNumber == 3)
-					{
-						fDist1 = Math.sqrt((this.x - mRef.nodeFarm7_2.x) *
-							(this.x - mRef.nodeFarm7_2.x) +
-							(this.y - mRef.nodeFarm7_2.y) *
-							(this.y - mRef.nodeFarm7_2.y))
-
-						FindMoveAngle(this.x, this.y, mRef.nodeFarm7_2.x, mRef.nodeFarm7_2.y);
+						FindMoveAngle(this.x, this.y, mRef.nodeFarm3_1.x, mRef.nodeFarm3_1.y);
 
 						this.x += Math.cos(objAngle) * speed;
 						this.y += Math.sin(objAngle) * speed;
@@ -932,17 +909,18 @@
 						}
 					}
 					
-					if (nodeNumber == 4)
+					
+					if (nodeNumber == 3)
 					{
-						FindMoveAngle(this.x, this.y, mRef.bFishingTown2.x, mRef.bFishingTown2.y);
+						FindMoveAngle(this.x, this.y, mRef.bFishingTown3.x, mRef.bFishingTown3.y);
 
 						this.x += Math.cos(objAngle) * speed;
 						this.y += Math.sin(objAngle) * speed;
 						if (currentResourceAmount < 25)
 						{
-							if (this.hitTestObject(mRef.bFishingTown2) == true)
+							if (this.hitTestObject(mRef.bFishingTown3) == true)
 							{
-								//trace("aa")
+								trace("aa")
 								speed = 0;
 								currentResourceAmount += 0.1
 								mRef.bFishingTown2.currentFishAmount -= 0.1;

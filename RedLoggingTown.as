@@ -38,29 +38,14 @@
 				{
 					currentWoodAmount = maxWood
 				}
-				if (this.name == "bLoggingTown1")
+				
+				if (this.name == "rLog1")
 				{
-					//trace(currentWoodAmount + "   " + hasTradeCartActive)
-					if (currentWoodAmount >= 40 && hasTradeCartActive == false)
-					{
-						//mRef.bCity.AddTradeCart(this.name)
-					}
+					
 				}
-				if (this.name == "bLoggingTown2")
+				if (this.name == "rrLog2")
 				{
-					//trace(currentWoodAmount + "   " + hasTradeCartActive)
-					if (currentWoodAmount >= 50 && hasTradeCartActive == false)
-					{
-						//mRef.bCity.AddTradeCart(this.name)
-					}
-				}
-				if (this.name == "bLoggingTown3")
-				{
-					//trace(currentWoodAmount + "   " + hasTradeCartActive)
-					if (currentWoodAmount >= 45 && hasTradeCartActive == false)
-					{
-						//mRef.bCity.AddTradeCart(this.name)
-					}
+					
 				}
 
 				if (objState == "boot")

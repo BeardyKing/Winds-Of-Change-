@@ -49,14 +49,14 @@
 				{
 					currentRiceAmount = maxRice;
 				}
-				if (currentRiceAmount >= 30 && hasTradeCartActive == false)
+				
+				if (this.name == "rFarmTown1")
 				{
-					//mRef.bCity.AddTradeCart(this.name)
-					trace("ADD TRADE CART HERE " + this.name)
+					
 				}
-				if (this.name == "farmTown1")
+				if (this.name == "rFarmTown2")
 				{
-					//trace(currentRiceAmount)
+					
 				}
 				if (objState == "boot")
 				{

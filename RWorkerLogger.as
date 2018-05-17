@@ -301,7 +301,7 @@
 						this.x += Math.cos(objAngle) * speed;
 						this.y += Math.sin(objAngle) * speed;
 
-						if (currentTreeName == "rTree1_1")
+						if (currentTreeName == "rTree2_1")
 						{
 							if (this.hitTestObject(mRef.rTree2_1) == true)
 							{

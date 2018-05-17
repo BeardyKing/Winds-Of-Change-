@@ -47,7 +47,7 @@
 				///////////////////////////////////// BWtree1 & BWtree2 & BWtree3 //////////////////////////////////
 				if (this.name == "rWL1_1" || this.name == "rWL1_2" || this.name == "rWL1_3")
 				{
-				
+
 					if (objState == "idle")
 					{
 
@@ -244,7 +244,207 @@
 					}
 				}
 
-				
+				//this.rotation = objAngle + 45;
+				///////////////////////////////////// BWtree1 & BWtree2 & BWtree3 //////////////////////////////////
+				if (this.name == "rWL2_1" || this.name == "rWL2_2" || this.name == "rWL2_3")
+				{
+
+					if (objState == "idle")
+					{
+
+						objState = "goToNearestFarm"
+
+						if (objState == "goToNearestFarm")
+						{
+							FindNearestTree2();
+							////trace("find nearest called")
+
+						}
+
+					}
+
+					if (objState == "goToNearestFarm")
+					{
+
+
+
+						if (mRef.rTree2_1.canBeLogged == false &&
+							mRef.rTree2_2.canBeLogged == false &&
+							mRef.rTree2_3.canBeLogged == false &&
+							mRef.rTree2_3.canBeLogged == false &&
+							mRef.rTree2_5.canBeLogged == false)
+						{
+							objState = "goToLoggingTown"
+						}
+
+
+						if (currentTreeName == "rTree2_1")
+						{
+							FindMoveAngle(this.x, this.y, mRef.rTree2_1.x, mRef.rTree2_1.y);
+						}
+						if (currentTreeName == "rTree2_2")
+						{
+							FindMoveAngle(this.x, this.y, mRef.rTree2_2.x, mRef.rTree2_2.y);
+						}
+						if (currentTreeName == "rTree2_3")
+						{
+							FindMoveAngle(this.x, this.y, mRef.rTree2_3.x, mRef.rTree2_3.y);
+						}
+						if (currentTreeName == "rTree2_4")
+						{
+							FindMoveAngle(this.x, this.y, mRef.rTree2_4.x, mRef.rTree2_4.y);
+						}
+						if (currentTreeName == "rTree2_5")
+						{
+							FindMoveAngle(this.x, this.y, mRef.rTree2_5.x, mRef.rTree2_5.y);
+						}
+						this.x += Math.cos(objAngle) * speed;
+						this.y += Math.sin(objAngle) * speed;
+
+						if (currentTreeName == "rTree1_1")
+						{
+							if (this.hitTestObject(mRef.rTree2_1) == true)
+							{
+								objState = "collectWood"
+							}
+						}
+						if (currentTreeName == "rTree2_2")
+						{
+							if (this.hitTestObject(mRef.rTree2_2) == true)
+							{
+								objState = "collectWood"
+							}
+						}
+						if (currentTreeName == "rTree2_3")
+						{
+							if (this.hitTestObject(mRef.rTree2_3) == true)
+							{
+								objState = "collectWood"
+							}
+						}
+						if (currentTreeName == "rTree2_4")
+						{
+							if (this.hitTestObject(mRef.rTree2_4) == true)
+							{
+								objState = "collectWood"
+							}
+						}
+						if (currentTreeName == "rTree2_5")
+						{
+							if (this.hitTestObject(mRef.rTree2_5) == true)
+							{
+								objState = "collectWood"
+							}
+						}
+						//////trace(objAngle);
+						//////trace(currentTreeName + " current farm name")
+
+					}
+
+					if (objState == "collectWood")
+					{
+						if (this.hitTestObject(mRef.rTree2_1) == true)
+						{
+							if (mRef.rTree2_1.remainingWood > 0 && currentWoodAmount < maxWood)
+							{
+								mRef.rTree2_1.remainingWood -= 0.1
+								currentWoodAmount += 0.1;
+							}
+							if (mRef.rTree2_1.remainingWood <= 0 && currentWoodAmount < maxWood)
+							{
+								objState = "idle"
+							}
+
+						}
+						if (this.hitTestObject(mRef.rTree2_2) == true)
+						{
+							if (mRef.rTree2_2.remainingWood > 0 && currentWoodAmount < maxWood)
+							{
+								mRef.rTree2_2.remainingWood -= 0.1
+								currentWoodAmount += 0.1;
+							}
+							if (mRef.rTree2_2.remainingWood <= 0 && currentWoodAmount < maxWood)
+							{
+								objState = "idle"
+							}
+						}
+						if (this.hitTestObject(mRef.rTree2_3) == true)
+						{
+							if (mRef.rTree2_3.remainingWood > 0 && currentWoodAmount < maxWood)
+							{
+								mRef.rTree2_3.remainingWood -= 0.1
+								currentWoodAmount += 0.1;
+							}
+							if (mRef.rTree2_3.remainingWood <= 0 && currentWoodAmount < maxWood)
+							{
+								objState = "idle"
+							}
+						}
+						if (this.hitTestObject(mRef.rTree2_4) == true)
+						{
+							if (mRef.rTree2_4.remainingWood > 0 && currentWoodAmount < maxWood)
+							{
+								mRef.rTree2_4.remainingWood -= 0.1
+								currentWoodAmount += 0.1;
+							}
+							if (mRef.rTree2_4.remainingWood <= 0 && currentWoodAmount < maxWood)
+							{
+								objState = "idle"
+							}
+						}
+						if (this.hitTestObject(mRef.rTree2_5) == true)
+						{
+							if (mRef.rTree2_5.remainingWood > 0 && currentWoodAmount < maxWood)
+							{
+								mRef.rTree2_5.remainingWood -= 0.1
+								currentWoodAmount += 0.1;
+							}
+							if (mRef.rTree2_5.remainingWood <= 0 && currentWoodAmount < maxWood)
+							{
+								objState = "idle"
+							}
+						}
+
+						if (currentWoodAmount >= 10)
+						{
+							currentWoodAmount = 10
+							objState = "goToLoggingTown";
+						}
+
+					}
+
+					if (objState == "goToLoggingTown")
+					{
+
+
+						FindMoveAngle(this.x, this.y, mRef.rLog2.x, mRef.rLog2.y);
+
+						this.x += Math.cos(objAngle) * speed;
+						this.y += Math.sin(objAngle) * speed;
+
+						if (this.hitTestObject(mRef.rLog2) == true)
+						{
+							currentWoodAmount -= 0.1;
+							mRef.rLog2.currentWoodAmount += 0.1;
+							if (currentWoodAmount <= 0)
+							{
+								objState = "idle"
+								currentWoodAmount = 0;
+							}
+							//objState = "idle"
+						}
+					}
+
+					if (objState == "notActive")
+					{
+
+					}
+					if (objState == "dead")
+					{
+
+					}
+				}
+
 			}
 			//loop
 		}
@@ -353,28 +553,28 @@
 
 		public function FindNearestTree2()
 		{
-			fDist1 = Math.sqrt((this.x - mRef.tree6.x) * (this.x - mRef.tree6.x) + (this.y - mRef.tree6.y) * (this.y - mRef.tree6.y))
-			if (mRef.tree6.remainingWood <= 0)
+			fDist1 = Math.sqrt((this.x - mRef.rTree2_1.x) * (this.x - mRef.rTree2_1.x) + (this.y - mRef.rTree2_1.y) * (this.y - mRef.rTree2_1.y))
+			if (mRef.rTree2_1.remainingWood <= 0)
 			{
 				fDist1 = Infinity;
 			}
-			fDist2 = Math.sqrt((this.x - mRef.tree7.x) * (this.x - mRef.tree7.x) + (this.y - mRef.tree7.y) * (this.y - mRef.tree7.y))
-			if (mRef.tree7.remainingWood <= 0)
+			fDist2 = Math.sqrt((this.x - mRef.rTree2_2.x) * (this.x - mRef.rTree2_2.x) + (this.y - mRef.rTree2_2.y) * (this.y - mRef.rTree2_2.y))
+			if (mRef.rTree2_2.remainingWood <= 0)
 			{
 				fDist2 = Infinity;
 			}
-			fDist3 = Math.sqrt((this.x - mRef.tree8.x) * (this.x - mRef.tree8.x) + (this.y - mRef.tree8.y) * (this.y - mRef.tree8.y))
-			if (mRef.tree8.remainingWood <= 0)
+			fDist3 = Math.sqrt((this.x - mRef.rTree2_3.x) * (this.x - mRef.rTree2_3.x) + (this.y - mRef.rTree2_3.y) * (this.y - mRef.rTree2_3.y))
+			if (mRef.rTree2_3.remainingWood <= 0)
 			{
 				fDist3 = Infinity;
 			}
-			fDist4 = Math.sqrt((this.x - mRef.tree9.x) * (this.x - mRef.tree9.x) + (this.y - mRef.tree9.y) * (this.y - mRef.tree9.y))
-			if (mRef.tree9.remainingWood <= 0)
+			fDist4 = Math.sqrt((this.x - mRef.rTree2_4.x) * (this.x - mRef.rTree2_4.x) + (this.y - mRef.rTree2_4.y) * (this.y - mRef.rTree2_4.y))
+			if (mRef.rTree2_4.remainingWood <= 0)
 			{
 				fDist4 = Infinity;
 			}
-			fDist5 = Math.sqrt((this.x - mRef.tree10.x) * (this.x - mRef.tree10.x) + (this.y - mRef.tree10.y) * (this.y - mRef.tree10.y))
-			if (mRef.tree10.remainingWood <= 0)
+			fDist5 = Math.sqrt((this.x - mRef.rTree2_5.x) * (this.x - mRef.rTree2_5.x) + (this.y - mRef.rTree2_5.y) * (this.y - mRef.rTree2_5.y))
+			if (mRef.rTree2_5.remainingWood <= 0)
 			{
 				fDist5 = Infinity;
 			}
@@ -383,8 +583,8 @@
 				fDist1 < fDist2 &&
 				fDist1 < fDist4)
 			{
-				currentTreeName = mRef.tree6.name;
-				//FindMoveAngle(this.x, this.y, mRef.tree6.x, mRef.tree6.y);
+				currentTreeName = mRef.rTree2_1.name;
+				//FindMoveAngle(this.x, this.y, mRef.tree1.x, mRef.tree1.y);
 
 				////trace(fDist1)
 			}
@@ -395,9 +595,9 @@
 				fDist2 < fDist4 &&
 				fDist2 < fDist5)
 			{
-				currentTreeName = mRef.tree7.name;
+				currentTreeName = mRef.rTree2_2.name;
 
-				//FindMoveAngle(this.x, this.y, mRef.tree7.x, mRef.tree7.y);
+				//FindMoveAngle(this.x, this.y, mRef.tree2.x, mRef.tree2.y);
 				////trace(fDist2)
 			}
 
@@ -406,9 +606,9 @@
 				fDist3 < fDist4 &&
 				fDist3 < fDist5)
 			{
-				currentTreeName = mRef.tree8.name;
+				currentTreeName = mRef.rTree2_3.name;
 
-				//FindMoveAngle(this.x, this.y, mRef.tree8.x, mRef.tree8.y);
+				//FindMoveAngle(this.x, this.y, mRef.tree3.x, mRef.tree3.y);
 				////trace(fDist3)
 			}
 
@@ -417,9 +617,9 @@
 				fDist4 < fDist3 &&
 				fDist4 < fDist5)
 			{
-				currentTreeName = mRef.tree9.name;
+				currentTreeName = mRef.rTree2_4.name;
 
-				//FindMoveAngle(this.x, this.y, mRef.tree9.x, mRef.tree9.y);
+				//FindMoveAngle(this.x, this.y, mRef.tree4.x, mRef.tree4.y);
 				////trace(fDist4)
 			}
 
@@ -428,95 +628,9 @@
 				fDist5 < fDist3 &&
 				fDist5 < fDist4)
 			{
-				currentTreeName = mRef.tree10.name;
+				currentTreeName = mRef.rTree2_5.name;
 
-				//FindMoveAngle(this.x, this.y, mRef.tree10.x, mRef.tree10.y);
-				////trace(fDist5)
-			}
-			////trace("aaaaaa");
-			return;
-		}
-
-		public function FindNearestTree3()
-		{
-			fDist1 = Math.sqrt((this.x - mRef.tree11.x) * (this.x - mRef.tree11.x) + (this.y - mRef.tree11.y) * (this.y - mRef.tree11.y))
-			if (mRef.tree11.remainingWood <= 0)
-			{
-				fDist1 = Infinity;
-			}
-			fDist2 = Math.sqrt((this.x - mRef.tree12.x) * (this.x - mRef.tree12.x) + (this.y - mRef.tree12.y) * (this.y - mRef.tree12.y))
-			if (mRef.tree12.remainingWood <= 0)
-			{
-				fDist2 = Infinity;
-			}
-			fDist3 = Math.sqrt((this.x - mRef.tree13.x) * (this.x - mRef.tree13.x) + (this.y - mRef.tree13.y) * (this.y - mRef.tree13.y))
-			if (mRef.tree13.remainingWood <= 0)
-			{
-				fDist3 = Infinity;
-			}
-			fDist4 = Math.sqrt((this.x - mRef.tree14.x) * (this.x - mRef.tree14.x) + (this.y - mRef.tree14.y) * (this.y - mRef.tree14.y))
-			if (mRef.tree14.remainingWood <= 0)
-			{
-				fDist4 = Infinity;
-			}
-			fDist5 = Math.sqrt((this.x - mRef.tree15.x) * (this.x - mRef.tree15.x) + (this.y - mRef.tree15.y) * (this.y - mRef.tree15.y))
-			if (mRef.tree15.remainingWood <= 0)
-			{
-				fDist5 = Infinity;
-			}
-			if (fDist1 < fDist2 &&
-				fDist1 < fDist3 &&
-				fDist1 < fDist2 &&
-				fDist1 < fDist4)
-			{
-				currentTreeName = mRef.tree11.name;
-				//FindMoveAngle(this.x, this.y, mRef.tree11.x, mRef.tree11.y);
-
-				////trace(fDist1)
-			}
-			//x1, y1, x2, y2
-
-			if (fDist2 < fDist1 &&
-				fDist2 < fDist3 &&
-				fDist2 < fDist4 &&
-				fDist2 < fDist5)
-			{
-				currentTreeName = mRef.tree12.name;
-
-				//FindMoveAngle(this.x, this.y, mRef.tree12.x, mRef.tree12.y);
-				////trace(fDist2)
-			}
-
-			if (fDist3 < fDist1 &&
-				fDist3 < fDist2 &&
-				fDist3 < fDist4 &&
-				fDist3 < fDist5)
-			{
-				currentTreeName = mRef.tree13.name;
-
-				//FindMoveAngle(this.x, this.y, mRef.tree13.x, mRef.tree13.y);
-				////trace(fDist3)
-			}
-
-			if (fDist4 < fDist1 &&
-				fDist4 < fDist2 &&
-				fDist4 < fDist3 &&
-				fDist4 < fDist5)
-			{
-				currentTreeName = mRef.tree14.name;
-
-				//FindMoveAngle(this.x, this.y, mRef.tree14.x, mRef.tree14.y);
-				////trace(fDist4)
-			}
-
-			if (fDist5 < fDist1 &&
-				fDist5 < fDist2 &&
-				fDist5 < fDist3 &&
-				fDist5 < fDist4)
-			{
-				currentTreeName = mRef.tree15.name;
-
-				//FindMoveAngle(this.x, this.y, mRef.tree15.x, mRef.tree15.y);
+				//FindMoveAngle(this.x, this.y, mRef.tree5.x, mRef.tree5.y);
 				////trace(fDist5)
 			}
 			////trace("aaaaaa");

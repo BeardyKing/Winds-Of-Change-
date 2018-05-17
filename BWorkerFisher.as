@@ -85,7 +85,7 @@
 					{
 						mRef.fishPoint1.x = mRef.water1.x;
 						mRef.fishPoint1.y = mRef.water1.y;
-						FindNewFishingLoc(125, 180);
+						FindNewFishingLoc(mRef.water1.width, mRef.water1.height);
 					}
 
 					if (objState == "goToFishingSpot")
@@ -334,7 +334,7 @@
 						
 						mRef.fishPoint3.x = mRef.water3.x;
 						mRef.fishPoint3.y = mRef.water3.y;
-						FindNewFishingLoc(200, 100);
+						FindNewFishingLoc(mRef.water3.width, mRef.water3.height);
 					}
 
 					if (objState == "goToFishingSpot")

@@ -45,24 +45,20 @@
 				}
 				if (this.name == "bFishingTown1")
 				{
-					//trace(currentWoodAmount + "   " + hasTradeCartActive)
+					if(mRef.fire_Fish1.objState == "onFire")
+					{
+						isOnFireBoolean = true;
+					}
 						if (currentFishAmount >= 10 && hasTradeCartActive == false)
 					{
 						mRef.bCity.AddTradeCart(this.name)
 					}
 				}
 				
-				if (this.name == "bFishingTown2")
-				{
-					//trace(currentFishAmount + "   " + hasTradeCartActive)
-					if (currentFishAmount >= 0 && hasTradeCartActive == false)
-					{
-						mRef.bCity.AddTradeCart(this.name)
-					}
-				}
 				
 				if (this.name == "bFishingTown3")
 				{
+					
 					//trace(currentFishAmount + "   " + hasTradeCartActive)
 					if (currentFishAmount >= 0 && hasTradeCartActive == false)
 					{

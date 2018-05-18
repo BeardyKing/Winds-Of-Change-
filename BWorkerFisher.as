@@ -41,9 +41,19 @@
 		{ // loop s
 			if (mRef.objState == "play")
 			{
+				if(mRef.bFishingTown1.isOnFireBoolean == true)
+				{
+					isAlive = false;
+					this.visible = false;
+				}
+				else
+				{
+					isAlive = true;
+					this.visible = true;
+				}
 				
 				//this.rotation = objAngle - 45;
-				if (this.name == "bFisher1")
+				if (this.name == "bFisher1" && isAlive == true )
 				{
 					if (this.x < 115)
 				{

@@ -11,17 +11,21 @@
 
 		var totalFires: Number;
 		var firesOnFire: Number;
-		var startingFire : Object = null;
+		var startingFire : String;
+		var mRef : MovieClip;
 
 		var counter: Number = 0;
 		public function FireManager()
 		{
+			mRef = MovieClip(this.parent)
 			// constructor code
 
 			this.addEventListener(Event.ENTER_FRAME, Loop);
 		}
 		public function Loop(e: Event)
 		{
+			mRef.expandBox1.isActiveBool = true
+			
 			//trace(startingFire);
 			
 			counter++;

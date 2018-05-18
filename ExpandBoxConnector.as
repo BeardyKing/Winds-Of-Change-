@@ -12,6 +12,7 @@
 		var expandCounter : Number = 0;
 		var expandBool : Boolean = false;
 		var singlePass : Boolean = false;
+		var scaleSpeed : Number = 0.1
 		public function ExpandBoxConnector() {
 			// constructor code
 			mRef = MovieClip(this.parent);
@@ -31,7 +32,7 @@
 			{
 				if(singlePass == false)
 				{
-					this.alpha = 0;
+					this.alpha = 0.3;
 					singlePass = true;
 					this.x = mRef.fire2.x;
 					this.y = mRef.fire2.y;

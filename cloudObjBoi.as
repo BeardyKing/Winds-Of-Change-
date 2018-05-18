@@ -140,8 +140,8 @@
 				// alphaCounter : Number = 0;
 				//var alphaBoolSwitch
 				alphaCounter += 1;
-				this.gotoAndPlay(1);
-				if (alphaCounter > 3)
+				this.gotoAndStop(3);
+				if (alphaCounter > 2)
 				{
 					alphaCounter = 0;
 					alphaBoolSwitch = !alphaBoolSwitch;
@@ -196,7 +196,7 @@
 
 				// REMOVED CLOUD LOC
 				this.x = randomXPos;
-				this.y = randomYPos;
+				//this.y = randomYPos;
 			}
 
 			objStateCounter += 1;

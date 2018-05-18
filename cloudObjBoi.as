@@ -264,6 +264,7 @@
 				{
 					this.alpha = 1
 				}
+				// add new texture for this frame
 			}
 			if (cloudState == "resetCloud")
 			{
@@ -306,6 +307,7 @@
 
 		public function HitTestCheckTwo()
 		{
+			// add hitTest for fire1 & other fireObjs
 			if (this.hitTestObject(mRef.c1_2) == true)
 			{
 				if (mRef.c1_2.objState == "moving")

@@ -196,7 +196,7 @@
 
 				// REMOVED CLOUD LOC
 				this.x = randomXPos;
-				//this.y = randomYPos;
+				this.y = randomYPos;
 			}
 
 			objStateCounter += 1;

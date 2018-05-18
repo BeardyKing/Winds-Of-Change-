@@ -19,7 +19,7 @@
 		var maxWood: Number = 50;
 		var hasThreeWorkers: Boolean = true;
 		var teamState: String = "na"
-		var isOnFire: Boolean = false;
+		var isOnFireBool: Boolean = false;
 		var captureCounter: Number = 0;
 		var isBeingCaptured: Boolean = false;
 
@@ -45,14 +45,37 @@
 					{
 						mRef.bCity.AddTradeCart(this.name)
 					}
-				}
-				if (this.name == "bLoggingTown2")
-				{
-					//trace(currentWoodAmount + "   " + hasTradeCartActive)
-					if (currentWoodAmount >= 50 && hasTradeCartActive == false)
+
+					if (mRef.fire1_Start1.objState == "onFire")
 					{
-						mRef.bCity.AddTradeCart(this.name)
+						isOnFireBool = true;
+						
+						mRef.tree11.objState = "drought";
+						mRef.tree12.objState = "drought";
+						mRef.tree13.objState = "drought";
+						mRef.tree14.objState = "drought";
+						mRef.tree15.objState = "drought";
+						
+						
+						
 					}
+					else
+					{
+						
+						mRef.tree11.objState = "growing";
+						mRef.tree12.objState = "growing";
+						mRef.tree13.objState = "growing";
+						mRef.tree14.objState = "growing";
+						mRef.tree15.objState = "growing";
+						isOnFireBool = false
+						mRef.bwl7.isAlive = true;
+						mRef.bwl8.isAlive = true;
+						mRef.bwl9.isAlive = true;
+						
+						
+					}
+
+
 				}
 				if (this.name == "bLoggingTown3")
 				{
@@ -60,6 +83,33 @@
 					if (currentWoodAmount >= 45 && hasTradeCartActive == false)
 					{
 						mRef.bCity.AddTradeCart(this.name)
+					}
+
+					if (mRef.fire1_Start7.objState == "onFire")
+					{
+						isOnFireBool = true;
+						
+						mRef.tree1.objState = "drought";
+						mRef.tree2.objState = "drought";
+						mRef.tree3.objState = "drought";
+						mRef.tree4.objState = "drought";
+						mRef.tree5.objState = "drought";
+						
+					}
+					else
+					{
+						
+						mRef.tree1.objState = "growing";
+						mRef.tree2.objState = "growing";
+						mRef.tree3.objState = "growing";
+						mRef.tree4.objState = "growing";
+						mRef.tree5.objState = "growing";
+						
+						isOnFireBool = false
+						
+						mRef.bwl1.isAlive = true;
+						mRef.bwl2.isAlive = true;
+						mRef.bwl3.isAlive = true;
 					}
 				}
 

@@ -99,8 +99,16 @@
 				}
 				if (objState == "drought")
 				{
-
-
+						this.alpha = 0.5;
+						
+						
+						this.rotation  =  90;
+					
+						
+					if(this.name == "tree15" || this.name == "tree11" || this.name == "tree2" ||this.name == "tree3" ||this.name =="tree4")
+					{
+						this.rotation  =  -90;
+					}
 				}
 				if (objState == "dead")
 				{

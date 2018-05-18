@@ -22,7 +22,7 @@
 		var maxRice: Number = 50
 		var hasThreeWorker: Boolean = true;
 		var teamState: String = "toSet"
-		var isOnFire: Boolean = false;
+		var isOnFireBool: Boolean = false;
 		var captureCounter: Number = 0;
 		var isBeingCaptured: Boolean = false;
 
@@ -54,13 +54,50 @@
 				}
 				if (this.name == "farmTown1")
 				{
-					//trace(currentRiceAmount)
+					if (mRef.fire1_Start5.objState == "onFire")
+					{
+						isOnFireBool = true;
+						mRef.f1.alpha =  0.5
+						mRef.f2.alpha =  0.5
+						mRef.f3.alpha =  0.5
+						mRef.f4.alpha =  0.5
+						mRef.f5.alpha =  0.5
+					}
+					else
+					{
+						isOnFireBool = false
+						mRef.bwf1.isAlive = true;
+						mRef.bwf2.isAlive = true;
+						mRef.bwf3.isAlive = true;
+					}
+				}
+				
+				if (this.name == "farmTown2")
+				{
+					if (mRef.fire2.objState == "onFire")
+					{
+						isOnFireBool = true;
+						
+						mRef.f6.objState = "drought"
+						mRef.f7.objState = "drought"
+						mRef.f8.objState = "drought"
+						mRef.f9.objState = "drought"
+						mRef.f10.objState = "drought"
+					}
+					else
+					{
+						isOnFireBool = false
+						
+						mRef.bwf4.isAlive = true;
+						mRef.bwf5.isAlive = true;
+						mRef.bwf6.isAlive = true;
+					}
 				}
 				if (objState == "boot")
 				{
 					mRef.bCity.tradecartCounter += 1;
 					objState = "idle"
-					trace(this.name)
+					//trace(this.name)
 				}
 			}
 			// loop

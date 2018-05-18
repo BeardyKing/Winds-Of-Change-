@@ -74,7 +74,8 @@
 				}
 				if (objState == "drought")
 				{
-
+					
+					this.alpha = 0.5;
 
 				}
 				if (objState == "dead")

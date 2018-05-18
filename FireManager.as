@@ -24,7 +24,7 @@
 		}
 		public function Loop(e: Event)
 		{
-			mRef.expandBox1.isActiveBool = true
+			mRef.expandBox6.isActiveBool = true
 			
 			//trace(startingFire);
 			

@@ -123,16 +123,13 @@
 			}
 			if (objState == "idle")
 			{
-				this.alpha = 0.2;
+				this.alpha = 0;
 				this.gotoAndStop(1);
 			}
 			if (objState == "onFire")
 			{
-				if (this.name == "fire2")
-				{
-
-				}
-				this.alpha = 1;
+				
+				//this.alpha = 1;
 				DoAnim();
 			}
 			if (objState == "findNextFire")
@@ -148,6 +145,12 @@
 		public function DoAnim()
 		{
 			//trace(currentFrame);
+			this.alpha += 0.05;
+			if(this.alpha >= 1)
+			{
+				this.alpha = 1;
+			}
+			
 
 			animCounter += 1;
 			if (animCounter >= 3)

@@ -48,44 +48,20 @@
 		{
 			if (mRef.objState == "play")
 			{
-				//this.rotation = objAngle + 45;
+
 				///////////////////////////////////// BWF1 & BWF2 & BWF3 //////////////////////////////////
-				if (this.name == "bwf1" || this.name == "bwf2" || this.name == "bwf3")
+				if (this.name == "bwf1" || this.name == "bwf2" || this.name == "bwf3" && isAlive == true)
 				{
+					if (mRef.farmTown1.isOnFireBool == true)
+					{
+						isAlive = false;
+						this.visible = false;
+					}
+					else
+					{
+						this.visible = true;
+					}
 
-					//if (this.x < mRef.farmTown1.x - 60)
-					//{
-					//	objState = "idle";
-
-					//}
-					//if (this.x > mRef.farmTown1.x + 30)
-					//{
-					//	objState = "idle"
-
-					//}
-					//if (this.y < mRef.farmTown1.y - 50)
-					//{
-					//	objState = "idle"
-					//	//trace("ow")
-					//}
-					//if (this.y > mRef.farmTown1.y + 20)
-					//{
-					//	objState = "idle"
-					//}
-					/*////trace(this.x + this.name)
-				if (this.name == "bwf1")
-				{
-
-					////trace(currentFarmName + " " + this.name)
-					////trace(objState + " " + this.name)
-					////trace(currentRiceAmount + " " + this.name)
-				}*/
-					/*////trace(fDist1 + "  fDist1")
-			////trace(fDist2 + "  fDist2")
-			////trace(fDist3 + "  fDist3")
-			////trace(fDist4 + "  fDist4")
-			////trace(fDist5 + "  fDist5")
-			////trace(objState + " objState")*/
 					if (objState == "idle")
 					{
 
@@ -282,43 +258,18 @@
 					}
 				}
 				///////////////////////////////////////////////// BWf4 & BWF5 & BWF6 //////////////////////////////
-				if (this.name == "bwf4" || this.name == "bwf5" || this.name == "bwf6")
+				if (this.name == "bwf4" || this.name == "bwf5" || this.name == "bwf6" && isAlive == true)
 				{
-					/*if (this.x < mRef.farmTown2.x - 25.5)
+					if (mRef.farmTown2.isOnFireBool == true)
 					{
-						objState = "idle";
-
+						isAlive = false;
+						this.visible = false;
 					}
-					if (this.x > mRef.farmTown2.x + 15)
+					else
 					{
-						objState = "idle"
-
+						this.visible = true;
 					}
-					if (this.y < mRef.farmTown2.y - 42)
-					{
-						objState = "idle"
-						trace("ow")
-					}
-					if (this.y > mRef.farmTown2.y + 34)
-					{
-						objState = "idle"
-						trace("ow")
-					}*/
 
-					//////trace(this.x + this.name)
-					/*if (this.name == "bwf1")
-				{
-					
-					////trace(currentFarmName + " " + this.name)
-					////trace(objState + " " + this.name)
-					////trace(currentRiceAmount + " " + this.name)
-				}*/
-					/*////trace(fDist1 + "  fDist1")
-			////trace(fDist2 + "  fDist2")
-			////trace(fDist3 + "  fDist3")
-			////trace(fDist4 + "  fDist4")
-			////trace(fDist5 + "  fDist5")
-			////trace(objState + " objState")*/
 					if (objState == "idle")
 					{
 

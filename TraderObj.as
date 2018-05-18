@@ -33,6 +33,124 @@
 
 		public function Loop(e: Event)
 		{
+			
+			if (this.name == "bTradeRice1")
+			{
+				if (mRef.farmTown1.isOnFireBool == true)
+				{
+					//trace(mRef.farmTown1.isOnFireBool + "isOnFireBool" + this.name )
+					this.alpha -= 0.03
+					if (this.alpha < 0.3)
+					{
+						this.alpha = 0.3;
+						speed = 0;
+					}
+				}
+				else
+				{
+					this.alpha = 1;
+					speed = 0.2;
+				}
+			}
+
+			if (this.name == "bTradeRice2")
+			{
+				if (mRef.farmTown2.isOnFireBool == true)
+				{
+					//	trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
+					this.alpha -= 0.03
+					if (this.alpha < 0.3)
+					{
+						this.alpha = 0.3;
+						speed = 0;
+					}
+				}
+				else
+				{
+					this.alpha = 1;
+					speed = 0.2;
+				}
+			}
+
+			if (this.name == "bTradeWood1")
+			{
+				if (mRef.bLoggingTown3.isOnFireBool == true)
+				{
+					//	trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
+					this.alpha -= 0.03
+					if (this.alpha < 0.3)
+					{
+						this.alpha = 0.3;
+						speed = 0;
+					}
+				}
+				else
+				{
+					this.alpha = 1;
+					speed = 0.2;
+				}
+			}
+
+			if (this.name == "bTradeWood3")
+			{
+				if (mRef.bLoggingTown3.isOnFireBool == true)
+				{
+					//	trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
+					this.alpha -= 0.03
+					if (this.alpha < 0.3)
+					{
+						this.alpha = 0.3;
+						speed = 0;
+					}
+				}
+				else
+				{
+					this.alpha = 1;
+					speed = 0.2;
+				}
+			}
+
+			if (this.name == "bTradeFish1")
+			{
+				if (mRef.bFishingTown1.isOnFireBool == true)
+				{
+					//	trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
+					this.alpha -= 0.03
+					if (this.alpha < 0.3)
+					{
+						this.alpha = 0.3;
+						speed = 0;
+					}
+				}
+				else
+				{
+					this.alpha = 1;
+					speed = 0.2;
+				}
+			}
+
+			if (this.name == "bTradeFish3")
+			{
+				if (mRef.bFishingTown3.isOnFireBool == true)
+				{
+					//	trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
+					this.alpha -= 0.03
+					if (this.alpha < 0.3)
+					{
+						this.alpha = 0.3;
+						speed = 0;
+					}
+				}
+				else
+				{
+					this.alpha = 1;
+					speed = 0.2;
+				}
+			}
+
+
+
+
 			this.rotation = 0;
 			if (mRef.objState == "play")
 			{
@@ -77,7 +195,7 @@
 						this.y += Math.sin(objAngle) * speed;
 						if (goingToTown == true && fDist1 <= hypotDist)
 						{
-							
+
 							nodeNumber += 1;
 						}
 
@@ -653,7 +771,7 @@
 					// node number 2 = go to farmTown1
 
 					//trace(currentResourceAmount)
-					
+
 					if (nodeNumber == 0)
 					{
 						FindMoveAngle(this.x, this.y, mRef.bCity.x, mRef.bCity.y);
@@ -680,7 +798,7 @@
 						//nodeNumber = 2;
 
 						//trace("HELLO!")
-						
+
 						//trace(speed)
 						fDist1 = Math.sqrt((this.x - mRef.nodeFarm1_1.x) *
 							(this.x - mRef.nodeFarm1_1.x) +
@@ -826,7 +944,7 @@
 
 				}
 				/////////////////////// FISH 2
-				
+
 				if (this.name == "bTradeFish3" && mRef.bFishingTown3.hasTradeCartActive == true)
 				{
 					//speed = 0.3;
@@ -871,8 +989,8 @@
 						//trace(fDist1)
 						FindMoveAngle(this.x, this.y, mRef.nodeFarm1_1.x, mRef.nodeFarm1_1.y);
 
-						this.x += Math.cos(objAngle) * speed ;
-						this.y += Math.sin(objAngle) * speed ;
+						this.x += Math.cos(objAngle) * speed;
+						this.y += Math.sin(objAngle) * speed;
 						//trace(objAngle)
 						if (goingToTown == true && fDist1 <= hypotDist)
 						{
@@ -908,8 +1026,8 @@
 
 						}
 					}
-					
-					
+
+
 					if (nodeNumber == 3)
 					{
 						FindMoveAngle(this.x, this.y, mRef.bFishingTown3.x, mRef.bFishingTown3.y);
@@ -924,7 +1042,7 @@
 								speed = 0;
 								currentResourceAmount += 0.1
 								mRef.bFishingTown2.currentFishAmount -= 0.1;
-								
+
 							}
 						}
 

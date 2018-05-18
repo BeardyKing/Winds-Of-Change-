@@ -32,7 +32,7 @@
 			{
 				if(singlePass == false)
 				{
-					this.alpha = 0.3;
+					this.alpha = 0;
 					singlePass = true;
 					this.x = mRef.fire2.x;
 					this.y = mRef.fire2.y;
@@ -46,14 +46,19 @@
 
 				if (expandBool == false)
 				{
-					this.scaleX += 0.02;
+					this.scaleX += 0.05;
 					
 				}
 
 				if (expandBool == true)
 				{
-					this.scaleY += 0.02;
+					this.scaleY += 0.05;
 					
+				}
+				if(this.scaleX >= 15 || this.scaleY >= 15 )
+				{
+					this.scaleX = 15
+					this.scaleY = 15 
 				}
 			}
 			if(objState == "reset")

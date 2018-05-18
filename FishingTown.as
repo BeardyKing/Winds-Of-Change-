@@ -20,7 +20,7 @@
 		var maxFish: Number = 50;
 		var workerIsAlive: Boolean = true;
 		var teamState: String = ""
-		var isOnFireBoolean: Boolean = false;
+		var isOnFireBool: Boolean = false;
 		var captureCouunter: Number = 0;
 		var isBeingCaptured: Boolean = false;
 
@@ -47,7 +47,12 @@
 				{
 					if(mRef.fire_Fish1.objState == "onFire")
 					{
-						isOnFireBoolean = true;
+						isOnFireBool = true;
+					}
+					else
+					{
+						isOnFireBool = false
+						mRef.bFisher1.isAlive = true;
 					}
 						if (currentFishAmount >= 10 && hasTradeCartActive == false)
 					{

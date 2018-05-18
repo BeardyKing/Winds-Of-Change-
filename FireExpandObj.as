@@ -11,7 +11,7 @@
 		var expandCounter: Number = 0;
 		var expandBool: Boolean = false;
 		var isActiveBool : Boolean = false;
-		var scaleSpeed : Number = 0.1;
+		var scaleSpeed : Number = 0.03;
 
 		public function FireExpandObj()
 		{
@@ -26,7 +26,7 @@
 			{
 
 
-				this.alpha = 0.3
+				this.alpha = 0
 
 
 				this.x = mRef.fire1_Start1.x
@@ -74,7 +74,7 @@
 			if (this.name == "expandBox2")
 			{
 				
-				this.alpha = 0.3
+				this.alpha = 0
 
 
 				this.x = mRef.fire1_Start2.x
@@ -126,7 +126,7 @@
 			if (this.name == "expandBox3")
 			{
 				
-				this.alpha = 0.3
+				this.alpha = 0
 
 
 				this.x = mRef.fire1_Start3.x
@@ -175,7 +175,7 @@
 			if (this.name == "expandBox4")
 			{
 				
-				this.alpha = 0.3
+				this.alpha = 0
 
 
 				this.x = mRef.fire1_Start4.x
@@ -225,7 +225,7 @@
 			if (this.name == "expandBox5")
 			{
 				
-				this.alpha = 0.3
+				this.alpha = 0
 
 
 				this.x = mRef.fire1_Start5.x
@@ -274,7 +274,7 @@
 			if (this.name == "expandBox6")
 			{
 				
-				this.alpha = 0.3
+				this.alpha = 0
 
 
 				this.x = mRef.fire1_Start6.x
@@ -322,7 +322,7 @@
 			if (this.name == "expandBox7")
 			{
 				
-				this.alpha = 0.3
+				this.alpha = 0
 
 
 				this.x = mRef.fire1_Start7.x
@@ -371,7 +371,7 @@
 			if (this.name == "expandBox8")
 			{
 				
-				this.alpha = 0.3
+				this.alpha = 0
 
 
 				this.x = mRef.fire1_Start8.x

@@ -57,7 +57,8 @@
 		var objStateCounterSeconds: Number = 0;
 
 
-		var cloudState: String = "white"
+		/*var cloudState: String = "white"*/
+		var cloudState: String = "greyStorm"
 
 		var randomChangeLightGrey: Number;
 		var randomChangeGrey: Number;
@@ -112,93 +113,566 @@
 
 		}
 
-		public function AnimationHandler()
-		{
 
-			// State refs white / lightGrey / grey / greyStorm
+		public function Loop(e: Event)
+		{
+			if (mRef.objState == "play")
+			{
+
+				GlobalDirMove();
+				AnimationHandler();
+				StateHandeler();
+				// TESTING
+				cloudState = "greyStorm"
+				// TESTING
+			}
+		}
+
+
+		public function StateHandeler()
+		{
+			if (objState == "init")
+			{
+				//sets spawn Loc & state change timer
+				SetRandomValues()
+			}
+
+			StateChangeHandeler();
 
 			if (cloudState == "white")
 			{
-				this.gotoAndStop(1);
-				this.visible = true;
+				this.alpha += 0.03;
+				if (this.alpha >= 0.7)
+				{
+					this.alpha = 0.7
+				}
 			}
 
 			if (cloudState == "lightGrey")
 			{
-				this.gotoAndStop(2);
-				this.visible = true;
+				this.alpha += 0.01;
+				if (this.alpha >= 0.9)
+				{
+					this.alpha = 0.9
+				}
 			}
 
 			if (cloudState == "grey")
 			{
-				this.gotoAndStop(3);
-				this.visible = true;
+				this.alpha += 0.01
+				if (this.alpha >= 1)
+				{
+					this.alpha = 1
+				}
 			}
 
 			if (cloudState == "greyStorm")
 			{
-				// alphaCounter : Number = 0;
-				//var alphaBoolSwitch
-				alphaCounter += 1;
-				this.gotoAndStop(3);
-				if (alphaCounter > 2)
-				{
-					alphaCounter = 0;
-					alphaBoolSwitch = !alphaBoolSwitch;
-				}
-				if (alphaBoolSwitch == true)
-				{
-					this.visible = true;
-				}
-				else
-				{
-					this.visible = false;
 
+				this.alpha += 0.02;
+				if (this.alpha >= 1)
+				{
+					this.alpha = 1
 				}
-				// add rain obj
-				// maybe make an active hitbox for whole obj
+
+				RainHitTestCheck();
+				// add new texture for this frame
 			}
 
+			if (cloudState == "resetCloud")
+			{
+				this.alpha -= 0.003
+				if (this.alpha <= 0)
+				{
+					this.alpha = 0;
+					objState = "init";
+					cloudState = "white"
+				}
+
+			}
+
+			if (objState == "idle")
+			{
+				this.x -= Math.cos(angleDegLocal) * speed;
+				this.y += Math.sin(angleDegLocal) * speed;
+
+				HitTestCheck();
+				ResetHitTest();
+
+			}
+		}
+
+		public function RainHitTestCheck()
+		{
+			HitTestExpandObjs();
+			HitTestFire();
+			HitTestRicePaddy();
+		}
+
+		public function HitTestExpandObjs()
+		{
+			if (this.hitTestObject(mRef.expandBox1) == true)
+			{
+				if (mRef.expandBox1.isActiveBool == true)
+				{
+					mRef.expandBox1.objState = "dead"
+				}
+			}
+			if (this.hitTestObject(mRef.expandBox2) == true)
+			{
+				if (mRef.expandBox2.isActiveBool == true)
+				{
+					mRef.expandBox2.objState = "dead"
+				}
+			}
+			if (this.hitTestObject(mRef.expandBox3) == true)
+			{
+				if (mRef.expandBox3.isActiveBool == true)
+				{
+					mRef.expandBox3.objState = "dead"
+				}
+			}
+			if (this.hitTestObject(mRef.expandBox4) == true)
+			{
+				if (mRef.expandBox4.isActiveBool == true)
+				{
+					mRef.expandBox4.objState = "dead"
+				}
+			}
+			if (this.hitTestObject(mRef.expandBox5) == true)
+			{
+				if (mRef.expandBox5.isActiveBool == true)
+				{
+					mRef.expandBox5.objState = "dead"
+				}
+			}
+			if (this.hitTestObject(mRef.expandBox6) == true)
+			{
+				if (mRef.expandBox6.isActiveBool == true)
+				{
+					mRef.expandBox6.objState = "dead"
+				}
+			}
+			if (this.hitTestObject(mRef.expandBox7) == true)
+			{
+				if (mRef.expandBox7.isActiveBool == true)
+				{
+					mRef.expandBox7.objState = "dead"
+				}
+			}
+			if (this.hitTestObject(mRef.expandBox8) == true)
+			{
+				if (mRef.expandBox8.isActiveBool == true)
+				{
+					mRef.expandBox8.objState = "dead"
+				}
+			}
+		}
+
+
+		public function HitTestFire()
+		{
+			
+			if (this.hitTestObject(mRef.fire1_Start1) == true)
+			{
+				mRef.fire1_Start1.objState = "idle"
+				mRef.fire1_Start1.isActive = false
+			}
+			if (this.hitTestObject(mRef.fire1_Start2) == true)
+			{
+				mRef.fire1_Start2.objState = "idle"
+				mRef.fire1_Start2.isActive = false
+			}
+			if (this.hitTestObject(mRef.fire1_Start3) == true)
+			{
+				mRef.fire1_Start3.objState = "idle"
+				mRef.fire1_Start3.isActive = false
+			}
+			if (this.hitTestObject(mRef.fire1_Start4) == true)
+			{
+				mRef.fire1_Start4.objState = "idle"
+				mRef.fire1_Start4.isActive = false
+			}
+			if (this.hitTestObject(mRef.fire1_Start5) == true)
+			{
+				mRef.fire1_Start5.objState = "idle"
+				mRef.fire1_Start5.isActive = false
+			}
+			if (this.hitTestObject(mRef.fire1_Start6) == true)
+			{
+				mRef.fire1_Start6.objState = "idle"
+				mRef.fire1_Start6.isActive = false
+			}
+			if (this.hitTestObject(mRef.fire1_Start7) == true)
+			{
+				mRef.fire1_Start7.objState = "idle"
+				mRef.fire1_Start7.isActive = false
+			}
+			if (this.hitTestObject(mRef.fire1_Start8) == true)
+			{
+				mRef.fire1_Start8.objState = "idle"
+				mRef.fire1_Start8.isActive = false
+			}
+
+			
+			if(this.hitTestObject(mRef.fire1_1) == true)
+			{
+				mRef.fire1_1.isActive = false
+				mRef.fire1_1.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire1_2) == true)
+			{
+				mRef.fire1_2.isActive = false
+				mRef.fire1_2.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire1_3) == true)
+			{
+				mRef.fire1_3.isActive = false
+				mRef.fire1_3.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire1_4) == true)
+			{
+				mRef.fire1_4.isActive = false
+				mRef.fire1_4.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire1_5) == true)
+			{
+				mRef.fire1_5.isActive = false
+				mRef.fire1_5.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire1_6) == true)
+			{
+				mRef.fire1_6.isActive = false
+				mRef.fire1_6.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire1_7) == true)
+			{
+				mRef.fire1_7.isActive = false
+				mRef.fire1_7.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire1_8) == true)
+			{
+				mRef.fire1_8.isActive = false
+				mRef.fire1_8.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire1_9) == true)
+			{
+				mRef.fire1_9.isActive = false
+				mRef.fire1_9.objState = "idle"
+			}
+						
+			/// SET 2
+			
+			if(this.hitTestObject(mRef.fire2_1) == true)
+			{
+				mRef.fire2_1.isActive = false
+				mRef.fire2_1.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire2_2) == true)
+			{
+				mRef.fire2_2.isActive = false
+				mRef.fire2_2.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire2_3) == true)
+			{
+				mRef.fire2_3.isActive = false
+				mRef.fire2_3.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire2_4) == true)
+			{
+				mRef.fire2_4.isActive = false
+				mRef.fire2_4.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire2_5) == true)
+			{
+				mRef.fire2_5.isActive = false
+				mRef.fire2_5.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire2_6) == true)
+			{
+				mRef.fire2_6.isActive = false
+				mRef.fire2_6.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire2_7) == true)
+			{
+				mRef.fire2_7.isActive = false
+				mRef.fire2_7.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire2_8) == true)
+			{
+				mRef.fire2_8.isActive = false
+				mRef.fire2_8.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire2_9) == true)
+			{
+				mRef.fire2_9.isActive = false
+				mRef.fire2_9.objState = "idle"
+			}
+			
+			// SET 3
+			
+			if(this.hitTestObject(mRef.fire3_1) == true)
+			{
+				mRef.fire3_1.isActive = false
+				mRef.fire3_1.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire3_2) == true)
+			{
+				mRef.fire3_2.isActive = false
+				mRef.fire3_2.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire3_3) == true)
+			{
+				mRef.fire3_3.isActive = false
+				mRef.fire3_3.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire3_4) == true)
+			{
+				mRef.fire3_4.isActive = false
+				mRef.fire3_4.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire3_5) == true)
+			{
+				mRef.fire3_5.isActive = false
+				mRef.fire3_5.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire3_6) == true)
+			{
+				mRef.fire3_6.isActive = false
+				mRef.fire3_6.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire3_7) == true)
+			{
+				mRef.fire3_7.isActive = false
+				mRef.fire3_7.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire3_8) == true)
+			{
+				mRef.fire3_8.isActive = false
+				mRef.fire3_8.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire3_9) == true)
+			{
+				mRef.fire3_9.isActive = false
+				mRef.fire3_9.objState = "idle"
+			}
+		
+			// SET 4
+			
+			if(this.hitTestObject(mRef.fire4_1) == true)
+			{
+				mRef.fire4_1.isActive = false
+				mRef.fire4_1.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire4_2) == true)
+			{
+				mRef.fire4_2.isActive = false
+				mRef.fire4_2.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire4_3) == true)
+			{
+				mRef.fire4_3.isActive = false
+				mRef.fire4_3.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire4_4) == true)
+			{
+				mRef.fire4_4.isActive = false
+				mRef.fire4_4.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire4_5) == true)
+			{
+				mRef.fire4_5.isActive = false
+				mRef.fire4_5.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire4_6) == true)
+			{
+				mRef.fire4_6.isActive = false
+				mRef.fire4_6.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire4_7) == true)
+			{
+				mRef.fire4_7.isActive = false
+				mRef.fire4_7.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire4_8) == true)
+			{
+				mRef.fire4_8.isActive = false
+				mRef.fire4_8.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire4_9) == true)
+			{
+				mRef.fire4_9.isActive = false
+				mRef.fire4_9.objState = "idle"
+			}
+			
+			// SET 5
+			
+			if(this.hitTestObject(mRef.fire5_1) == true)
+			{
+				mRef.fire5_1.isActive = false
+				mRef.fire5_1.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire5_2) == true)
+			{
+				mRef.fire5_2.isActive = false
+				mRef.fire5_2.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire5_3) == true)
+			{
+				mRef.fire5_3.isActive = false
+				mRef.fire5_3.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire5_4) == true)
+			{
+				mRef.fire5_4.isActive = false
+				mRef.fire5_4.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire5_5) == true)
+			{
+				mRef.fire5_5.isActive = false
+				mRef.fire5_5.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire5_6) == true)
+			{
+				mRef.fire5_6.isActive = false
+				mRef.fire5_6.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire5_7) == true)
+			{
+				mRef.fire5_7.isActive = false
+				mRef.fire5_7.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire5_8) == true)
+			{
+				mRef.fire5_8.isActive = false
+				mRef.fire5_8.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire5_9) == true)
+			{
+				mRef.fire5_9.isActive = false
+				mRef.fire5_9.objState = "idle"
+			}
+			
+			// SET 6
+			
+			if(this.hitTestObject(mRef.fire6_1) == true)
+			{
+				mRef.fire6_1.isActive = false
+				mRef.fire6_1.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire6_2) == true)
+			{
+				mRef.fire6_2.isActive = false
+				mRef.fire6_2.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire6_3) == true)
+			{
+				mRef.fire6_3.isActive = false
+				mRef.fire6_3.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire6_4) == true)
+			{
+				mRef.fire6_4.isActive = false
+				mRef.fire6_4.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire6_5) == true)
+			{
+				mRef.fire6_5.isActive = false
+				mRef.fire6_5.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire6_6) == true)
+			{
+				mRef.fire6_6.isActive = false
+				mRef.fire6_6.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire6_7) == true)
+			{
+				mRef.fire6_7.isActive = false
+				mRef.fire6_7.objState = "idle"
+			}
+			
+			// SET 7 fire 1 to 12 with fire names missing :^) good coding right here
+			
+			if(this.hitTestObject(mRef.fire1) == true)
+			{
+				mRef.fire1.isActive = false
+				mRef.fire1.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire2) == true)
+			{
+				mRef.fire2.isActive = false
+				mRef.fire2.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire3) == true)
+			{
+				mRef.fire3.isActive = false
+				mRef.fire3.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire5) == true)
+			{
+				mRef.fire5.isActive = false
+				mRef.fire5.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire7) == true)
+			{
+				mRef.fire7.isActive = false
+				mRef.fire7.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire8) == true)
+			{
+				mRef.fire8.isActive = false
+				mRef.fire8.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire9) == true)
+			{
+				mRef.fire9.isActive = false
+				mRef.fire9.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire11) == true)
+			{
+				mRef.fire11.isActive = false
+				mRef.fire11.objState = "idle"
+			}
+			if(this.hitTestObject(mRef.fire12) == true)
+			{
+				mRef.fire12.isActive = false
+				mRef.fire12.objState = "idle"
+			}
+			
+
+		}
+		public function HitTestRicePaddy()
+		{
 
 		}
 
-		public function Loop(e: Event)
+		public function SetRandomValues()
 		{
-
-			GlobalDirMove();
-			AnimationHandler();
-
-			if (objState == "init")
+			speed = 0
+			randomXPos = Math.round(Math.random() * 800);
+			randomYPos = Math.round(Math.random() * 500);
+			if ((randomXPos > 100 && randomXPos < 700) &&
+				(randomYPos > 50 && randomYPos < 450))
 			{
-				speed = 0
-				randomXPos = Math.round(Math.random() * 800);
-				randomYPos = Math.round(Math.random() * 500);
-				if ((randomXPos > 100 && randomXPos < 700) && (randomYPos > 50 && randomYPos < 450))
-				{
-					//trace(randomXPos)
-					//trace(randomXPos)
-					objState = "init"
-					this.alpha = 0;
-					//cloudState = ""
-				}
-				else
-				{
-					objState = "idle"
-				}
-
-				randomChangeLightGrey = Math.round(Math.random() * 15 + 2);
-
-				randomChangeGrey = Math.round(Math.random() * 20 + 2)
-				randomChangeGreyStorm = Math.round(Math.random() * 10 + 8)
-				randomChangeReset = Math.round(Math.random() * 8 + 3)
-				//trace(randomChangeLightGrey + " RANDOM " + this.name)
-				//trace("startUp")
-
-				// REMOVED CLOUD LOC
-				this.x = randomXPos;
-				this.y = randomYPos;
+				objState = "init"
+				this.alpha = 0;
+			}
+			else
+			{
+				objState = "idle"
 			}
 
+			randomChangeLightGrey = Math.round(Math.random() * 15 + 2);
+			randomChangeGrey = Math.round(Math.random() * 20 + 2)
+			randomChangeGreyStorm = Math.round(Math.random() * 10 + 8)
+			randomChangeReset = Math.round(Math.random() * 8 + 3)
+
+			this.x = randomXPos;
+			this.y = randomYPos;
+		}
+
+		public function StateChangeHandeler()
+		{
 			objStateCounter += 1;
 			if (objStateCounter >= 60)
 			{
@@ -227,82 +701,6 @@
 					cloudState = "resetCloud"
 				}
 			}
-			if (cloudState == "white")
-			{
-				this.alpha += 0.03;
-				if (this.alpha >= 0.7)
-				{
-					this.alpha = 0.7
-				}
-
-			}
-			if (cloudState == "lightGrey")
-			{
-
-				this.alpha += 0.01;
-				if (this.alpha >= 0.9)
-				{
-					this.alpha = 0.9
-				}
-
-
-			}
-			if (cloudState == "grey")
-			{
-				this.alpha += 0.01
-				if (this.alpha >= 1)
-				{
-					this.alpha = 1
-				}
-
-			}
-			if (cloudState == "greyStorm")
-			{
-
-				this.alpha += 0.02;
-				if (this.alpha >= 1)
-				{
-					this.alpha = 1
-				}
-				// add new texture for this frame
-			}
-			if (cloudState == "resetCloud")
-			{
-				this.alpha -= 0.003
-				if (this.alpha <= 0)
-				{
-					this.alpha = 0;
-					objState = "init";
-					cloudState = "white"
-				}
-
-			}
-
-			if (this.name == "cloudBoi1")
-			{
-				//trace(objStateCounter);
-				//trace(objStateCounterSeconds);
-				//trace(mRef.c1.localAngleDeg)
-			}
-			if (null)
-			{
-
-			}
-			/*if(speed != 0)
-			{
-			trace(speed + "  " + this.name)
-			}*/
-			if (objState == "idle")
-			{
-				this.x -= Math.cos(angleDegLocal) * speed;
-				this.y += Math.sin(angleDegLocal) * speed;
-
-				HitTestCheck();
-
-				ResetHitTest();
-				//this.alpha = 0.7;
-			}
-
 		}
 
 		public function HitTestCheckTwo()
@@ -520,6 +918,58 @@
 
 
 		}
+
+		public function AnimationHandler()
+		{
+
+			// State refs white / lightGrey / grey / greyStorm
+
+			if (cloudState == "white")
+			{
+				this.gotoAndStop(1);
+				this.visible = true;
+			}
+
+			if (cloudState == "lightGrey")
+			{
+				this.gotoAndStop(2);
+				this.visible = true;
+			}
+
+			if (cloudState == "grey")
+			{
+				this.gotoAndStop(3);
+				this.visible = true;
+			}
+
+			if (cloudState == "greyStorm")
+			{
+				// alphaCounter : Number = 0;
+				//var alphaBoolSwitch
+				//alphaCounter += 1;
+				this.visible = true;
+				this.gotoAndStop(3);
+				/*if (alphaCounter > 2)
+				{
+					alphaCounter = 0;
+					alphaBoolSwitch = !alphaBoolSwitch;
+				}
+				if (alphaBoolSwitch == true)
+				{
+			
+				}
+				else
+				{
+					this.visible = false;
+
+				}*/
+				// add rain obj
+				// maybe make an active hitbox for whole obj
+			}
+
+
+		}
+
 
 		public function ResetHitTest()
 		{

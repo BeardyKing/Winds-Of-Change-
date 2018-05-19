@@ -38,13 +38,21 @@
 		{
 			
 
-			if (    this.name == "fire1" || this.name == "fire2" 
+			/*if (    this.name == "fire1" || this.name == "fire2" 
 				|| this.name == "fire_Fish1" || this.name == "fire1_Start1" 
 				|| this.name == "fire1_Start2" || this.name == "fire1_Start3" 
 				|| this.name == "fire1_Start4" || this.name == "fire1_Start5" 
 				|| this.name == "fire1_Start6" || this.name == "fire1_Start7" 
-				|| this.name == "fire1_Start8")
-			{
+				|| this.name == "fire1_Start8" || this.name == "fire1_2"
+				|| this.name == "fire1_3" || this.name == "fire1_4" 
+				|| this.name == "fire1_5" || this.name == "fire1_6" 
+				|| this.name == "fire1_7" || this.name == "fire1_8" 
+				|| this.name == "fire1_9" || this.name == "fire2_1" 
+				|| this.name == "fire2_2" || this.name == "fire2_3" 
+				|| this.name == "fire2_4" || this.name == "fire2_5" 
+				|| this.name == "fire2_6" || this.name == "fire2_7" 
+				|| this.name == "fire2_8" || this.name == "fire2_9 ")
+			{*/
 				if (this.hitTestObject(mRef.expandBox1) == true)
 				{
 					if(mRef.expandBox1.isActiveBool == true)
@@ -110,7 +118,7 @@
 					}
 				}
 			
-			}
+			//}
 			if (this.hitTestObject(mRef.expandConnector1) == true)
 			{
 				isActive = true;

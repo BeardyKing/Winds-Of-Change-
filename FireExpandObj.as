@@ -23,7 +23,7 @@
 		}
 		public function Loop(e: Event)
 		{
-			trace(objState + "objState " + this.name)
+			//trace(objState + "objState " + this.name)
 			if (objState == "init")
 			{
 				objState = "waiting";

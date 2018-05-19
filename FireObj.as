@@ -18,24 +18,33 @@
 		var singlePass: Boolean = false;
 		var animCounter: Number = 0;
 		var animCounter2: Number = 0;
+		var singlePassFireTotal : Boolean = false;
+		var singlePassFireActive : Boolean = false;
 		public function FireObj()
 		{
+			
 			// constructor code
 			mRef = MovieClip(this.parent);
 			this.addEventListener(Event.ENTER_FRAME, Loop);
 			this.addEventListener(MouseEvent.MOUSE_DOWN, MouseD)
+			//mRef.fireManager1.totalFireAmount += 1;
 
 		}
 		public function MouseD(md: MouseEvent)
 		{
 
-
-			trace(this.name)
-			objState = "onFire";
-			mRef.fireManager1.startingFire = this.name;
+			// TESTING
+			//trace(this.name)
+			//objState = "onFire";
+			//mRef.fireManager1.startingFire = this.name;
 		}
 		public function Loop(e: Event)
 		{
+			if(singlePassFireTotal == false)
+			{
+				singlePassFireTotal = true;
+				mRef.fireManager1.totalFireAmount += 1;
+			}
 			
 
 			/*if (    this.name == "fire1" || this.name == "fire2" 
@@ -133,9 +142,25 @@
 			{
 				this.alpha = 0;
 				this.gotoAndStop(1);
+				if(singlePassFireActive == false)
+				{
+					
+				}
+				if(singlePassFireActive == true)
+				{
+					singlePassFireActive = false
+					mRef.firemanager1.amountOfFireActive -= 1;
+				}
+				objState = "waiting";
 			}
 			if (objState == "onFire")
 			{
+				
+				if(singlePassFireActive == false)
+				{
+					singlePassFireActive = true
+					mRef.fireManager1.amountOfFireActive += 1;
+				}
 				
 				//this.alpha = 1;
 				DoAnim();

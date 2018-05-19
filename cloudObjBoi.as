@@ -57,8 +57,8 @@
 		var objStateCounterSeconds: Number = 0;
 
 
-		/*var cloudState: String = "white"*/
-		var cloudState: String = "greyStorm"
+		var cloudState: String = "white"
+		//var cloudState: String = "greyStorm"
 
 		var randomChangeLightGrey: Number;
 		var randomChangeGrey: Number;
@@ -123,7 +123,7 @@
 				AnimationHandler();
 				StateHandeler();
 				// TESTING
-				cloudState = "greyStorm"
+				//cloudState = "greyStorm"
 				// TESTING
 			}
 		}
@@ -265,6 +265,13 @@
 				if (mRef.expandBox8.isActiveBool == true)
 				{
 					mRef.expandBox8.objState = "dead"
+				}
+			}
+			if (this.hitTestObject(mRef.expandConnector1) == true)
+			{
+				if (mRef.expandConnector1.objState == "expand")
+				{
+					mRef.expandConnector1.objState = "reset"
 				}
 			}
 		}
@@ -593,11 +600,11 @@
 			
 			// SET 7 fire 1 to 12 with fire names missing :^) good coding right here
 			
-			if(this.hitTestObject(mRef.fire1) == true)
+			/*if(this.hitTestObject(mRef.fire1) == true)
 			{
 				mRef.fire1.isActive = false
 				mRef.fire1.objState = "idle"
-			}
+			}*/
 			if(this.hitTestObject(mRef.fire2) == true)
 			{
 				mRef.fire2.isActive = false
@@ -638,6 +645,30 @@
 				mRef.fire12.isActive = false
 				mRef.fire12.objState = "idle"
 			}
+			
+			
+			// Extra that I missed
+			
+			if(this.hitTestObject(mRef.fire_Fish1) == true)
+			{
+				mRef.fire_Fish1.isActive = false;
+				mRef.fire_Fish1.objState = "idle"
+			}
+			
+			if(this.hitTestObject(mRef.fire1) == true)
+			{
+				mRef.fire1.isActive = false;
+				mRef.fire1.objState = "idle"
+			}
+			
+			if(this.hitTestObject(mRef.fire3_10) == true)
+			{
+				mRef.fire3_10.isActive = false;
+				mRef.fire3_10.objState = "idle"
+			}
+			
+			
+			
 			
 
 		}

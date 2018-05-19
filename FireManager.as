@@ -21,6 +21,13 @@
 		var spawnCounterSeconds: Number = 0;
 
 		var counter: Number = 0;
+		var amountOfFireActive: Number = 0;
+		var totalFireAmount: Number = 0;
+
+		var randomHasHappened: Boolean = false;
+
+		var resetCounter: Number = 0;
+
 		public function FireManager()
 		{
 			mRef = MovieClip(this.parent)
@@ -30,19 +37,23 @@
 		}
 		public function Loop(e: Event)
 		{
+			trace(totalFireAmount + " totalFireAmount" + this.name)
+			trace(amountOfFireActive + " amountOfFireActive" + this.name)
+
 			if (objState == "boot")
 			{
-				if(mRef.objState == "play")
+				if (mRef.objState == "play" && randomHasHappened == false)
 				{
-				objState = "newRandom"
+					randomHasHappened = true;
+					objState = "newRandom"
 				}
 			}
 			if (objState == "newRandom")
 			{
-				
-				//randomSpawnTimer = Math.round((Math.random() * 40) + 35);
-				randomSpawnTimer = 1;
-				// testing spawnCounter;
+
+				randomSpawnTimer = Math.round((Math.random() * 40) + 35);
+				// testing spawnCounter;				
+				//randomSpawnTimer = 1;
 				randomSelection = Math.round(Math.random() * 8);
 				if (randomSelection == 0)
 				{
@@ -54,17 +65,17 @@
 			}
 			if (objState == "finished")
 			{
-				spawnCounterTick +=1
-				if(spawnCounterTick >= stage.frameRate)
+				spawnCounterTick += 1
+				if (spawnCounterTick >= stage.frameRate)
 				{
 					spawnCounterTick = 0;
-					spawnCounterSeconds +=1;
+					spawnCounterSeconds += 1;
 				}
 				trace(randomSpawnTimer + " randomSpawnTimer")
 				trace(spawnCounterSeconds + " spawnCounterTick")
 				trace(randomSelection + " randomSelection")
-				
-				if (spawnCounterSeconds >= randomSpawnTimer   )
+
+				if (spawnCounterSeconds >= randomSpawnTimer)
 				{
 					if (randomSelection == 1)
 					{
@@ -108,13 +119,43 @@
 					}
 				}
 			}
-			if(objState == "waitingForNoFire")
+			if (objState == "waitingForNoFire")
 			{
-				
+				if(resetCounter < 60)
+				{
+					resetCounter += 1;
+				}
+				if (resetCounter >= 60)
+				{
+					if (amountOfFireActive == 0)
+					{
+						objState = "reset"
+					}
+				}
+
 			}
 			if (objState == "reset")
 			{
+				randomHasHappened = false;
 				objState = "newRandom";
+				mRef.expandBox1.objState = "init"
+				mRef.expandBox2.objState = "init"
+				mRef.expandBox3.objState = "init"
+				mRef.expandBox4.objState = "init"
+				mRef.expandBox5.objState = "init"
+				mRef.expandBox6.objState = "init"
+				mRef.expandBox7.objState = "init"
+				mRef.expandBox8.objState = "init"
+				mRef.expandConnector1.objState = "init"
+
+				mRef.expandBox1.isActiveBool = false
+				mRef.expandBox2.isActiveBool = false
+				mRef.expandBox3.isActiveBool = false
+				mRef.expandBox4.isActiveBool = false
+				mRef.expandBox5.isActiveBool = false
+				mRef.expandBox6.isActiveBool = false
+				mRef.expandBox7.isActiveBool = false
+				mRef.expandBox8.isActiveBool = false
 			}
 
 

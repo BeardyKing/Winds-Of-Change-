@@ -1,38 +1,44 @@
-﻿package  {
-	
+﻿package
+{
+
 	import flash.display.MovieClip;
 	import flash.events.Event;
-	
-	
-	public class ExpandBoxConnector extends MovieClip {
-		
-		var startBeingUsed : Boolean = false;
-		var objState : String = "init"
+
+
+	public class ExpandBoxConnector extends MovieClip
+	{
+
+		var startBeingUsed: Boolean = false;
+		var objState: String = "init"
 		var mRef = MovieClip;
-		var expandCounter : Number = 0;
-		var expandBool : Boolean = false;
-		var singlePass : Boolean = false;
-		var scaleSpeed : Number = 0.1
-		public function ExpandBoxConnector() {
+		var expandCounter: Number = 0;
+		var expandBool: Boolean = false;
+		var singlePass: Boolean = false;
+		var scaleSpeed: Number = 0.1
+		public function ExpandBoxConnector()
+		{
 			// constructor code
 			mRef = MovieClip(this.parent);
 			this.addEventListener(Event.ENTER_FRAME, Loop)
 		}
 		public function Loop(e: Event)
 		{
-			if(objState == "init")
+			if (objState == "init")
 			{
 				objState = "idle";
 			}
-			if(objState == "idle")
+			if (objState == "idle")
 			{
-				
-			}
-			if(objState == "expand")
-			{
-				if(singlePass == false)
+				if (mRef.fire2.objState == "onFire")
 				{
-					this.alpha = 0;
+					objState = "expand";
+				}
+			}
+			if (objState == "expand")
+			{
+				if (singlePass == false)
+				{
+
 					singlePass = true;
 					this.x = mRef.fire2.x;
 					this.y = mRef.fire2.y;
@@ -47,31 +53,31 @@
 				if (expandBool == false)
 				{
 					this.scaleX += 0.05;
-					
+
 				}
 
 				if (expandBool == true)
 				{
 					this.scaleY += 0.05;
-					
+
 				}
-				if(this.scaleX >= 15 || this.scaleY >= 15 )
+				if (this.scaleX >= 15 || this.scaleY >= 15)
 				{
 					this.scaleX = 15
-					this.scaleY = 15 
+					this.scaleY = 15
+					objState = "reset"
 				}
 			}
-			if(objState == "reset")
+			if (objState == "reset")
 			{
-				objState = "idle"
+				this.scaleX = 1;
+				this.scaleY = 1;
+				this.x = 1000;
 			}
-				
-			if(mRef.fire2.objState == "onFire")
-			{
-				
-				objState = "expand";
-			}
+
+
+			this.alpha = 0.3;
 		}
 	}
-	
+
 }

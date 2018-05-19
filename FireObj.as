@@ -20,6 +20,7 @@
 		var animCounter2: Number = 0;
 		var singlePassFireTotal : Boolean = false;
 		var singlePassFireActive : Boolean = false;
+		var singlePassMinusFireActive : Boolean = false;
 		public function FireObj()
 		{
 			
@@ -140,17 +141,23 @@
 			}
 			if (objState == "idle")
 			{
+				trace("HAS BEEN SET TO FALSE / INSIDE IDLE")
 				this.alpha = 0;
 				this.gotoAndStop(1);
-				if(singlePassFireActive == false)
+				/*if(singlePassMinusFireActive == false)
+				{
+					singlePassMinusFireActive = true;
+					
+				}*/
+				/*if(singlePassFireActive == false)
 				{
 					
 				}
 				if(singlePassFireActive == true)
 				{
 					singlePassFireActive = false
-					mRef.firemanager1.amountOfFireActive -= 1;
-				}
+					mRef.fireManager1.amountOfFireActive -= 1;
+				}*/
 				objState = "waiting";
 			}
 			if (objState == "onFire")
@@ -158,6 +165,7 @@
 				
 				if(singlePassFireActive == false)
 				{
+					trace("HAS BEEN SET TO TRUE")
 					singlePassFireActive = true
 					mRef.fireManager1.amountOfFireActive += 1;
 				}
@@ -173,6 +181,7 @@
 			{
 
 			}
+			//objState = "onFire"
 		}
 
 		public function DoAnim()

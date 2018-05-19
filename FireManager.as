@@ -52,9 +52,9 @@
 			{
 
 				randomSpawnTimer = Math.round((Math.random() * 40) + 35);
-				// testing spawnCounter;				
-				//randomSpawnTimer = 1;
-				randomSelection = Math.round(Math.random() * 8);
+				// TESTING spawnCounter;				
+				randomSpawnTimer = 1;
+				//randomSelection = Math.round(Math.random() * 8);
 				if (randomSelection == 0)
 				{
 					randomSelection = 3;

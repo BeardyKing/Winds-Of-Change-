@@ -123,7 +123,7 @@
 				AnimationHandler();
 				StateHandeler();
 				// TESTING
-				//cloudState = "greyStorm"
+				cloudState = "greyStorm"
 				// TESTING
 			}
 		}
@@ -284,41 +284,49 @@
 			{
 				mRef.fire1_Start1.objState = "idle"
 				mRef.fire1_Start1.isActive = false
+				
 			}
 			if (this.hitTestObject(mRef.fire1_Start2) == true)
 			{
 				mRef.fire1_Start2.objState = "idle"
 				mRef.fire1_Start2.isActive = false
+				
 			}
 			if (this.hitTestObject(mRef.fire1_Start3) == true)
 			{
 				mRef.fire1_Start3.objState = "idle"
 				mRef.fire1_Start3.isActive = false
+				
 			}
 			if (this.hitTestObject(mRef.fire1_Start4) == true)
 			{
 				mRef.fire1_Start4.objState = "idle"
 				mRef.fire1_Start4.isActive = false
+				
 			}
 			if (this.hitTestObject(mRef.fire1_Start5) == true)
 			{
 				mRef.fire1_Start5.objState = "idle"
 				mRef.fire1_Start5.isActive = false
+				
 			}
 			if (this.hitTestObject(mRef.fire1_Start6) == true)
 			{
 				mRef.fire1_Start6.objState = "idle"
 				mRef.fire1_Start6.isActive = false
+				
 			}
 			if (this.hitTestObject(mRef.fire1_Start7) == true)
 			{
 				mRef.fire1_Start7.objState = "idle"
 				mRef.fire1_Start7.isActive = false
+				
 			}
 			if (this.hitTestObject(mRef.fire1_Start8) == true)
 			{
 				mRef.fire1_Start8.objState = "idle"
 				mRef.fire1_Start8.isActive = false
+				
 			}
 
 			
@@ -326,46 +334,55 @@
 			{
 				mRef.fire1_1.isActive = false
 				mRef.fire1_1.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire1_2) == true)
 			{
 				mRef.fire1_2.isActive = false
 				mRef.fire1_2.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire1_3) == true)
 			{
 				mRef.fire1_3.isActive = false
 				mRef.fire1_3.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire1_4) == true)
 			{
 				mRef.fire1_4.isActive = false
 				mRef.fire1_4.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire1_5) == true)
 			{
 				mRef.fire1_5.isActive = false
 				mRef.fire1_5.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire1_6) == true)
 			{
 				mRef.fire1_6.isActive = false
 				mRef.fire1_6.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire1_7) == true)
 			{
 				mRef.fire1_7.isActive = false
 				mRef.fire1_7.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire1_8) == true)
 			{
 				mRef.fire1_8.isActive = false
 				mRef.fire1_8.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire1_9) == true)
 			{
 				mRef.fire1_9.isActive = false
 				mRef.fire1_9.objState = "idle"
+				
 			}
 						
 			/// SET 2
@@ -374,46 +391,55 @@
 			{
 				mRef.fire2_1.isActive = false
 				mRef.fire2_1.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire2_2) == true)
 			{
 				mRef.fire2_2.isActive = false
 				mRef.fire2_2.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire2_3) == true)
 			{
 				mRef.fire2_3.isActive = false
 				mRef.fire2_3.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire2_4) == true)
 			{
 				mRef.fire2_4.isActive = false
 				mRef.fire2_4.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire2_5) == true)
 			{
 				mRef.fire2_5.isActive = false
 				mRef.fire2_5.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire2_6) == true)
 			{
 				mRef.fire2_6.isActive = false
 				mRef.fire2_6.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire2_7) == true)
 			{
 				mRef.fire2_7.isActive = false
 				mRef.fire2_7.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire2_8) == true)
 			{
 				mRef.fire2_8.isActive = false
 				mRef.fire2_8.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire2_9) == true)
 			{
 				mRef.fire2_9.isActive = false
 				mRef.fire2_9.objState = "idle"
+				
 			}
 			
 			// SET 3
@@ -422,46 +448,55 @@
 			{
 				mRef.fire3_1.isActive = false
 				mRef.fire3_1.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire3_2) == true)
 			{
 				mRef.fire3_2.isActive = false
 				mRef.fire3_2.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire3_3) == true)
 			{
 				mRef.fire3_3.isActive = false
 				mRef.fire3_3.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire3_4) == true)
 			{
 				mRef.fire3_4.isActive = false
 				mRef.fire3_4.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire3_5) == true)
 			{
 				mRef.fire3_5.isActive = false
 				mRef.fire3_5.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire3_6) == true)
 			{
 				mRef.fire3_6.isActive = false
 				mRef.fire3_6.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire3_7) == true)
 			{
 				mRef.fire3_7.isActive = false
 				mRef.fire3_7.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire3_8) == true)
 			{
 				mRef.fire3_8.isActive = false
 				mRef.fire3_8.objState = "idle"
+				
 			}
 			if(this.hitTestObject(mRef.fire3_9) == true)
 			{
 				mRef.fire3_9.isActive = false
 				mRef.fire3_9.objState = "idle"
+				
 			}
 		
 			// SET 4

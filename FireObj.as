@@ -50,16 +50,6 @@
 		}
 		public function Loop(e: Event)
 		{
-/*<<<<<<< HEAD
-			if (singlePassFireTotal == false)
-			{
-				singlePassFireTotal = true;
-				mRef.fireManager1.totalFireAmount += 1;
-			}
-
-=======
-			
->>>>>>> parent of bd5540f... putting out fire reset*/
 
 			/*if (    this.name == "fire1" || this.name == "fire2" 
 				|| this.name == "fire_Fish1" || this.name == "fire1_Start1" 
@@ -76,6 +66,7 @@
 				|| this.name == "fire2_6" || this.name == "fire2_7" 
 				|| this.name == "fire2_8" || this.name == "fire2_9 ")
 			{*/
+			
 			if (this.hitTestObject(mRef.expandBox1) == true)
 			{
 				if (mRef.expandBox1.isActiveBool == true)
@@ -156,39 +147,7 @@
 			{
 				this.alpha = 0;
 				this.gotoAndStop(1);
-//<<<<<<< HEAD
-//<<<<<<< HEAD
 
-//				/*if(singlePassFireActive == false)
-//=======
-//				if(singlePassFireActive == false)
-//>>>>>>> parent of 9dabb9d... push before i fucking die
-//				{
-//					
-//				}
-//				if(singlePassFireActive == true)
-//				{
-//					singlePassFireActive = false
-//<<<<<<< HEAD
-//					mRef.fireManager1.amountOfFireActive -= 1;
-//				}*/
-//				
-//=======
-/*					mRef.firemanager1.amountOfFireActive -= 1;
-				}
-				objState = "waiting";
->>>>>>> parent of 9dabb9d... push before i fucking die
-			}
-			if (objState == "onFire")
-			{
-
-				if (singlePassFireActive == false)
-				{
-					singlePassFireActive = true
-					mRef.fireManager1.amountOfFireActive += 1;
-				}
-
-=======*/
 			}
 			if (objState == "onFire")
 			{

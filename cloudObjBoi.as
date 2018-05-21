@@ -123,7 +123,7 @@
 				AnimationHandler();
 				StateHandeler();
 				// TESTING
-				//cloudState = "greyStorm"
+				cloudState = "greyStorm"
 				// TESTING
 			}
 		}

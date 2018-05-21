@@ -39,25 +39,12 @@
 			}
 			if (objState == "newRandom")
 			{
-//<<<<<<< HEAD
-
-//				randomSpawnTimer = Math.round((Math.random() * 40) + 35);
-//<<<<<<< HEAD
-//				// TESTING spawnCounter;				
-//				randomSpawnTimer = 1;
-//				//randomSelection = Math.round(Math.random() * 8);
-//=======
-				
+		
 				//randomSpawnTimer = Math.round((Math.random() * 40) + 35);
 				randomSpawnTimer = 1;
 				// testing spawnCounter;
 				randomSelection = Math.round(Math.random() * 8);
-//>>>>>>> parent of bd5540f... putting out fire reset
-//=======
-//				// testing spawnCounter;				
-//				//randomSpawnTimer = 1;
-//				randomSelection = Math.round(Math.random() * 8);
-//>>>>>>> parent of 9dabb9d... push before i fucking die
+				
 				if (randomSelection == 0)
 				{
 					randomSelection = 3;

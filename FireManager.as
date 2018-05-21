@@ -80,10 +80,10 @@
 					spawnCounterTick = 0;
 					spawnCounterSeconds +=1;
 				}
-				trace(randomSpawnTimer + " randomSpawnTimer")
-				trace(spawnCounterSeconds + " spawnCounterTick")
-				trace(randomSelection + " randomSelection")
-				trace("");
+				//trace(randomSpawnTimer + " randomSpawnTimer")
+				//trace(spawnCounterSeconds + " spawnCounterTick")
+				//trace(randomSelection + " randomSelection")
+				//trace("");
 				
 				if (spawnCounterSeconds >= randomSpawnTimer   )
 				{
@@ -153,11 +153,11 @@
 					}
 				}
 				
-				trace(fireActiveTimer + " fireActiveTimer " + this.name)
-				trace(fireResetTimer + " fireResetTimer " + this.name)
-				trace(checkFireAmountAfterTime + " checkFireAmountAfterTime " + this.name)
-				trace(amountOfFireActive + " firesOnFire " + this.name)
-				trace("")
+				//trace(fireActiveTimer + " fireActiveTimer " + this.name)
+				//trace(fireResetTimer + " fireResetTimer " + this.name)
+				//trace(checkFireAmountAfterTime + " checkFireAmountAfterTime " + this.name)
+				//trace(amountOfFireActive + " firesOnFire " + this.name)
+				//trace("")
 				
 				 
 				

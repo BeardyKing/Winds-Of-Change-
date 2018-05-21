@@ -3,6 +3,8 @@
 
 	import flash.display.MovieClip;
 	import flash.events.Event;
+	import flash.events.KeyboardEvent;
+	import flash.ui.Keyboard;
 
 
 	public class cloudObjBoi extends MovieClip
@@ -57,8 +59,8 @@
 		var objStateCounterSeconds: Number = 0;
 
 
-		/*var cloudState: String = "white"*/
-		var cloudState: String = "greyStorm"
+		var cloudState: String = "white"
+		//var cloudState: String = "greyStorm"
 
 		var randomChangeLightGrey: Number;
 		var randomChangeGrey: Number;
@@ -73,21 +75,28 @@
 
 		var alphaCounter: Number = 0;
 		var alphaBoolSwitch: Boolean = false;
+		var testingActive : Boolean = false;
+		
+		var animCounter : Number = 4;
+		var animCounter2 : Number = 0;
 
 
 		public function cloudObjBoi()
 		{
 
 			mRef = MovieClip(this.parent);
+			stage.addEventListener(KeyboardEvent.KEY_DOWN, KeyDown);
 			this.addEventListener(Event.ENTER_FRAME, Loop);
-			this.addEventListener(Event.EXIT_FRAME, ExitLoop);
 			mRef.testCounter += 1;
 
 		}
-		public function ExitLoop(e: Event)
+		
+		public function KeyDown (kDown : KeyboardEvent)
 		{
-
-
+			if(kDown.keyCode == Keyboard.Q)
+			{
+			testingActive = !testingActive;
+			}
 		}
 
 		private function GlobalDirMove()
@@ -123,14 +132,19 @@
 				AnimationHandler();
 				StateHandeler();
 				// TESTING
-				cloudState = "greyStorm"
+				//cloudState = "greyStorm"
 				// TESTING
 			}
+			
 			if (this.name == "cloudBoi1")
 			{
+				if(testingActive == true)
+				{
 				// TESTING
+				cloudState = "greyStorm"
 				this.x = stage.mouseX;
 				this.y = stage.mouseY;
+				}
 				//
 			}
 		}
@@ -188,6 +202,7 @@
 
 			if (cloudState == "resetCloud")
 			{
+				this.gotoAndStop(3);
 				this.alpha -= 0.003
 				if (this.alpha <= 0)
 				{
@@ -940,9 +955,9 @@
 			randomChangeGreyStorm = Math.round(Math.random() * 10 + 8)
 			randomChangeReset = Math.round(Math.random() * 8 + 3)
 
-			// SET SPAWN
-			//this.x = randomXPos;
-			//this.y = randomYPos;
+			// SET SPAWN TESTING
+			this.x = randomXPos;
+			this.y = randomYPos;
 		}
 
 		public function StateChangeHandeler()
@@ -1221,8 +1236,9 @@
 				// alphaCounter : Number = 0;
 				//var alphaBoolSwitch
 				//alphaCounter += 1;
+				DoAnim();
 				this.visible = true;
-				this.gotoAndStop(3);
+				// frame 4 to 7
 				/*if (alphaCounter > 2)
 				{
 					alphaCounter = 0;
@@ -1242,6 +1258,26 @@
 			}
 
 
+		}
+		
+		public function DoAnim()
+		{
+			trace(this.currentFrame);
+			trace( animCounter2 + " animCounter2 " + this.name)
+			trace("hello from me" + this.name)
+			// frame 4 to 7
+			animCounter += 1;
+			if (animCounter >= 3)
+			{
+				animCounter = 0;
+				animCounter2 += 1;
+			}
+
+			this.gotoAndStop(animCounter2);
+			if (this.currentFrame >= 7)
+			{
+				animCounter2 = 4;
+			}
 		}
 
 

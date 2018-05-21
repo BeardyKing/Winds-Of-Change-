@@ -36,6 +36,16 @@
 
 		public function Loop(e: Event)
 		{
+			if(mRef.fire11.objState == "onFire" || mRef.fire8.objState == "onFire" || mRef.fire7.objState == "onFire" )
+			{
+				objHealth -= 3 / stage.frameRate;
+				isOnFire = true;
+				
+			}
+			else 
+			{
+				isOnFire = false;
+			}
 			if (mRef.objState == "play")
 			{
 

@@ -274,6 +274,17 @@
 					mRef.expandBox8.objState = "dead"
 				}
 			}
+			
+			//expandConnector1
+			
+			if (this.hitTestObject(mRef.expandConnector1) == true)
+			{
+			//	if (mRef.expandConnector1.isActiveBool == true)
+			//	{
+					mRef.expandConnector1.objState = "idle"
+				//}
+			}
+			
 		}
 
 

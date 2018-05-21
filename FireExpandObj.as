@@ -11,7 +11,7 @@
 		var expandCounter: Number = 0;
 		var expandBool: Boolean = false;
 		var isActiveBool: Boolean = false;
-		var scaleSpeed: Number = 0.03;
+		var scaleSpeed: Number = 0.01;
 		var objState: String = "init"
 
 		public function FireExpandObj()
@@ -422,7 +422,7 @@
 				{
 					objState = "dead";
 				}
-				this.alpha = 0.3;
+				this.alpha = 0;
 			}
 
 			if(objState == "dead")
@@ -431,18 +431,20 @@
 				this.scaleY = 1;
 				expandCounter = 0;
 				isActiveBool = false;
-				this.x = 1000;
+				objState = "init"
+				//this.x = 1000;
+				
+				
 				
 				// add counter to fire to check if all are dead;
-				if(null)
-				{
-					
-				}
+				
 			}
 			if(objState == "reset")
 			{
 				
 			}
+			
+			this.alpha = 0.3;
 
 			// loop
 		}

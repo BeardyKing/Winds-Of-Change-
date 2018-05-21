@@ -58,7 +58,7 @@
 			if (objState == "idle")
 			{
 
-				this.alpha = 0.5;
+				this.alpha = 0;
 				this.gotoAndStop(1);
 
 				objState = "waiting";
@@ -75,22 +75,22 @@
 					mRef.fireManager1.amountOfFireActive += 1;
 				}
 
-				this.alpha = 1;
+				//this.alpha = 1;
 				DoAnim();
 			}
-			if (objState == "findNextFire")
+			if (objState == "findNextFire " + this.name)
 			{
 
 			}
 			if (objState == "dead")
 			{
-				singlePassFireActive = true
+				singlePassFireActive = false
 				mRef.fireManager1.amountOfFireActive -= 1;
-				
-				this.alpha = 0.5;
-				
-				trace("DEAD FROM FIRE")
-				objState = "idle"
+
+				this.alpha = 0;
+
+				trace("DEAD FROM FIRE " + this.name)
+				objState = "init"
 			}
 			if (objState == "")
 			{
@@ -101,13 +101,24 @@
 		//
 		public function HitTestFunction()
 		{
-			if (this.name != "fire3" || this.name != "fire5" ||
-				  this.name != "fire7" || this.name != "fire8" || 
-				  this.name != "fire9" || this.name != "fire11" || 
-				  this.name != "fire12")
+			if (this.name == "fire5" || this.name == "fire7" ||
+				this.name == "fire8" || this.name == "fire9" ||
+				this.name == "fire11" || this.name == "fire12")
+			{
+				if (this.hitTestObject(mRef.expandConnector1) == true)
+				{
+					if (mRef.expandConnector1.isActiveBool == true)
+					{
+						isActive = true;
+						objState = "onFire"
+					}
+				}
+			}
+			if (this.name != "fire5" || this.name != "fire7" ||
+				this.name != "fire8" || this.name != "fire9" ||
+				this.name != "fire11" || this.name != "fire12")
 			{
 				if (this.hitTestObject(mRef.expandBox1) == true)
-				//>>>>>>> parent of 126b2b4... NOT FIN
 				{
 					if (mRef.expandBox1.isActiveBool == true)
 					{
@@ -171,13 +182,8 @@
 						isActive = true;
 					}
 				}
-
-				if (this.hitTestObject(mRef.expandConnector1) == true)
-				{
-					isActive = true;
-					objState = "onFire"
-				}
 			}
+
 		}
 
 

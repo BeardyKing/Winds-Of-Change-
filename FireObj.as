@@ -18,6 +18,7 @@
 		var singlePass: Boolean = false;
 		var animCounter: Number = 0;
 		var animCounter2: Number = 0;
+<<<<<<< HEAD
 /*<<<<<<< HEAD
 <<<<<<< HEAD*/
 		var singlePassFireTotal: Boolean = false;
@@ -31,9 +32,14 @@
 		{
 
 =======*/
+=======
+		var singlePassFireTotal : Boolean = false;
+		var singlePassFireActive : Boolean = false;
+		var singlePassMinusFireActive : Boolean = false;
+>>>>>>> parent of 126b2b4... NOT FIN
 		public function FireObj()
 		{
-
+			
 			// constructor code
 			mRef = MovieClip(this.parent);
 			this.addEventListener(Event.ENTER_FRAME, Loop);
@@ -50,6 +56,15 @@
 		}
 		public function Loop(e: Event)
 		{
+<<<<<<< HEAD
+=======
+			if(singlePassFireTotal == false)
+			{
+				singlePassFireTotal = true;
+				mRef.fireManager1.totalFireAmount += 1;
+			}
+			
+>>>>>>> parent of 126b2b4... NOT FIN
 
 			/*if (    this.name == "fire1" || this.name == "fire2" 
 				|| this.name == "fire_Fish1" || this.name == "fire1_Start1" 
@@ -66,72 +81,78 @@
 				|| this.name == "fire2_6" || this.name == "fire2_7" 
 				|| this.name == "fire2_8" || this.name == "fire2_9 ")
 			{*/
+<<<<<<< HEAD
 			
 			if (this.hitTestObject(mRef.expandBox1) == true)
 			{
 				if (mRef.expandBox1.isActiveBool == true)
+=======
+				if (this.hitTestObject(mRef.expandBox1) == true)
+>>>>>>> parent of 126b2b4... NOT FIN
 				{
+					if(mRef.expandBox1.isActiveBool == true)
+					{
 					objState = "onFire"
 					isActive = true;
+					}
 				}
-			}
-			if (this.hitTestObject(mRef.expandBox2) == true)
-			{
-				if (mRef.expandBox2.isActiveBool == true)
+				if (this.hitTestObject(mRef.expandBox2) == true)
 				{
+					if(mRef.expandBox2.isActiveBool == true)
+					{
 					objState = "onFire"
 					isActive = true;
+					}
 				}
-			}
-			if (this.hitTestObject(mRef.expandBox3) == true)
-			{
-				if (mRef.expandBox3.isActiveBool == true)
+				if (this.hitTestObject(mRef.expandBox3) == true)
 				{
+					if(mRef.expandBox3.isActiveBool == true)
+					{
 					objState = "onFire"
 					isActive = true;
+					}
 				}
-			}
-			if (this.hitTestObject(mRef.expandBox4) == true)
-			{
-				if (mRef.expandBox4.isActiveBool == true)
+				if (this.hitTestObject(mRef.expandBox4) == true)
 				{
+					if(mRef.expandBox4.isActiveBool == true)
+					{
 					objState = "onFire"
 					isActive = true;
+					}
 				}
-			}
-			if (this.hitTestObject(mRef.expandBox5) == true)
-			{
-				if (mRef.expandBox5.isActiveBool == true)
+				if (this.hitTestObject(mRef.expandBox5) == true)
 				{
+					if(mRef.expandBox5.isActiveBool == true)
+					{
 					objState = "onFire"
 					isActive = true;
+					}
 				}
-			}
-			if (this.hitTestObject(mRef.expandBox6) == true)
-			{
-				if (mRef.expandBox6.isActiveBool == true)
+				if (this.hitTestObject(mRef.expandBox6) == true)
 				{
+					if(mRef.expandBox6.isActiveBool == true)
+					{
 					objState = "onFire"
 					isActive = true;
+					}
 				}
-			}
-			if (this.hitTestObject(mRef.expandBox7) == true)
-			{
-				if (mRef.expandBox7.isActiveBool == true)
+				if (this.hitTestObject(mRef.expandBox7) == true)
 				{
+					if(mRef.expandBox7.isActiveBool == true)
+					{
 					objState = "onFire"
 					isActive = true;
+					}
 				}
-			}
-			if (this.hitTestObject(mRef.expandBox8) == true)
-			{
-				if (mRef.expandBox8.isActiveBool == true)
+				if (this.hitTestObject(mRef.expandBox8) == true)
 				{
+					if(mRef.expandBox8.isActiveBool == true)
+					{
 					objState = "onFire"
 					isActive = true;
+					}
 				}
-			}
-
+			
 			//}
 			if (this.hitTestObject(mRef.expandConnector1) == true)
 			{
@@ -147,27 +168,46 @@
 			{
 				this.alpha = 0;
 				this.gotoAndStop(1);
+<<<<<<< HEAD
 
+=======
+				/*if(singlePassMinusFireActive == false)
+				{
+					singlePassMinusFireActive = true;
+					
+				}*/
+				/*if(singlePassFireActive == false)
+				{
+					
+				}
+				if(singlePassFireActive == true)
+				{
+					singlePassFireActive = false
+					mRef.fireManager1.amountOfFireActive -= 1;
+				}*/
+				objState = "waiting";
+>>>>>>> parent of 126b2b4... NOT FIN
 			}
 			if (objState == "onFire")
 			{
 				
+<<<<<<< HEAD
 
+=======
+				if(singlePassFireActive == false)
+				{
+					trace("HAS BEEN SET TO TRUE")
+					singlePassFireActive = true
+					mRef.fireManager1.amountOfFireActive += 1;
+				}
+				
+>>>>>>> parent of 126b2b4... NOT FIN
 				//this.alpha = 1;
 				DoAnim();
 			}
 			if (objState == "findNextFire")
 			{
 
-			}
-			if (objState == "dead")
-			{
-				if (singlePassMinusFireActive == false)
-				{
-					//mRef.fireManager1.amountOfFireActive -= 1;
-					singlePassMinusFireActive = true;
-
-				}
 			}
 			if (objState == "")
 			{
@@ -179,11 +219,11 @@
 		{
 			//trace(currentFrame);
 			this.alpha += 0.05;
-			if (this.alpha >= 1)
+			if(this.alpha >= 1)
 			{
 				this.alpha = 1;
 			}
-
+			
 
 			animCounter += 1;
 			if (animCounter >= 3)

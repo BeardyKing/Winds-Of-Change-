@@ -18,22 +18,22 @@
 		var singlePass: Boolean = false;
 		var animCounter: Number = 0;
 		var animCounter2: Number = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
+/*<<<<<<< HEAD
+<<<<<<< HEAD*/
 		var singlePassFireTotal: Boolean = false;
 		var singlePassFireActive: Boolean = false;
 		var singlePassMinusFireActive: Boolean = false;
-=======
+/*=======
 		var singlePassFireTotal : Boolean = false;
-		var singlePassFireActive : Boolean = false;
->>>>>>> parent of 9dabb9d... push before i fucking die
+		var singlePassFireActive : Boolean = false;*/
+/*>>>>>>> parent of 9dabb9d... push before i fucking die
 		public function FireObj()
 		{
 
-=======
+=======*/
 		public function FireObj()
 		{
->>>>>>> parent of bd5540f... putting out fire reset
+
 			// constructor code
 			mRef = MovieClip(this.parent);
 			this.addEventListener(Event.ENTER_FRAME, Loop);
@@ -50,7 +50,7 @@
 		}
 		public function Loop(e: Event)
 		{
-<<<<<<< HEAD
+/*<<<<<<< HEAD
 			if (singlePassFireTotal == false)
 			{
 				singlePassFireTotal = true;
@@ -59,7 +59,7 @@
 
 =======
 			
->>>>>>> parent of bd5540f... putting out fire reset
+>>>>>>> parent of bd5540f... putting out fire reset*/
 
 			/*if (    this.name == "fire1" || this.name == "fire2" 
 				|| this.name == "fire_Fish1" || this.name == "fire1_Start1" 
@@ -156,25 +156,25 @@
 			{
 				this.alpha = 0;
 				this.gotoAndStop(1);
-<<<<<<< HEAD
-<<<<<<< HEAD
+//<<<<<<< HEAD
+//<<<<<<< HEAD
 
-				/*if(singlePassFireActive == false)
-=======
-				if(singlePassFireActive == false)
->>>>>>> parent of 9dabb9d... push before i fucking die
-				{
-					
-				}
-				if(singlePassFireActive == true)
-				{
-					singlePassFireActive = false
-<<<<<<< HEAD
-					mRef.fireManager1.amountOfFireActive -= 1;
-				}*/
-				
-=======
-					mRef.firemanager1.amountOfFireActive -= 1;
+//				/*if(singlePassFireActive == false)
+//=======
+//				if(singlePassFireActive == false)
+//>>>>>>> parent of 9dabb9d... push before i fucking die
+//				{
+//					
+//				}
+//				if(singlePassFireActive == true)
+//				{
+//					singlePassFireActive = false
+//<<<<<<< HEAD
+//					mRef.fireManager1.amountOfFireActive -= 1;
+//				}*/
+//				
+//=======
+/*					mRef.firemanager1.amountOfFireActive -= 1;
 				}
 				objState = "waiting";
 >>>>>>> parent of 9dabb9d... push before i fucking die
@@ -188,12 +188,12 @@
 					mRef.fireManager1.amountOfFireActive += 1;
 				}
 
-=======
+=======*/
 			}
 			if (objState == "onFire")
 			{
 				
->>>>>>> parent of bd5540f... putting out fire reset
+
 				//this.alpha = 1;
 				DoAnim();
 			}

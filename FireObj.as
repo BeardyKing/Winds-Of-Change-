@@ -115,8 +115,8 @@
 				}
 			}
 			if (this.name != "fire5" || this.name != "fire7" ||
-				this.name != "fire8" || this.name != "fire9" ||
-				this.name != "fire11" || this.name != "fire12")
+				  this.name != "fire8" || this.name != "fire9" || 
+				  this.name != "fire11" || this.name != "fire12")
 			{
 				if (this.hitTestObject(mRef.expandBox1) == true)
 				{

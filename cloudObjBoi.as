@@ -487,7 +487,7 @@
 			}
 			if (this.hitTestObject(mRef.fire2_6) == true)
 			{
-				if (mRef.fire2_1.isActive == true)
+				if (mRef.fire2_6.isActive == true)
 				{
 					mRef.fire2_6.isActive = false
 					mRef.fire2_6.objState = "dead"

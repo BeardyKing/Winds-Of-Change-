@@ -84,6 +84,9 @@
 			}
 			if (objState == "dead")
 			{
+				singlePassFireActive = true
+				mRef.fireManager1.amountOfFireActive -= 1;
+				
 				this.alpha = 0.5;
 				
 				trace("DEAD FROM FIRE")

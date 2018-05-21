@@ -19,9 +19,14 @@
 		var animCounter: Number = 0;
 		var animCounter2: Number = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		var singlePassFireTotal: Boolean = false;
 		var singlePassFireActive: Boolean = false;
 		var singlePassMinusFireActive: Boolean = false;
+=======
+		var singlePassFireTotal : Boolean = false;
+		var singlePassFireActive : Boolean = false;
+>>>>>>> parent of 9dabb9d... push before i fucking die
 		public function FireObj()
 		{
 
@@ -149,28 +154,36 @@
 			}
 			if (objState == "idle")
 			{
-				trace("HAS BEEN SET TO FALSE / INSIDE IDLE")
 				this.alpha = 0;
 				this.gotoAndStop(1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 				/*if(singlePassFireActive == false)
+=======
+				if(singlePassFireActive == false)
+>>>>>>> parent of 9dabb9d... push before i fucking die
 				{
 					
 				}
 				if(singlePassFireActive == true)
 				{
 					singlePassFireActive = false
+<<<<<<< HEAD
 					mRef.fireManager1.amountOfFireActive -= 1;
 				}*/
 				
+=======
+					mRef.firemanager1.amountOfFireActive -= 1;
+				}
+				objState = "waiting";
+>>>>>>> parent of 9dabb9d... push before i fucking die
 			}
 			if (objState == "onFire")
 			{
 
 				if (singlePassFireActive == false)
 				{
-					trace("HAS BEEN SET TO TRUE")
 					singlePassFireActive = true
 					mRef.fireManager1.amountOfFireActive += 1;
 				}
@@ -201,7 +214,6 @@
 			{
 
 			}
-			//objState = "onFire"
 		}
 
 		public function DoAnim()

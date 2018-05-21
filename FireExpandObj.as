@@ -91,7 +91,7 @@
 					//if (mRef.fire1_Start2.objState == "onFire")
 					if (isActiveBool == true)
 					{
-						//trace("aaaaaaaaaaaaaaaa")
+						trace("aaaaaaaaaaaaaaaa")
 						expandCounter += 1;
 						if (expandCounter > stage.frameRate * 2)
 						{
@@ -143,7 +143,7 @@
 					//if (mRef.fire1_Start2.objState == "onFire")
 					if (isActiveBool == true)
 					{
-						//trace("aaaaaaaaaaaaaaaa")
+						trace("aaaaaaaaaaaaaaaa")
 						expandCounter += 1;
 						if (expandCounter > stage.frameRate * 2)
 						{
@@ -192,7 +192,7 @@
 					//if (mRef.fire1_Start2.objState == "onFire")
 					if (isActiveBool == true)
 					{
-						//trace("aaaaaaaaaaaaaaaa")
+						trace("aaaaaaaaaaaaaaaa")
 						expandCounter += 1;
 						if (expandCounter > stage.frameRate * 2)
 						{
@@ -242,7 +242,7 @@
 					//if (mRef.fire1_Start2.objState == "onFire")
 					if (isActiveBool == true)
 					{
-						//trace("aaaaaaaaaaaaaaaa")
+						trace("aaaaaaaaaaaaaaaa")
 						expandCounter += 1;
 						if (expandCounter > stage.frameRate * 2)
 						{
@@ -291,7 +291,7 @@
 					//if (mRef.fire1_Start2.objState == "onFire")
 					if (isActiveBool == true)
 					{
-						//trace("aaaaaaaaaaaaaaaa")
+						trace("aaaaaaaaaaaaaaaa")
 						expandCounter += 1;
 						if (expandCounter > stage.frameRate * 2)
 						{
@@ -339,7 +339,7 @@
 					//if (mRef.fire1_Start2.objState == "onFire")
 					if (isActiveBool == true)
 					{
-						//trace("aaaaaaaaaaaaaaaa")
+						trace("aaaaaaaaaaaaaaaa")
 						expandCounter += 1;
 						if (expandCounter > stage.frameRate * 2)
 						{
@@ -388,7 +388,7 @@
 					//if (mRef.fire1_Start2.objState == "onFire")
 					if (isActiveBool == true)
 					{
-						//trace("aaaaaaaaaaaaaaaa")
+						trace("aaaaaaaaaaaaaaaa")
 						expandCounter += 1;
 						if (expandCounter > stage.frameRate * 2)
 						{

@@ -31,7 +31,6 @@
 			mRef = MovieClip(this.parent);
 
 			this.addEventListener(Event.ENTER_FRAME, Loop)
-			trace("inside " + this.name)
 
 		}
 

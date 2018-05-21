@@ -40,12 +40,12 @@
 			{
 
 				//riceTotal = Math.round((riceTotal * 10) / 10)
-				//trace("rice total = " + riceTotal );
+				////trace("rice total = " + riceTotal );
 				mRef.riceText1.text = riceTotal.toString();
 				mRef.fishText1.text = fishTotal.toString();
 				mRef.woodText1.text = woodTotal.toString();
-				//trace(fishTotal + this.name);
-				//trace("aaaaa")
+				////trace(fishTotal + this.name);
+				////trace("aaaaa")
 
 
 			}
@@ -54,7 +54,7 @@
 		{
 			if (objName == "farmTown1")
 			{
-				trace("farmTown1 added trade cart")
+				//trace("farmTown1 added trade cart")
 				mRef.farmTown1.hasTradeCartActive = true;
 				mRef.bTradeRice1.x = this.x - 15;
 				mRef.bTradeRice1.y = this.y
@@ -62,7 +62,7 @@
 			}
 			if (objName == "farmTown2")
 			{
-				trace("farmTown2 added trade cart")
+				//trace("farmTown2 added trade cart")
 				mRef.farmTown2.hasTradeCartActive = true;
 				mRef.bTradeRice2.x = this.x + 15;
 				mRef.bTradeRice2.y = this.y
@@ -70,7 +70,7 @@
 			}
 			if (objName == "bLoggingTown1")
 			{
-				trace("LoggingTown1 added trade cart")
+				//trace("LoggingTown1 added trade cart")
 				mRef.bLoggingTown1.hasTradeCartActive = true;
 				mRef.bTradeWood1.x = this.x - 15;
 				mRef.bTradeWood1.y = this.y
@@ -78,7 +78,7 @@
 			}
 			if (objName == "bLoggingTown2")
 			{
-				trace("LoggingTown2 added trade cart")
+				//trace("LoggingTown2 added trade cart")
 				mRef.bLoggingTown2.hasTradeCartActive = true;
 				mRef.bTradeWood2.x = this.x - 15;
 				mRef.bTradeWood2.y = this.y
@@ -86,7 +86,7 @@
 			}
 			if (objName == "bLoggingTown3")
 			{
-				trace("LoggingTown3 added trade cart")
+				//trace("LoggingTown3 added trade cart")
 				mRef.bLoggingTown3.hasTradeCartActive = true;
 				mRef.bTradeWood3.x = this.x + 15;
 				mRef.bTradeWood3.y = this.y;
@@ -95,7 +95,7 @@
 			
 			if(objName == "bFishingTown1")
 			{
-				trace(objName + " added trade cart")
+				//trace(objName + " added trade cart")
 				mRef.bFishingTown1.hasTradeCartActive = true;
 				mRef.bTradeFish1.x = this.x - 10
 				mRef.bTradeFish1.y = this.y;
@@ -104,7 +104,7 @@
 			
 			if(objName == "bFishingTown2")
 			{
-				trace(objName + " added trade cart")
+				//trace(objName + " added trade cart")
 				mRef.bFishingTown2.hasTradeCartActive = true;
 				mRef.bTradeFish2.x = this.x - 10
 				mRef.bTradeFish2.y = this.y;
@@ -113,7 +113,7 @@
 			
 			if(objName == "bFishingTown3")
 			{
-				trace(objName + " added trade cart")
+				//trace(objName + " added trade cart")
 				mRef.bFishingTown3.hasTradeCartActive = true;
 				mRef.bTradeFish3.x = this.x - 10
 				mRef.bTradeFish3.y = this.y;

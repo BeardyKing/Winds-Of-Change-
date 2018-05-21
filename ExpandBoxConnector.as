@@ -55,10 +55,11 @@
 					this.scaleY += 0.05;
 					
 				}
-				if(this.scaleX >= 15 || this.scaleY >= 15 )
+				if(this.scaleX >= 10 || this.scaleY >= 10 )
 				{
-					this.scaleX = 15
-					this.scaleY = 15 
+					this.scaleX = 1
+					this.scaleY = 1 
+					this.x = 1000
 				}
 			}
 			if(objState == "reset")
@@ -66,12 +67,16 @@
 				objState = "idle"
 			}
 				
-			if(mRef.fire2.objState == "onFire")
+			if(mRef.fire3.objState == "onFire")
 			{
 				
 				objState = "expand";
 			}
+			this.alpha = 0.5
+			//loop
 		}
+			//loop
+		
 	}
 	
 }

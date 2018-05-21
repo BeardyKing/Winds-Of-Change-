@@ -40,7 +40,7 @@
 				}
 				if (this.name == "bLoggingTown1")
 				{
-					//trace(currentWoodAmount + "   " + hasTradeCartActive)
+					////trace(currentWoodAmount + "   " + hasTradeCartActive)
 					if (currentWoodAmount >= 40 && hasTradeCartActive == false)
 					{
 						mRef.bCity.AddTradeCart(this.name)
@@ -79,7 +79,7 @@
 				}
 				if (this.name == "bLoggingTown3")
 				{
-					//trace(currentWoodAmount + "   " + hasTradeCartActive)
+					////trace(currentWoodAmount + "   " + hasTradeCartActive)
 					if (currentWoodAmount >= 45 && hasTradeCartActive == false)
 					{
 						mRef.bCity.AddTradeCart(this.name)
@@ -117,7 +117,7 @@
 				{
 					mRef.bCity.tradecartCounter += 1;
 					objState = "idle";
-					trace(this.name)
+					//trace(this.name)
 				}
 
 			}

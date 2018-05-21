@@ -36,7 +36,7 @@
 
 			mRef = MovieClip(this.parent);
 			this.addEventListener(Event.ENTER_FRAME, Loop);
-			trace("inside : " + this.name)
+			//trace("inside : " + this.name)
 		}
 
 		public function Loop(e: Event)
@@ -56,7 +56,7 @@
 						if (objState == "goToNearestFarm")
 						{
 							FindNearestTree();
-							////trace("find nearest called")
+							//////trace("find nearest called")
 
 						}
 
@@ -135,8 +135,8 @@
 								objState = "collectWood"
 							}
 						}
-						//////trace(objAngle);
-						//////trace(currentTreeName + " current farm name")
+						////////trace(objAngle);
+						////////trace(currentTreeName + " current farm name")
 
 					}
 
@@ -257,7 +257,7 @@
 						if (objState == "goToNearestFarm")
 						{
 							FindNearestTree2();
-							////trace("find nearest called")
+							//////trace("find nearest called")
 
 						}
 
@@ -336,8 +336,8 @@
 								objState = "collectWood"
 							}
 						}
-						//////trace(objAngle);
-						//////trace(currentTreeName + " current farm name")
+						////////trace(objAngle);
+						////////trace(currentTreeName + " current farm name")
 
 					}
 
@@ -461,7 +461,7 @@
 			//angleRad += (Math.PI/2)
 			objAngle -= 45;
 
-			//////trace("done")
+			////////trace("done")
 			return;
 
 		}
@@ -500,7 +500,7 @@
 				currentTreeName = mRef.rTree1_1.name;
 				//FindMoveAngle(this.x, this.y, mRef.tree1.x, mRef.tree1.y);
 
-				////trace(fDist1)
+				//////trace(fDist1)
 			}
 			//x1, y1, x2, y2
 
@@ -512,7 +512,7 @@
 				currentTreeName = mRef.rTree1_2.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.tree2.x, mRef.tree2.y);
-				////trace(fDist2)
+				//////trace(fDist2)
 			}
 
 			if (fDist3 < fDist1 &&
@@ -523,7 +523,7 @@
 				currentTreeName = mRef.rTree1_3.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.tree3.x, mRef.tree3.y);
-				////trace(fDist3)
+				//////trace(fDist3)
 			}
 
 			if (fDist4 < fDist1 &&
@@ -534,7 +534,7 @@
 				currentTreeName = mRef.rTree1_4.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.tree4.x, mRef.tree4.y);
-				////trace(fDist4)
+				//////trace(fDist4)
 			}
 
 			if (fDist5 < fDist1 &&
@@ -545,9 +545,9 @@
 				currentTreeName = mRef.rTree1_5.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.tree5.x, mRef.tree5.y);
-				////trace(fDist5)
+				//////trace(fDist5)
 			}
-			////trace("aaaaaa");
+			//////trace("aaaaaa");
 			return;
 		}
 
@@ -586,7 +586,7 @@
 				currentTreeName = mRef.rTree2_1.name;
 				//FindMoveAngle(this.x, this.y, mRef.tree1.x, mRef.tree1.y);
 
-				////trace(fDist1)
+				//////trace(fDist1)
 			}
 			//x1, y1, x2, y2
 
@@ -598,7 +598,7 @@
 				currentTreeName = mRef.rTree2_2.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.tree2.x, mRef.tree2.y);
-				////trace(fDist2)
+				//////trace(fDist2)
 			}
 
 			if (fDist3 < fDist1 &&
@@ -609,7 +609,7 @@
 				currentTreeName = mRef.rTree2_3.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.tree3.x, mRef.tree3.y);
-				////trace(fDist3)
+				//////trace(fDist3)
 			}
 
 			if (fDist4 < fDist1 &&
@@ -620,7 +620,7 @@
 				currentTreeName = mRef.rTree2_4.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.tree4.x, mRef.tree4.y);
-				////trace(fDist4)
+				//////trace(fDist4)
 			}
 
 			if (fDist5 < fDist1 &&
@@ -631,9 +631,9 @@
 				currentTreeName = mRef.rTree2_5.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.tree5.x, mRef.tree5.y);
-				////trace(fDist5)
+				//////trace(fDist5)
 			}
-			////trace("aaaaaa");
+			//////trace("aaaaaa");
 			return;
 		}
 

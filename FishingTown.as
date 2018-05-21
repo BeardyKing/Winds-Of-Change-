@@ -64,7 +64,7 @@
 				if (this.name == "bFishingTown3")
 				{
 					
-					//trace(currentFishAmount + "   " + hasTradeCartActive)
+					////trace(currentFishAmount + "   " + hasTradeCartActive)
 					if (currentFishAmount >= 0 && hasTradeCartActive == false)
 					{
 						mRef.bCity.AddTradeCart(this.name)
@@ -77,7 +77,7 @@
 				{
 					mRef.bCity.tradecartCounter += 1;
 					objState = "idle";
-					trace(this.name)
+					//trace(this.name)
 				}
 			}
 			// loop

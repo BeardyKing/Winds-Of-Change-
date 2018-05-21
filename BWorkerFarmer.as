@@ -39,7 +39,7 @@
 
 			mRef = MovieClip(this.parent)
 			this.addEventListener(Event.ENTER_FRAME, Loop);
-			//trace("inside " + this.name )
+			////trace("inside " + this.name )
 
 
 		}
@@ -70,7 +70,7 @@
 						if (objState == "goToNearestFarm")
 						{
 							FindNearestFarm();
-							////trace("find nearest called")
+							//////trace("find nearest called")
 
 						}
 
@@ -149,8 +149,8 @@
 								objState = "collectRice"
 							}
 						}
-						//////trace(objAngle);
-						//////trace(currentFarmName + " current farm name")
+						////////trace(objAngle);
+						////////trace(currentFarmName + " current farm name")
 
 					}
 
@@ -278,7 +278,7 @@
 						if (objState == "goToNearestFarm")
 						{
 							FindNearestFarm2();
-							////trace("find nearest called")
+							//////trace("find nearest called")
 
 						}
 
@@ -355,8 +355,8 @@
 								objState = "collectRice"
 							}
 						}
-						//////trace(objAngle);
-						//////trace(currentFarmName + " current farm name")
+						////////trace(objAngle);
+						////////trace(currentFarmName + " current farm name")
 
 					}
 
@@ -478,7 +478,7 @@
 			//angleRad += (Math.PI/2)
 			objAngle -= 45;
 
-			//////trace("done")
+			////////trace("done")
 			return;
 
 		}
@@ -517,7 +517,7 @@
 				currentFarmName = mRef.f1.name;
 				//FindMoveAngle(this.x, this.y, mRef.f1.x, mRef.f1.y);
 
-				////trace(fDist1)
+				//////trace(fDist1)
 			}
 			//x1, y1, x2, y2
 
@@ -529,7 +529,7 @@
 				currentFarmName = mRef.f2.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f2.x, mRef.f2.y);
-				////trace(fDist2)
+				//////trace(fDist2)
 			}
 
 			if (fDist3 < fDist1 &&
@@ -540,7 +540,7 @@
 				currentFarmName = mRef.f3.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f3.x, mRef.f3.y);
-				////trace(fDist3)
+				//////trace(fDist3)
 			}
 
 			if (fDist4 < fDist1 &&
@@ -551,7 +551,7 @@
 				currentFarmName = mRef.f4.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f4.x, mRef.f4.y);
-				////trace(fDist4)
+				//////trace(fDist4)
 			}
 
 			if (fDist5 < fDist1 &&
@@ -562,9 +562,9 @@
 				currentFarmName = mRef.f5.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f5.x, mRef.f5.y);
-				////trace(fDist5)
+				//////trace(fDist5)
 			}
-			////trace("aaaaaa");
+			//////trace("aaaaaa");
 			return;
 		}
 
@@ -603,7 +603,7 @@
 				currentFarmName = mRef.f6.name;
 				//FindMoveAngle(this.x, this.y, mRef.f1.x, mRef.f1.y);
 
-				////trace(fDist1)
+				//////trace(fDist1)
 			}
 			//x1, y1, x2, y2
 
@@ -615,7 +615,7 @@
 				currentFarmName = mRef.f7.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f2.x, mRef.f2.y);
-				////trace(fDist2)
+				//////trace(fDist2)
 			}
 
 			if (fDist3 < fDist1 &&
@@ -626,7 +626,7 @@
 				currentFarmName = mRef.f8.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f3.x, mRef.f3.y);
-				////trace(fDist3)
+				//////trace(fDist3)
 			}
 
 			if (fDist4 < fDist1 &&
@@ -637,7 +637,7 @@
 				currentFarmName = mRef.f9.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f4.x, mRef.f4.y);
-				////trace(fDist4)
+				//////trace(fDist4)
 			}
 
 			if (fDist5 < fDist1 &&
@@ -648,9 +648,9 @@
 				currentFarmName = mRef.f10.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f5.x, mRef.f5.y);
-				////trace(fDist5)
+				//////trace(fDist5)
 			}
-			//trace("aaaaaa");
+			////trace("aaaaaa");
 			return;
 		}
 

@@ -45,7 +45,7 @@
 
 		public function Loop(e: Event)
 		{
-			//trace(currentRiceAmount + " " + this.name + "currentRiceAmount")
+			////trace(currentRiceAmount + " " + this.name + "currentRiceAmount")
 			if (mRef.objState == "play")
 			{
 				if (currentRiceAmount > maxRice)
@@ -65,7 +65,7 @@
 					}
 					if (riceSendBool == true)
 					{
-						//trace(this.name)
+						////trace(this.name)
 						mRef.rCity.riceTotal += 0.01
 						currentRiceAmount -= 0.001
 					}
@@ -76,7 +76,7 @@
 				{
 					mRef.bCity.tradecartCounter += 1;
 					objState = "idle"
-					//trace(this.name)
+					////trace(this.name)
 				}
 			}
 			// loop

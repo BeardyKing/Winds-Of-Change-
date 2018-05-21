@@ -25,21 +25,21 @@
 		
 		public function Loop(e: Event)
 		{
-			//trace(globalDir + "globalDir")
-		//	trace(globalMoveSpeedTest + "globalMoveSpeedTest ")
-		//	trace(stage.frameRate);
-			//trace(globalDir)
-			//trace(testCounter)
+			////trace(globalDir + "globalDir")
+		//	//trace(globalMoveSpeedTest + "globalMoveSpeedTest ")
+		//	//trace(stage.frameRate);
+			////trace(globalDir)
+			////trace(testCounter)
 			i++;
 			if(i == 120)
 			{
 				i = 0;
-					trace(globalDir);
+					//trace(globalDir);
 				
 			}
 			//globalDir += 0.005;
 			
-			//trace(clickLoc.hasBeenClickedOnce);
+			////trace(clickLoc.hasBeenClickedOnce);
 		
 			// set global movement
 			

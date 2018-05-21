@@ -45,12 +45,12 @@
 			stage.addEventListener(MouseEvent.MOUSE_DOWN, MouseDown)
 			stage.addEventListener(MouseEvent.MOUSE_UP, MouseUp)
 			this.addEventListener(Event.ENTER_FRAME, Loop)
-			trace("inside : " + this.name)
+			//trace("inside : " + this.name)
 		}
 
 		public function Loop(e: Event)
 		{
-			//trace(mRef.mouseDir.rotation)
+			////trace(mRef.mouseDir.rotation)
 
 			if (mouseDown == false)
 			{
@@ -65,7 +65,7 @@
 				{
 					this.alpha = 0;
 
-					//trace("ow")
+					////trace("ow")
 				}
 			}
 			if (mouseDown == true)
@@ -117,7 +117,7 @@
 					{
 						mouseDownTimer = 0
 						windCounter += 1;
-						//trace("add cloud" + windCounter.toString());
+						////trace("add cloud" + windCounter.toString());
 
 					}
 				}
@@ -143,7 +143,7 @@
 			AAAAAAADeg = angleDeg
 			mRef.mouseDir.rotation = angleDeg;
 
-			//trace("aaaaadeg: "+AAAAAAADeg)
+			////trace("aaaaadeg: "+AAAAAAADeg)
 		}
 
 		public function MouseDown(e: MouseEvent)
@@ -165,33 +165,33 @@
 			mouseDown = false;
 			var checker: Number;
 			checker = AAAAAAADeg * (Math.PI / 180)
-			//trace(checker + " a aaaaaaa")
-			//trace((Math.PI / 2))
+			////trace(checker + " a aaaaaaa")
+			////trace((Math.PI / 2))
 			// top right arrow pointing same dir
 			// MOUSE IN TOP RIGHT
-			//trace(mRef.WindDirArrow.rotation + "  WIND CONST ROT")
-			//	trace(mRef.mouseDir.rotation + " MOUSE DIR ROT")
-			//trace(mRef.mouseDir.rotation + " mRef.mouseDir.rotation")
-			//trace(mRef.WindDirArrow.rotation + " mRef.WindDirArrow.rotation")
+			////trace(mRef.WindDirArrow.rotation + "  WIND CONST ROT")
+			//	//trace(mRef.mouseDir.rotation + " MOUSE DIR ROT")
+			////trace(mRef.mouseDir.rotation + " mRef.mouseDir.rotation")
+			////trace(mRef.WindDirArrow.rotation + " mRef.WindDirArrow.rotation")
 			var moveRot : Number = mRef.mouseDir.rotation;
 			var globalRot : Number = mRef.WindDirArrow.rotation;
 			var moveRotState : String = ""
 			
-			trace(mRef.mouseDir.rotation + "   mRef.WindDirArrow.rotation")
+			//trace(mRef.mouseDir.rotation + "   mRef.WindDirArrow.rotation")
 
 			/*if (mRef.WindDirArrow.rotation < mRef.mouseDir.rotation)
 			{
-				trace("boop")
+				//trace("boop")
 				mRef.globalDir += 0.1
-				trace(mRef.mouseDir.rotation + " mRef.mouseDir.rotation")
-				trace(mRef.WindDirArrow.rotation + " mRef.WindDirArrow.rotation")
+				//trace(mRef.mouseDir.rotation + " mRef.mouseDir.rotation")
+				//trace(mRef.WindDirArrow.rotation + " mRef.WindDirArrow.rotation")
 			}
 			else if (mRef.WindDirArrow.rotation > mRef.mouseDir.rotation)
 			{
-				trace("boop")
+				//trace("boop")
 				mRef.globalDir -= 0.1
-				trace(mRef.mouseDir.rotation + " mRef.mouseDir.rotation")
-				trace(mRef.WindDirArrow.rotation + " mRef.WindDirArrow.rotation")
+				//trace(mRef.mouseDir.rotation + " mRef.mouseDir.rotation")
+				//trace(mRef.WindDirArrow.rotation + " mRef.WindDirArrow.rotation")
 
 			}*/
 			
@@ -209,7 +209,7 @@
 				if(globalRot > 90 && globalRot < 180)
 				{
 					
-					trace(moveRotState)
+					//trace(moveRotState)
 					moveRotState = "antiClockwise"
 				}
 			}
@@ -218,7 +218,7 @@
 				if(globalRot < -90 && globalRot > -180)
 				{
 				
-					trace(moveRotState)
+					//trace(moveRotState)
 					moveRotState = "clockwise"
 				}
 			}
@@ -244,33 +244,33 @@
 			{
 				n1 = trajectory - shipAngle;
 				n2 = 180 - n1;
-				trace("tra > ship")
+				//trace("tra > ship")
 			}
 			else if (shipAngle > trajectory)
 			{
 				n1 = shipAngle - trajectory;
 				n2 = 180 - n1;
-				trace("tra < ship")
+				//trace("tra < ship")
 			}
 
 			if (n1 < n2)
 			{
 				short = n1;
 				long = n2;
-				trace("n1 < n2")
+				//trace("n1 < n2")
 			}
 			else if (n2 < n1)
 			{
 				short = n2;
 				long = n2;
-				trace("n2 < n1 ")
+				//trace("n2 < n1 ")
 			}
 
 
 			if ((shipAngle - short) < 0)
 			{
-				trace(shipAngle - short + "  ship angle - short")
-				trace(trajectory - 180 + " trajectory - 180")
+				//trace(shipAngle - short + "  ship angle - short")
+				//trace(trajectory - 180 + " trajectory - 180")
 				if ((shipAngle - short) == (trajectory - 180))
 				{
 					turn = "right";
@@ -278,8 +278,8 @@
 			}
 			else if ((shipAngle + short) > 180)
 			{
-				trace(shipAngle + short + "  ship angle + short")
-				trace(trajectory + 180 + " trajectory + 180")
+				//trace(shipAngle + short + "  ship angle + short")
+				//trace(trajectory + 180 + " trajectory + 180")
 				if ((shipAngle + short) == (trajectory + 180))
 				{
 					turn = "left"
@@ -296,11 +296,11 @@
 					turn = "left"
 				}
 			}*/
-			//trace(shipAngle + " ship angle")
-			//trace(trajectory + "trajectory")
-			//trace(long + " long");
-			//trace(short + " short")
-			trace(turn + " turn")
+			////trace(shipAngle + " ship angle")
+			////trace(trajectory + "trajectory")
+			////trace(long + " long");
+			////trace(short + " short")
+			//trace(turn + " turn")
 			///////////////////////////////////////////// FINS CODE
 		}
 

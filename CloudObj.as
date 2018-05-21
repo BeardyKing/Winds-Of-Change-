@@ -82,10 +82,10 @@
 
 			if (this.name == "c1")
 			{
-				//trace(objState + "   objState")
-				//trace(localAngleDeg + "      anglle deg local")
+				////trace(objState + "   objState")
+				////trace(localAngleDeg + "      anglle deg local")
 			}
-			//trace(objState + "" + this.name)
+			////trace(objState + "" + this.name)
 			if (objState == "init")
 			{
 				startX = this.x
@@ -369,8 +369,8 @@
 				}
 				speedNum = this.alpha;
 
-				//trace(this.name)
-				//trace(mRef.clickLoc.mouseDown)
+				////trace(this.name)
+				////trace(mRef.clickLoc.mouseDown)
 
 				if (mRef.clickLoc.mouseDown == false)
 				{
@@ -378,19 +378,19 @@
 
 
 					randomPosOrNeg = Math.round(Math.random())
-					//trace(randomPosOrNeg)
+					////trace(randomPosOrNeg)
 
 					if (randomPosOrNeg == 1)
 					{
-						//trace(randomAngleDeg + "+ ve")
+						////trace(randomAngleDeg + "+ ve")
 						randomAngleDeg = -randomAngleDeg
-						//trace(randomAngleDeg + "-ve")
-						//trace()
+						////trace(randomAngleDeg + "-ve")
+						////trace()
 					}
 
 
 
-					//trace("goToMove")
+					////trace("goToMove")
 					this.rotation = mRef.clickLoc.angleDeg;
 					isBeingUsed = false;
 

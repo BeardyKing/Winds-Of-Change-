@@ -48,7 +48,7 @@
 				}
 				if (this.name == "rFishTown1")
 				{
-					//trace(currentFishAmount)
+					////trace(currentFishAmount)
 					if (currentFishAmount > 1)
 					{
 						foodSendBool = true;
@@ -86,7 +86,7 @@
 				{
 					//mRef.bCity.tradecartCounter += 1;
 					objState = "idle";
-					trace(this.name)
+					//trace(this.name)
 				}
 			}
 			// loop

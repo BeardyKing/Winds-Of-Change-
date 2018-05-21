@@ -38,7 +38,7 @@
 			{
 				if (mRef.farmTown1.isOnFireBool == true)
 				{
-					//trace(mRef.farmTown1.isOnFireBool + "isOnFireBool" + this.name )
+					////trace(mRef.farmTown1.isOnFireBool + "isOnFireBool" + this.name )
 					this.alpha -= 0.03
 					if (this.alpha < 0.3)
 					{
@@ -57,7 +57,7 @@
 			{
 				if (mRef.farmTown2.isOnFireBool == true)
 				{
-					//	trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
+					//	//trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
 					this.alpha -= 0.03
 					if (this.alpha < 0.3)
 					{
@@ -76,7 +76,7 @@
 			{
 				if (mRef.bLoggingTown3.isOnFireBool == true)
 				{
-					//	trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
+					//	//trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
 					this.alpha -= 0.03
 					if (this.alpha < 0.3)
 					{
@@ -95,7 +95,7 @@
 			{
 				if (mRef.bLoggingTown3.isOnFireBool == true)
 				{
-					//	trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
+					//	//trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
 					this.alpha -= 0.03
 					if (this.alpha < 0.3)
 					{
@@ -114,7 +114,7 @@
 			{
 				if (mRef.bFishingTown1.isOnFireBool == true)
 				{
-					//	trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
+					//	//trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
 					this.alpha -= 0.03
 					if (this.alpha < 0.3)
 					{
@@ -133,7 +133,7 @@
 			{
 				if (mRef.bFishingTown3.isOnFireBool == true)
 				{
-					//	trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
+					//	//trace(mRef.farmTown2.isOnFireBool + "isOnFireBool" + this.name )
 					this.alpha -= 0.03
 					if (this.alpha < 0.3)
 					{
@@ -154,7 +154,7 @@
 			this.rotation = 0;
 			if (mRef.objState == "play")
 			{
-				//trace(this.x + "     " +this.name)
+				////trace(this.x + "     " +this.name)
 				if (this.name == "bTradeRice1" && mRef.farmTown1.hasTradeCartActive == true)
 				{
 					//this.rotation = objAngle - 45;
@@ -575,17 +575,17 @@
 						//nodeNumber = 2;
 
 
-						//trace(speed)
+						////trace(speed)
 						fDist1 = Math.sqrt((this.x - mRef.nodeFarm1_1.x) *
 							(this.x - mRef.nodeFarm1_1.x) +
 							(this.y - mRef.nodeFarm1_1.y) *
 							(this.y - mRef.nodeFarm1_1.y))
-						//trace(fDist1)
+						////trace(fDist1)
 						FindMoveAngle(this.x, this.y, mRef.nodeFarm1_1.x, mRef.nodeFarm1_1.y);
 
 						this.x += Math.cos(objAngle) * speed;
 						this.y += Math.sin(objAngle) * speed;
-						//trace(objAngle)
+						////trace(objAngle)
 						if (goingToTown == true && fDist1 <= hypotDist)
 						{
 							nodeNumber += 1;
@@ -684,18 +684,18 @@
 					{
 						//nodeNumber = 2;
 
-						//trace("HELLO!")
-						//trace(speed)
+						////trace("HELLO!")
+						////trace(speed)
 						fDist1 = Math.sqrt((this.x - mRef.nodeFarm2_1.x) *
 							(this.x - mRef.nodeFarm2_1.x) +
 							(this.y - mRef.nodeFarm2_1.y) *
 							(this.y - mRef.nodeFarm2_1.y))
-						//trace(fDist1)
+						////trace(fDist1)
 						FindMoveAngle(this.x, this.y, mRef.nodeFarm2_1.x, mRef.nodeFarm2_1.y);
 
 						this.x += Math.cos(objAngle) * speed;
 						this.y += Math.sin(objAngle) * speed;
-						//trace(objAngle)
+						////trace(objAngle)
 						if (goingToTown == true && fDist1 <= hypotDist)
 						{
 							nodeNumber += 1;
@@ -770,7 +770,7 @@
 					// nodeNumber 1 = go to nodeFarm1_1
 					// node number 2 = go to farmTown1
 
-					//trace(currentResourceAmount)
+					////trace(currentResourceAmount)
 
 					if (nodeNumber == 0)
 					{
@@ -797,19 +797,19 @@
 					{
 						//nodeNumber = 2;
 
-						//trace("HELLO!")
+						////trace("HELLO!")
 
-						//trace(speed)
+						////trace(speed)
 						fDist1 = Math.sqrt((this.x - mRef.nodeFarm1_1.x) *
 							(this.x - mRef.nodeFarm1_1.x) +
 							(this.y - mRef.nodeFarm1_1.y) *
 							(this.y - mRef.nodeFarm1_1.y))
-						//trace(fDist1)
+						////trace(fDist1)
 						FindMoveAngle(this.x, this.y, mRef.nodeFarm1_1.x, mRef.nodeFarm1_1.y);
 
 						this.x += Math.cos(objAngle) * speed;
 						this.y += Math.sin(objAngle) * speed;
-						//trace(objAngle)
+						////trace(objAngle)
 						if (goingToTown == true && fDist1 <= hypotDist)
 						{
 							nodeNumber += 1;
@@ -949,7 +949,7 @@
 				{
 					//speed = 0.3;
 					//this.rotation = objAngle - 45;
-					//trace(currentResourceAmount);
+					////trace(currentResourceAmount);
 					// nodeNumber 0 = go to bCity
 					// nodeNumber 1 = go to nodeFarm1_1
 					// node number 2 = go to farmTown1
@@ -964,7 +964,7 @@
 						{
 							if (this.hitTestObject(mRef.bCity) == true)
 							{
-								//trace("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+								////trace("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 								currentResourceAmount -= 0.1
 								mRef.bCity.fishTotal += 0.1;
 							}
@@ -980,18 +980,18 @@
 					{
 						//nodeNumber = 2;
 
-						//trace("HELLO!")
-						//trace(speed)
+						////trace("HELLO!")
+						////trace(speed)
 						fDist1 = Math.sqrt((this.x - mRef.nodeFarm1_1.x) *
 							(this.x - mRef.nodeFarm1_1.x) +
 							(this.y - mRef.nodeFarm1_1.y) *
 							(this.y - mRef.nodeFarm1_1.y))
-						//trace(fDist1)
+						////trace(fDist1)
 						FindMoveAngle(this.x, this.y, mRef.nodeFarm1_1.x, mRef.nodeFarm1_1.y);
 
 						this.x += Math.cos(objAngle) * speed;
 						this.y += Math.sin(objAngle) * speed;
-						//trace(objAngle)
+						////trace(objAngle)
 						if (goingToTown == true && fDist1 <= hypotDist)
 						{
 							nodeNumber += 1;
@@ -1038,7 +1038,7 @@
 						{
 							if (this.hitTestObject(mRef.bFishingTown3) == true)
 							{
-								trace("aa")
+								//trace("aa")
 								speed = 0;
 								currentResourceAmount += 0.1
 								mRef.bFishingTown2.currentFishAmount -= 0.1;
@@ -1077,7 +1077,7 @@
 			//angleRad += (Math.PI/2)
 			objAngle -= 45;
 
-			//////trace("done")
+			////////trace("done")
 			return;
 
 		}

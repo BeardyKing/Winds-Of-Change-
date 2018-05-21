@@ -30,7 +30,7 @@
 
 		public function RedWorkerFisher()
 		{
-			////trace("inside " + this.name);
+			//////trace("inside " + this.name);
 			mRef = MovieClip(this.parent);
 
 
@@ -46,7 +46,7 @@
 				if (this.name == "rFisher1_1")
 				{
 
-					//////trace(this.name)
+					////////trace(this.name)
 					if (objState == "idle")
 					{
 
@@ -81,7 +81,7 @@
 
 						if (this.hitTestObject(mRef.redFishPoint1) == true)
 						{
-							//////trace(currentFishAmount)
+							////////trace(currentFishAmount)
 							currentFishAmount += 0.1;
 							if (currentFishAmount >= maxFish)
 							{
@@ -139,7 +139,7 @@
 				if (this.name == "rFisher2_1")
 				{
 
-					//////trace(this.name)
+					////////trace(this.name)
 					if (objState == "idle")
 					{
 
@@ -174,7 +174,7 @@
 
 						if (this.hitTestObject(mRef.redFishPoint2) == true)
 						{
-							//////trace(currentFishAmount)
+							////////trace(currentFishAmount)
 							currentFishAmount += 0.1;
 							if (currentFishAmount >= maxFish)
 							{
@@ -265,22 +265,22 @@
 				mRef.redFishPoint1.x = newRandomX + mRef.redWaterObj1.x
 				mRef.redFishPoint1.y = newRandomY + mRef.redWaterObj1.y
 				
-				/*trace(newRandomX + " " + this.name);
-				trace(newRandomY + " " + this.name);
-				trace("")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
-				trace("aaaaaaaaaaaaaaaaaaaaa")
+				/*//trace(newRandomX + " " + this.name);
+				//trace(newRandomY + " " + this.name);
+				//trace("")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
+				//trace("aaaaaaaaaaaaaaaaaaaaa")
 				*/
 
 			}
@@ -294,9 +294,9 @@
 
 			//	mRef.fishPoint2.x = newRandomX + mRef.water2.x
 			//	mRef.fishPoint2.y = newRandomY + mRef.water2.y
-			//	////trace(newRandomX + " " + this.name);
-			//	////trace(newRandomY + " " + this.name);
-			//	////trace("")
+			//	//////trace(newRandomX + " " + this.name);
+			//	//////trace(newRandomY + " " + this.name);
+			//	//////trace("")
 
 			//}
 

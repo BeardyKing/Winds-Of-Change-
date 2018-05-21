@@ -22,7 +22,7 @@
 
 		public function TreeObj()
 		{
-			trace("inside : " + this.name)
+			//trace("inside : " + this.name)
 			// constructor code
 			mRef = MovieClip(this.parent);
 			this.addEventListener(Event.ENTER_FRAME, Loop);
@@ -34,11 +34,11 @@
 		{
 			if (mRef.objState == "play")
 			{
-				//trace(remainingRice + " " + this.name + " " + objState)
+				////trace(remainingRice + " " + this.name + " " + objState)
 				if (objState == "growing")
 				{
 					this.alpha = 0.5;
-					//trace(this.rotation + "  " +this.name )
+					////trace(this.rotation + "  " +this.name )
 
 					if (this.name == "tree3" || this.name == "tree4")
 					{

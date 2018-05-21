@@ -39,7 +39,7 @@
 
 			mRef = MovieClip(this.parent)
 			this.addEventListener(Event.ENTER_FRAME, Loop);
-			////trace("inside " + this.name )
+			//////trace("inside " + this.name )
 
 
 		}
@@ -53,12 +53,12 @@
 				///////////////////////////////////////////////// rWF1_1 & rWF1_2 & rWF1_3 //////////////////////////////
 				if (this.name == "rWF1_1" || this.name == "rWF1_2" || this.name == "rWF1_3")
 				{
-					/*//trace("");
-					//trace(objState + " " + this.name + " objState");
-					//trace(currentRiceAmount + " " + this.name + " currentRiceAmount")
-					//trace(currentFarmName + " " + this.name + " currentFarmName")
-					//trace(mRef.rFarm1_1.remainingRice + " " + " mRef.rFarm1_1.remainingRice")
-					//trace("");*/
+					/*////trace("");
+					////trace(objState + " " + this.name + " objState");
+					////trace(currentRiceAmount + " " + this.name + " currentRiceAmount")
+					////trace(currentFarmName + " " + this.name + " currentFarmName")
+					////trace(mRef.rFarm1_1.remainingRice + " " + " mRef.rFarm1_1.remainingRice")
+					////trace("");*/
 					if (objState == "idle")
 					{
 
@@ -67,7 +67,7 @@
 						if (objState == "goToNearestFarm")
 						{
 							FindNearestFarm();
-							//////trace("find nearest called")
+							////////trace("find nearest called")
 						}
 					}
 
@@ -110,7 +110,7 @@
 						{
 							if (this.hitTestObject(mRef.rFarm1_1) == true)
 							{
-								//trace("HIT FROM GOTO FARM")
+								////trace("HIT FROM GOTO FARM")
 								objState = "collectRice"
 							}
 						}
@@ -142,8 +142,8 @@
 								objState = "collectRice"
 							}
 						}
-						////////trace(objAngle);
-						////////trace(currentFarmName + " current farm name")
+						//////////trace(objAngle);
+						//////////trace(currentFarmName + " current farm name")
 
 					}
 
@@ -151,7 +151,7 @@
 					{
 						if (this.hitTestObject(mRef.rFarm1_1) == true)
 						{
-							//trace("HIT TEST FORM rFarm1_1")
+							////trace("HIT TEST FORM rFarm1_1")
 							if (mRef.rFarm1_1.remainingRice > 0 && currentRiceAmount < maxRice)
 							{
 								mRef.rFarm1_1.remainingRice -= 0.1
@@ -257,12 +257,12 @@
 				///////////////////////////////////////////////// rWf2_1 & rWf2_2 & rWf2_3 //////////////////////////////
 				if (this.name == "rWF2_1" || this.name == "rWF2_2" || this.name == "rWF2_3")
 				{
-					/*//trace("");
-					//trace(objState + " " + this.name + " objState");
-					//trace(currentRiceAmount + " " + this.name + " currentRiceAmount")
-					//trace(currentFarmName + " " + this.name + " currentFarmName")
-					//trace(mRef.rFarm1_1.remainingRice + " " + " mRef.rFarm1_1.remainingRice")
-					//trace("");*/
+					/*////trace("");
+					////trace(objState + " " + this.name + " objState");
+					////trace(currentRiceAmount + " " + this.name + " currentRiceAmount")
+					////trace(currentFarmName + " " + this.name + " currentFarmName")
+					////trace(mRef.rFarm1_1.remainingRice + " " + " mRef.rFarm1_1.remainingRice")
+					////trace("");*/
 					if (objState == "idle")
 					{
 
@@ -271,7 +271,7 @@
 						if (objState == "goToNearestFarm")
 						{
 							FindNearestFarm2();
-							//////trace("find nearest called")
+							////////trace("find nearest called")
 						}
 					}
 
@@ -314,7 +314,7 @@
 						{
 							if (this.hitTestObject(mRef.rFarm2_1) == true)
 							{
-								//trace("HIT FROM GOTO FARM")
+								////trace("HIT FROM GOTO FARM")
 								objState = "collectRice"
 							}
 						}
@@ -346,8 +346,8 @@
 								objState = "collectRice"
 							}
 						}
-						////////trace(objAngle);
-						////////trace(currentFarmName + " current farm name")
+						//////////trace(objAngle);
+						//////////trace(currentFarmName + " current farm name")
 
 					}
 
@@ -355,7 +355,7 @@
 					{
 						if (this.hitTestObject(mRef.rFarm2_1) == true)
 						{
-							//trace("HIT TEST FORM rFarm2_1")
+							////trace("HIT TEST FORM rFarm2_1")
 							if (mRef.rFarm2_1.remainingRice > 0 && currentRiceAmount < maxRice)
 							{
 								mRef.rFarm2_1.remainingRice -= 0.1
@@ -476,7 +476,7 @@
 			//angleRad += (Math.PI/2)
 			objAngle -= 45;
 
-			////////trace("done")
+			//////////trace("done")
 			return;
 
 		}
@@ -515,7 +515,7 @@
 				currentFarmName = mRef.rFarm1_1.name;
 				//FindMoveAngle(this.x, this.y, mRef.f1.x, mRef.f1.y);
 
-				//////trace(fDist1)
+				////////trace(fDist1)
 			}
 			//x1, y1, x2, y2
 
@@ -527,7 +527,7 @@
 				currentFarmName = mRef.rFarm1_2.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f2.x, mRef.f2.y);
-				//////trace(fDist2)
+				////////trace(fDist2)
 			}
 
 			if (fDist3 < fDist1 &&
@@ -538,7 +538,7 @@
 				currentFarmName = mRef.rFarm1_3.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f3.x, mRef.f3.y);
-				//////trace(fDist3)
+				////////trace(fDist3)
 			}
 
 			if (fDist4 < fDist1 &&
@@ -549,7 +549,7 @@
 				currentFarmName = mRef.rFarm1_4.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f4.x, mRef.f4.y);
-				//////trace(fDist4)
+				////////trace(fDist4)
 			}
 
 			if (fDist5 < fDist1 &&
@@ -560,9 +560,9 @@
 				currentFarmName = mRef.rFarm1_5.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f5.x, mRef.f5.y);
-				//////trace(fDist5)
+				////////trace(fDist5)
 			}
-			//////trace("aaaaaa");
+			////////trace("aaaaaa");
 			return;
 		}
 
@@ -601,7 +601,7 @@
 				currentFarmName = mRef.rFarm2_1.name;
 				//FindMoveAngle(this.x, this.y, mRef.f1.x, mRef.f1.y);
 
-				//////trace(fDist1)
+				////////trace(fDist1)
 			}
 			//x1, y1, x2, y2
 
@@ -613,7 +613,7 @@
 				currentFarmName = mRef.rFarm2_2.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f2.x, mRef.f2.y);
-				//////trace(fDist2)
+				////////trace(fDist2)
 			}
 
 			if (fDist3 < fDist1 &&
@@ -624,7 +624,7 @@
 				currentFarmName = mRef.rFarm2_3.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f3.x, mRef.f3.y);
-				//////trace(fDist3)
+				////////trace(fDist3)
 			}
 
 			if (fDist4 < fDist1 &&
@@ -635,7 +635,7 @@
 				currentFarmName = mRef.rFarm2_4.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f4.x, mRef.f4.y);
-				//////trace(fDist4)
+				////////trace(fDist4)
 			}
 
 			if (fDist5 < fDist1 &&
@@ -646,9 +646,9 @@
 				currentFarmName = mRef.rFarm2_5.name;
 
 				//FindMoveAngle(this.x, this.y, mRef.f5.x, mRef.f5.y);
-				//////trace(fDist5)
+				////////trace(fDist5)
 			}
-			//////trace("aaaaaa");
+			////////trace("aaaaaa");
 			return;
 		}
 

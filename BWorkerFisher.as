@@ -30,7 +30,7 @@
 
 		public function BWorkerFisher()
 		{
-			////trace("inside " + this.name);
+			//////trace("inside " + this.name);
 			mRef = MovieClip(this.parent);
 
 

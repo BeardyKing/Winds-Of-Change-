@@ -19,6 +19,8 @@
 		var randomSelection: Number = 0;
 		var spawnCounterTick: Number = 0;
 		var spawnCounterSeconds: Number = 0;
+		var totalFireAmount : Number = 0;
+		var amountOfFireActive : Number = 0;
 
 		var counter: Number = 0;
 		public function FireManager()
@@ -30,6 +32,9 @@
 		}
 		public function Loop(e: Event)
 		{
+			trace(amountOfFireActive + " amountOfFireActive");
+			trace(totalFireAmount + " totalFireAmount")
+			
 			if (objState == "boot")
 			{
 				if(mRef.objState == "play")
@@ -61,9 +66,9 @@
 					spawnCounterTick = 0;
 					spawnCounterSeconds +=1;
 				}
-				trace(randomSpawnTimer + " randomSpawnTimer")
-				trace(spawnCounterSeconds + " spawnCounterTick")
-				trace(randomSelection + " randomSelection")
+				//trace(randomSpawnTimer + " randomSpawnTimer")
+				//trace(spawnCounterSeconds + " spawnCounterTick")
+				//trace(randomSelection + " randomSelection")
 				
 				if (spawnCounterSeconds >= randomSpawnTimer   )
 				{
@@ -119,7 +124,7 @@
 			}
 
 
-			//trace(startingFire);
+			////trace(startingFire);
 
 			counter++;
 			if (counter >= 15)

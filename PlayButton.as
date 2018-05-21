@@ -24,14 +24,14 @@
 		}
 		public function MouseOver (e: MouseEvent)
 		{
-			//trace("OVER")
+			////trace("OVER")
 			mouseIsOver = true;
 		}
 		
 		public function MouseOut (e: MouseEvent)
 		{ 
 			mouseIsOver = false;
-			//trace("OUT")
+			////trace("OUT")
 		}
 		public function Loop (e: Event)
 		{
@@ -63,7 +63,7 @@
 		
 		public function MouseUp(mu : MouseEvent)
 		{
-			trace("Start Game")
+			//trace("Start Game")
 			mRef.objState = "play"
 				mRef.intro1.x = - 1000;
 				mRef.intro1.y = - 1000

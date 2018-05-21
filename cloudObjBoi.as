@@ -126,6 +126,13 @@
 				cloudState = "greyStorm"
 				// TESTING
 			}
+			if (this.name == "cloudBoi1")
+			{
+				// TESTING
+				this.x = stage.mouseX;
+				this.y = stage.mouseY;
+				//
+			}
 		}
 
 
@@ -191,7 +198,7 @@
 
 			}
 
-			if (objState == "idle")
+			if (objState == "idle_")
 			{
 				this.x -= Math.cos(angleDegLocal) * speed;
 				this.y += Math.sin(angleDegLocal) * speed;
@@ -272,408 +279,628 @@
 
 		public function HitTestFire()
 		{
-			
+
 			if (this.hitTestObject(mRef.fire1_Start1) == true)
 			{
-				mRef.fire1_Start1.objState = "idle"
-				mRef.fire1_Start1.isActive = false
-				
+				if (mRef.fire1_Start1.isActive == true)
+				{
+					mRef.fire1_Start1.objState = "dead"
+					mRef.fire1_Start1.isActive = false
+				}
+
 			}
 			if (this.hitTestObject(mRef.fire1_Start2) == true)
 			{
-				mRef.fire1_Start2.objState = "idle"
-				mRef.fire1_Start2.isActive = false
-				
+				if (mRef.fire1_Start2.isActive == true)
+				{
+					mRef.fire1_Start2.objState = "dead"
+					mRef.fire1_Start2.isActive = false
+				}
+
 			}
 			if (this.hitTestObject(mRef.fire1_Start3) == true)
 			{
-				mRef.fire1_Start3.objState = "idle"
-				mRef.fire1_Start3.isActive = false
-				
+				if (mRef.fire1_Start3.isActive == true)
+				{
+					mRef.fire1_Start3.objState = "dead"
+					mRef.fire1_Start3.isActive = false
+				}
+
 			}
 			if (this.hitTestObject(mRef.fire1_Start4) == true)
 			{
-				mRef.fire1_Start4.objState = "idle"
-				mRef.fire1_Start4.isActive = false
-				
+				if (mRef.fire1_Start4.isActive == true)
+				{
+					mRef.fire1_Start4.objState = "dead"
+					mRef.fire1_Start4.isActive = false
+				}
+
 			}
 			if (this.hitTestObject(mRef.fire1_Start5) == true)
 			{
-				mRef.fire1_Start5.objState = "idle"
-				mRef.fire1_Start5.isActive = false
-				
+				if (mRef.fire1_Start5.isActive == true)
+				{
+					mRef.fire1_Start5.objState = "dead"
+					mRef.fire1_Start5.isActive = false
+				}
+
 			}
 			if (this.hitTestObject(mRef.fire1_Start6) == true)
 			{
-				mRef.fire1_Start6.objState = "idle"
-				mRef.fire1_Start6.isActive = false
-				
+				if (mRef.fire1_Start6.isActive == true)
+				{
+					mRef.fire1_Start6.objState = "dead"
+					mRef.fire1_Start6.isActive = false
+				}
+
 			}
 			if (this.hitTestObject(mRef.fire1_Start7) == true)
 			{
-				mRef.fire1_Start7.objState = "idle"
-				mRef.fire1_Start7.isActive = false
-				
+				if (mRef.fire1_Start7.isActive == true)
+				{
+					mRef.fire1_Start7.objState = "dead"
+					mRef.fire1_Start7.isActive = false
+				}
+
 			}
 			if (this.hitTestObject(mRef.fire1_Start8) == true)
 			{
-				mRef.fire1_Start8.objState = "idle"
-				mRef.fire1_Start8.isActive = false
-				
+				if (mRef.fire1_Start8.isActive == true)
+				{
+					mRef.fire1_Start8.objState = "dead"
+					mRef.fire1_Start8.isActive = false
+				}
+
 			}
 
-			
-			if(this.hitTestObject(mRef.fire1_1) == true)
+			// end of starting
+
+
+			if (this.hitTestObject(mRef.fire1_1) == true)
 			{
-				mRef.fire1_1.isActive = false
-				mRef.fire1_1.objState = "idle"
-				
+				if (mRef.fire1_1.isActive == true)
+				{
+					mRef.fire1_1.isActive = false
+					mRef.fire1_1.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire1_2) == true)
+			if (this.hitTestObject(mRef.fire1_2) == true)
 			{
-				mRef.fire1_2.isActive = false
-				mRef.fire1_2.objState = "idle"
-				
+				if (mRef.fire1_2.isActive == true)
+				{
+					mRef.fire1_2.isActive = false
+					mRef.fire1_2.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire1_3) == true)
+			if (this.hitTestObject(mRef.fire1_3) == true)
 			{
-				mRef.fire1_3.isActive = false
-				mRef.fire1_3.objState = "idle"
-				
+				if (mRef.fire1_3.isActive == true)
+				{
+					mRef.fire1_3.isActive = false
+					mRef.fire1_3.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire1_4) == true)
+			if (this.hitTestObject(mRef.fire1_4) == true)
 			{
-				mRef.fire1_4.isActive = false
-				mRef.fire1_4.objState = "idle"
-				
+				if (mRef.fire1_4.isActive == true)
+				{
+					mRef.fire1_4.isActive = false
+					mRef.fire1_4.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire1_5) == true)
+			if (this.hitTestObject(mRef.fire1_5) == true)
 			{
-				mRef.fire1_5.isActive = false
-				mRef.fire1_5.objState = "idle"
-				
+				if (mRef.fire1_5.isActive == true)
+				{
+					mRef.fire1_5.isActive = false
+					mRef.fire1_5.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire1_6) == true)
+			if (this.hitTestObject(mRef.fire1_6) == true)
 			{
-				mRef.fire1_6.isActive = false
-				mRef.fire1_6.objState = "idle"
-				
+				if (mRef.fire1_6.isActive == true)
+				{
+					mRef.fire1_6.isActive = false
+					mRef.fire1_6.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire1_7) == true)
+			if (this.hitTestObject(mRef.fire1_7) == true)
 			{
-				mRef.fire1_7.isActive = false
-				mRef.fire1_7.objState = "idle"
-				
+				if (mRef.fire1_7.isActive == true)
+				{
+					mRef.fire1_7.isActive = false
+					mRef.fire1_7.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire1_8) == true)
+			if (this.hitTestObject(mRef.fire1_8) == true)
 			{
-				mRef.fire1_8.isActive = false
-				mRef.fire1_8.objState = "idle"
-				
+				if (mRef.fire1_8.isActive == true)
+				{
+					mRef.fire1_8.isActive = false
+					mRef.fire1_8.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire1_9) == true)
+			if (this.hitTestObject(mRef.fire1_9) == true)
 			{
-				mRef.fire1_9.isActive = false
-				mRef.fire1_9.objState = "idle"
-				
+				if (mRef.fire1_9.isActive == true)
+				{
+					mRef.fire1_9.isActive = false
+					mRef.fire1_9.objState = "dead"
+				}
+
 			}
-						
+
 			/// SET 2
-			
-			if(this.hitTestObject(mRef.fire2_1) == true)
+
+			if (this.hitTestObject(mRef.fire2_1) == true)
 			{
-				mRef.fire2_1.isActive = false
-				mRef.fire2_1.objState = "idle"
-				
+				if (mRef.fire2_1.isActive == true)
+				{
+					mRef.fire2_1.isActive = false
+					mRef.fire2_1.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire2_2) == true)
+			if (this.hitTestObject(mRef.fire2_2) == true)
 			{
-				mRef.fire2_2.isActive = false
-				mRef.fire2_2.objState = "idle"
-				
+				if (mRef.fire2_2.isActive == true)
+				{
+					mRef.fire2_2.isActive = false
+					mRef.fire2_2.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire2_3) == true)
+			if (this.hitTestObject(mRef.fire2_3) == true)
 			{
-				mRef.fire2_3.isActive = false
-				mRef.fire2_3.objState = "idle"
-				
+				if (mRef.fire2_3.isActive == true)
+				{
+					mRef.fire2_3.isActive = false
+					mRef.fire2_3.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire2_4) == true)
+			if (this.hitTestObject(mRef.fire2_4) == true)
 			{
-				mRef.fire2_4.isActive = false
-				mRef.fire2_4.objState = "idle"
-				
+				if (mRef.fire2_4.isActive == true)
+				{
+					mRef.fire2_4.isActive = false
+					mRef.fire2_4.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire2_5) == true)
+			if (this.hitTestObject(mRef.fire2_5) == true)
 			{
-				mRef.fire2_5.isActive = false
-				mRef.fire2_5.objState = "idle"
-				
+				if (mRef.fire2_5.isActive == true)
+				{
+					mRef.fire2_5.isActive = false
+					mRef.fire2_5.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire2_6) == true)
+			if (this.hitTestObject(mRef.fire2_6) == true)
 			{
-				mRef.fire2_6.isActive = false
-				mRef.fire2_6.objState = "idle"
-				
+				if (mRef.fire2_1.isActive == true)
+				{
+					mRef.fire2_6.isActive = false
+					mRef.fire2_6.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire2_7) == true)
+			if (this.hitTestObject(mRef.fire2_7) == true)
 			{
-				mRef.fire2_7.isActive = false
-				mRef.fire2_7.objState = "idle"
-				
+				if (mRef.fire2_7.isActive == true)
+				{
+					mRef.fire2_7.isActive = false
+					mRef.fire2_7.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire2_8) == true)
+			if (this.hitTestObject(mRef.fire2_8) == true)
 			{
-				mRef.fire2_8.isActive = false
-				mRef.fire2_8.objState = "idle"
-				
+				if (mRef.fire2_8.isActive == true)
+				{
+					mRef.fire2_8.isActive = false
+					mRef.fire2_8.objState = "dead"
+				}
+
 			}
-			if(this.hitTestObject(mRef.fire2_9) == true)
+			if (this.hitTestObject(mRef.fire2_9) == true)
 			{
-				mRef.fire2_9.isActive = false
-				mRef.fire2_9.objState = "idle"
-				
+				if (mRef.fire2_9.isActive == true)
+				{
+					mRef.fire2_9.isActive = false
+					mRef.fire2_9.objState = "dead"
+				}
+
 			}
-			
+
 			// SET 3
-			
-			if(this.hitTestObject(mRef.fire3_1) == true)
+
+			if (this.hitTestObject(mRef.fire3_1) == true)
 			{
-				mRef.fire3_1.isActive = false
-				mRef.fire3_1.objState = "idle"
-				
+				if (mRef.fire3_1.isActive == true)
+				{
+					mRef.fire3_1.isActive = false
+					mRef.fire3_1.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire3_2) == true)
+			if (this.hitTestObject(mRef.fire3_2) == true)
 			{
-				mRef.fire3_2.isActive = false
-				mRef.fire3_2.objState = "idle"
-				
+				if (mRef.fire3_2.isActive == true)
+				{
+					mRef.fire3_2.isActive = false
+					mRef.fire3_2.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire3_3) == true)
+			if (this.hitTestObject(mRef.fire3_3) == true)
 			{
-				mRef.fire3_3.isActive = false
-				mRef.fire3_3.objState = "idle"
-				
+				if (mRef.fire3_3.isActive == true)
+				{
+					mRef.fire3_3.isActive = false
+					mRef.fire3_3.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire3_4) == true)
+			if (this.hitTestObject(mRef.fire3_4) == true)
 			{
-				mRef.fire3_4.isActive = false
-				mRef.fire3_4.objState = "idle"
-				
+				if (mRef.fire3_4.isActive == true)
+				{
+					mRef.fire3_4.isActive = false
+					mRef.fire3_4.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire3_5) == true)
+			if (this.hitTestObject(mRef.fire3_5) == true)
 			{
-				mRef.fire3_5.isActive = false
-				mRef.fire3_5.objState = "idle"
-				
+				if (mRef.fire3_5.isActive == true)
+				{
+					mRef.fire3_5.isActive = false
+					mRef.fire3_5.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire3_6) == true)
+			if (this.hitTestObject(mRef.fire3_6) == true)
 			{
-				mRef.fire3_6.isActive = false
-				mRef.fire3_6.objState = "idle"
-				
+				if (mRef.fire3_6.isActive == true)
+				{
+					mRef.fire3_6.isActive = false
+					mRef.fire3_6.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire3_7) == true)
+			if (this.hitTestObject(mRef.fire3_7) == true)
 			{
-				mRef.fire3_7.isActive = false
-				mRef.fire3_7.objState = "idle"
-				
+				if (mRef.fire3_7.isActive == true)
+				{
+					mRef.fire3_7.isActive = false
+					mRef.fire3_7.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire3_8) == true)
+			if (this.hitTestObject(mRef.fire3_8) == true)
 			{
-				mRef.fire3_8.isActive = false
-				mRef.fire3_8.objState = "idle"
-				
+				if (mRef.fire3_8.isActive == true)
+				{
+					mRef.fire3_8.isActive = false
+					mRef.fire3_8.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire3_9) == true)
+			if (this.hitTestObject(mRef.fire3_9) == true)
 			{
-				mRef.fire3_9.isActive = false
-				mRef.fire3_9.objState = "idle"
-				
+				if (mRef.fire3_9.isActive == true)
+				{
+					mRef.fire3_9.isActive = false
+					mRef.fire3_9.objState = "dead"
+				}
 			}
-		
+
 			// SET 4
-			
-			if(this.hitTestObject(mRef.fire4_1) == true)
+
+			if (this.hitTestObject(mRef.fire4_1) == true)
 			{
-				mRef.fire4_1.isActive = false
-				mRef.fire4_1.objState = "idle"
+				if (mRef.fire4_1.isActive == true)
+				{
+					mRef.fire4_1.isActive = false
+					mRef.fire4_1.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire4_2) == true)
+			if (this.hitTestObject(mRef.fire4_2) == true)
 			{
-				mRef.fire4_2.isActive = false
-				mRef.fire4_2.objState = "idle"
+				if (mRef.fire4_2.isActive == true)
+				{
+					mRef.fire4_2.isActive = false
+					mRef.fire4_2.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire4_3) == true)
+			if (this.hitTestObject(mRef.fire4_3) == true)
 			{
-				mRef.fire4_3.isActive = false
-				mRef.fire4_3.objState = "idle"
+				if (mRef.fire4_3.isActive == true)
+				{
+					mRef.fire4_3.isActive = false
+					mRef.fire4_3.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire4_4) == true)
+			if (this.hitTestObject(mRef.fire4_4) == true)
 			{
-				mRef.fire4_4.isActive = false
-				mRef.fire4_4.objState = "idle"
+				if (mRef.fire4_4.isActive == true)
+				{
+					mRef.fire4_4.isActive = false
+					mRef.fire4_4.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire4_5) == true)
+			if (this.hitTestObject(mRef.fire4_5) == true)
 			{
-				mRef.fire4_5.isActive = false
-				mRef.fire4_5.objState = "idle"
+				if (mRef.fire4_5.isActive == true)
+				{
+					mRef.fire4_5.isActive = false
+					mRef.fire4_5.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire4_6) == true)
+			if (this.hitTestObject(mRef.fire4_6) == true)
 			{
-				mRef.fire4_6.isActive = false
-				mRef.fire4_6.objState = "idle"
+				if (mRef.fire4_6.isActive == true)
+				{
+					mRef.fire4_6.isActive = false
+					mRef.fire4_6.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire4_7) == true)
+			if (this.hitTestObject(mRef.fire4_7) == true)
 			{
-				mRef.fire4_7.isActive = false
-				mRef.fire4_7.objState = "idle"
+				if (mRef.fire4_7.isActive == true)
+				{
+					mRef.fire4_7.isActive = false
+					mRef.fire4_7.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire4_8) == true)
+			if (this.hitTestObject(mRef.fire4_8) == true)
 			{
-				mRef.fire4_8.isActive = false
-				mRef.fire4_8.objState = "idle"
+				if (mRef.fire4_8.isActive == true)
+				{
+					mRef.fire4_8.isActive = false
+					mRef.fire4_8.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire4_9) == true)
+			if (this.hitTestObject(mRef.fire4_9) == true)
 			{
-				mRef.fire4_9.isActive = false
-				mRef.fire4_9.objState = "idle"
+				if (mRef.fire4_9.isActive == true)
+				{
+					mRef.fire4_9.isActive = false
+					mRef.fire4_9.objState = "dead"
+				}
 			}
-			
+
 			// SET 5
-			
-			if(this.hitTestObject(mRef.fire5_1) == true)
+
+			if (this.hitTestObject(mRef.fire5_1) == true)
 			{
-				mRef.fire5_1.isActive = false
-				mRef.fire5_1.objState = "idle"
+				if (mRef.fire5_1.isActive == true)
+				{
+					mRef.fire5_1.isActive = false
+					mRef.fire5_1.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire5_2) == true)
+			if (this.hitTestObject(mRef.fire5_2) == true)
 			{
-				mRef.fire5_2.isActive = false
-				mRef.fire5_2.objState = "idle"
+				if (mRef.fire5_2.isActive == true)
+				{
+					mRef.fire5_2.isActive = false
+					mRef.fire5_2.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire5_3) == true)
+			if (this.hitTestObject(mRef.fire5_3) == true)
 			{
-				mRef.fire5_3.isActive = false
-				mRef.fire5_3.objState = "idle"
+				if (mRef.fire5_3.isActive == true)
+				{
+					mRef.fire5_3.isActive = false
+					mRef.fire5_3.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire5_4) == true)
+			if (this.hitTestObject(mRef.fire5_4) == true)
 			{
-				mRef.fire5_4.isActive = false
-				mRef.fire5_4.objState = "idle"
+				if (mRef.fire5_4.isActive == true)
+				{
+					mRef.fire5_4.isActive = false
+					mRef.fire5_4.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire5_5) == true)
+			if (this.hitTestObject(mRef.fire5_5) == true)
 			{
-				mRef.fire5_5.isActive = false
-				mRef.fire5_5.objState = "idle"
+				if (mRef.fire5_5.isActive == true)
+				{
+					mRef.fire5_5.isActive = false
+					mRef.fire5_5.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire5_6) == true)
+			if (this.hitTestObject(mRef.fire5_6) == true)
 			{
-				mRef.fire5_6.isActive = false
-				mRef.fire5_6.objState = "idle"
+				if (mRef.fire5_6.isActive == true)
+				{
+					mRef.fire5_6.isActive = false
+					mRef.fire5_6.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire5_7) == true)
+			if (this.hitTestObject(mRef.fire5_7) == true)
 			{
-				mRef.fire5_7.isActive = false
-				mRef.fire5_7.objState = "idle"
+				if (mRef.fire5_7.isActive == true)
+				{
+					mRef.fire5_7.isActive = false
+					mRef.fire5_7.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire5_8) == true)
+			if (this.hitTestObject(mRef.fire5_8) == true)
 			{
-				mRef.fire5_8.isActive = false
-				mRef.fire5_8.objState = "idle"
+				if (mRef.fire5_8.isActive == true)
+				{
+					mRef.fire5_8.isActive = false
+					mRef.fire5_8.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire5_9) == true)
+			if (this.hitTestObject(mRef.fire5_9) == true)
 			{
-				mRef.fire5_9.isActive = false
-				mRef.fire5_9.objState = "idle"
+				if (mRef.fire5_9.isActive == true)
+				{
+					mRef.fire5_9.isActive = false
+					mRef.fire5_9.objState = "dead"
+				}
 			}
-			
+
 			// SET 6
-			
-			if(this.hitTestObject(mRef.fire6_1) == true)
+
+			if (this.hitTestObject(mRef.fire6_1) == true)
 			{
-				mRef.fire6_1.isActive = false
-				mRef.fire6_1.objState = "idle"
+				if (mRef.fire6_1.isActive == true)
+				{
+					mRef.fire6_1.isActive = false
+					mRef.fire6_1.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire6_2) == true)
+			if (this.hitTestObject(mRef.fire6_2) == true)
 			{
-				mRef.fire6_2.isActive = false
-				mRef.fire6_2.objState = "idle"
+				if (mRef.fire6_2.isActive == true)
+				{
+					mRef.fire6_2.isActive = false
+					mRef.fire6_2.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire6_3) == true)
+			if (this.hitTestObject(mRef.fire6_3) == true)
 			{
-				mRef.fire6_3.isActive = false
-				mRef.fire6_3.objState = "idle"
+				if (mRef.fire6_3.isActive == true)
+				{
+					mRef.fire6_3.isActive = false
+					mRef.fire6_3.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire6_4) == true)
+			if (this.hitTestObject(mRef.fire6_4) == true)
 			{
-				mRef.fire6_4.isActive = false
-				mRef.fire6_4.objState = "idle"
+				if (mRef.fire6_4.isActive == true)
+				{
+					mRef.fire6_4.isActive = false
+					mRef.fire6_4.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire6_5) == true)
+			if (this.hitTestObject(mRef.fire6_5) == true)
 			{
-				mRef.fire6_5.isActive = false
-				mRef.fire6_5.objState = "idle"
+				if (mRef.fire6_5.isActive == true)
+				{
+					mRef.fire6_5.isActive = false
+					mRef.fire6_5.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire6_6) == true)
+			if (this.hitTestObject(mRef.fire6_6) == true)
 			{
-				mRef.fire6_6.isActive = false
-				mRef.fire6_6.objState = "idle"
+				if (mRef.fire6_6.isActive == true)
+				{
+					mRef.fire6_6.isActive = false
+					mRef.fire6_6.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire6_7) == true)
+			if (this.hitTestObject(mRef.fire6_7) == true)
 			{
-				mRef.fire6_7.isActive = false
-				mRef.fire6_7.objState = "idle"
+				if (mRef.fire6_7.isActive == true)
+				{
+					mRef.fire6_7.isActive = false
+					mRef.fire6_7.objState = "dead"
+				}
 			}
-			
+
 			// SET 7 fire 1 to 12 with fire names missing :^) good coding right here
-			
-			if(this.hitTestObject(mRef.fire1) == true)
+
+			if (this.hitTestObject(mRef.fire1) == true)
 			{
-				mRef.fire1.isActive = false
-				mRef.fire1.objState = "idle"
+				if (mRef.fire1.isActive == true)
+				{
+					mRef.fire1.isActive = false
+					mRef.fire1.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire2) == true)
+			if (this.hitTestObject(mRef.fire2) == true)
 			{
-				mRef.fire2.isActive = false
-				mRef.fire2.objState = "idle"
+				if (mRef.fire2.isActive == true)
+				{
+					mRef.fire2.isActive = false
+					mRef.fire2.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire3) == true)
+			if (this.hitTestObject(mRef.fire3) == true)
 			{
-				mRef.fire3.isActive = false
-				mRef.fire3.objState = "idle"
+				if (mRef.fire3.isActive == true)
+				{
+					mRef.fire3.isActive = false
+					mRef.fire3.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire5) == true)
+			if (this.hitTestObject(mRef.fire5) == true)
 			{
-				mRef.fire5.isActive = false
-				mRef.fire5.objState = "idle"
+				if (mRef.fire5.isActive == true)
+				{
+					mRef.fire5.isActive = false
+					mRef.fire5.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire7) == true)
+			if (this.hitTestObject(mRef.fire7) == true)
 			{
-				mRef.fire7.isActive = false
-				mRef.fire7.objState = "idle"
+				if (mRef.fire7.isActive == true)
+				{
+					mRef.fire7.isActive = false
+					mRef.fire7.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire8) == true)
+			if (this.hitTestObject(mRef.fire8) == true)
 			{
-				mRef.fire8.isActive = false
-				mRef.fire8.objState = "idle"
+				if (mRef.fire8.isActive == true)
+				{
+					mRef.fire8.isActive = false
+					mRef.fire8.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire9) == true)
+			if (this.hitTestObject(mRef.fire9) == true)
 			{
-				mRef.fire9.isActive = false
-				mRef.fire9.objState = "idle"
+				if (mRef.fire9.isActive == true)
+				{
+					mRef.fire9.isActive = false
+					mRef.fire9.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire11) == true)
+			if (this.hitTestObject(mRef.fire11) == true)
 			{
-				mRef.fire11.isActive = false
-				mRef.fire11.objState = "idle"
+				if (mRef.fire11.isActive == true)
+				{
+					mRef.fire11.isActive = false
+					mRef.fire11.objState = "dead"
+				}
 			}
-			if(this.hitTestObject(mRef.fire12) == true)
+			if (this.hitTestObject(mRef.fire12) == true)
 			{
-				mRef.fire12.isActive = false
-				mRef.fire12.objState = "idle"
+				if (mRef.fire12.isActive == true)
+				{
+					mRef.fire12.isActive = false
+					mRef.fire12.objState = "dead"
+				}
 			}
-			
+
+			if (this.hitTestObject(mRef.fire_Fish1) == true)
+			{
+				if (mRef.fire_Fish1.isActive == true)
+				{
+					mRef.fire_Fish1.isActive = false
+					mRef.fire_Fish1.objState = "dead"
+				}
+			}
+
+
+			if (this.hitTestObject(mRef.fire3_10) == true)
+			{
+				if (mRef.fire3_10.isActive == true)
+				{
+					mRef.fire3_10.isActive = false
+					mRef.fire3_10.objState = "dead"
+				}
+			}
+
+
 
 		}
 		public function HitTestRicePaddy()
@@ -694,7 +921,7 @@
 			}
 			else
 			{
-				objState = "idle"
+				objState = "idle_"
 			}
 
 			randomChangeLightGrey = Math.round(Math.random() * 15 + 2);
@@ -702,8 +929,9 @@
 			randomChangeGreyStorm = Math.round(Math.random() * 10 + 8)
 			randomChangeReset = Math.round(Math.random() * 8 + 3)
 
-			this.x = randomXPos;
-			this.y = randomYPos;
+			// SET SPAWN
+			//this.x = randomXPos;
+			//this.y = randomYPos;
 		}
 
 		public function StateChangeHandeler()
@@ -717,19 +945,19 @@
 				{
 					cloudState = "lightGrey"
 					objStateCounterSeconds = 0;
-					//trace(cloudState + " " + this.name)
+					////trace(cloudState + " " + this.name)
 				}
 				else if (objStateCounterSeconds >= randomChangeGrey && cloudState == "lightGrey")
 				{
 					cloudState = "grey"
 					objStateCounterSeconds = 0
-					//trace(cloudState + " " + this.name)
+					////trace(cloudState + " " + this.name)
 				}
 				else if (objStateCounterSeconds >= randomChangeGreyStorm && cloudState == "grey")
 				{
 					cloudState = "greyStorm"
 					objStateCounterSeconds = 0;
-					//trace(cloudState + " " + this.name)
+					////trace(cloudState + " " + this.name)
 				}
 				else if (objStateCounterSeconds >= randomChangeReset && cloudState == "greyStorm")
 				{
@@ -1310,6 +1538,8 @@
 					mRef.c15.speedNum -= minusAmount;
 				}
 			}
+
+
 
 			if (singlePassRandom == false)
 			{

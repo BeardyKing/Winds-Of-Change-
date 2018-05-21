@@ -25,7 +25,7 @@
 
 		public function RedFarmObj()
 		{
-			trace("inside " + this.name)
+			//trace("inside " + this.name)
 
 			mRef = MovieClip(this.parent);
 
@@ -35,7 +35,7 @@
 		{
 			if (mRef.objState == "play")
 			{
-				//trace(remainingRice + " " + this.name + " " + objState)
+				////trace(remainingRice + " " + this.name + " " + objState)
 				if (objState == "growing")
 				{
 					this.alpha = 0.5;

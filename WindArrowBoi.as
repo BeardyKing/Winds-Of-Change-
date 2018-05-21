@@ -17,7 +17,7 @@
 		public function Loop(e: Event)
 		{
 			this.rotation = (mRef.globalDir / Math.PI) * 180;
-			//trace(this.rotation + " " + this.name);
+			////trace(this.rotation + " " + this.name);
 		}
 	}
 	

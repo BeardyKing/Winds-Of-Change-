@@ -80,7 +80,7 @@
 				{
 					mRef.bCity.tradecartCounter += 1;
 					objState = "idle";
-					trace(this.name)
+					//trace(this.name)
 				}
 
 			}

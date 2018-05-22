@@ -53,6 +53,7 @@
 				Node6();
 				Node7();
 				Node8();
+				Node9();
 			}
 
 			if (objState == "landed")
@@ -232,7 +233,14 @@
 					{
 						objState = "landed";
 						isInWater = false;
-						PlaceSamuari();
+						if (mRef.bFighter1.isActiveBool == false)
+						{
+							mRef.bFighter1.PlaceSamuari(mRef.rFishTown1.x, mRef.rFishTown1.y, "rFishTown1");
+						}
+						else if (mRef.bFighter2.isActiveBool == false)
+						{
+							mRef.bFighter2.PlaceSamuari(mRef.rFishTown1.x, mRef.rFishTown1.y, "rFishTown1");
+						}
 					}
 					if (mRef.rFishTown1.teamState == "blue")
 					{
@@ -242,7 +250,7 @@
 				}
 			}
 		}
-		
+
 		public function Node9()
 		{
 			if (nodeNumber == 9)
@@ -258,9 +266,10 @@
 
 				if (fDist1 <= hypotDist)
 				{
-						objState = "landed";
-						nodeNumber += 1;
-						isInWater = false;			
+					mRef.bFighter1.PlaceSamuari(mRef.rCity.x, mRef.rCity.y, "rCity");
+					objState = "landed";
+					nodeNumber += 1;
+					isInWater = false;
 				}
 			}
 		}

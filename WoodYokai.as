@@ -4,14 +4,13 @@
 	import flash.events.Event;
 	
 	
-	public class RiceYokai extends MovieClip {
+	public class WoodYokai extends MovieClip {
 		
 		var mRef : MovieClip;
-		
 		var isActiveBool : Boolean = false;
 		
 		
-		public function RiceYokai() {
+		public function WoodYokai() {
 			// constructor code
 
 			mRef = MovieClip(this.parent);
@@ -23,6 +22,11 @@
 		public function Loop(e: Event)
 		{
 			//trace("Inside " + this.name)
+			if(isActiveBool == false)
+			{
+				// do something here I guess
+				this.x = 1000;
+			}
 		}
 	}
 	

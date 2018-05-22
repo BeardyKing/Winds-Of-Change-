@@ -234,12 +234,12 @@
 		
 		public function HitTestFireYokai()
 		{
-			if (this.hitTestObject(mRef.woodYokai1) == true)
+			if (this.hitTestObject(mRef.yokai1) == true)
 			{
-				if (mRef.woodYokai1.isActiveBool == true)
+				if (mRef.yokai1.isActiveBool == true)
 				{
-					mRef.woodYokai1.isActiveBool = false;
-					mRef.yokaiManager1.objState = "idle";
+					mRef.yokai1.isActiveBool = false;
+					mRef.yokaiManager1.objState = "reset";
 					mRef.yokaiManager1.townDisabled = "none";
 				}
 			}

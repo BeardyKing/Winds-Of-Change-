@@ -89,7 +89,7 @@
 			randomChoice = Math.round(Math.random() * 3) + 1;
 
 			// TESTING
-			randomSpawnTime = Math.round(Math.random() * 5) + 1;
+			randomSpawnTime = Math.round(Math.random() * 60) + 45;
 
 			trace(randomChoice + " randomChoice " + this.name)
 			trace(randomSpawnTime + " randomSpawnTime " + this.name)
@@ -109,7 +109,6 @@
 			if (timerSeconds >= randomSpawnTime)
 			{
 				ChooseYokai();
-				trace("FUCKING BOOP" + this.name)
 				objState = "yokaiActive"
 			}
 		}
@@ -118,32 +117,32 @@
 		{
 			if (randomChoice == 1)
 			{
-				mRef.woodYokai1.x = mRef.bLoggingTown1.x
-				mRef.woodYokai1.y = mRef.bLoggingTown1.y
+				mRef.yokai1.x = mRef.bLoggingTown1.x
+				mRef.yokai1.y = mRef.bLoggingTown1.y
 				townDisabled = "bLoggingTown1"
-				mRef.woodYokai1.isActiveBool = true;
+				mRef.yokai1.isActiveBool = true;
 
 			}
 			if (randomChoice == 2)
 			{
-				mRef.woodYokai1.x = mRef.bLoggingTown3.x
-				mRef.woodYokai1.y = mRef.bLoggingTown3.y
+				mRef.yokai1.x = mRef.bLoggingTown3.x
+				mRef.yokai1.y = mRef.bLoggingTown3.y
 				townDisabled = "bLoggingTown3"
-				mRef.woodYokai1.isActiveBool = true;
+				mRef.yokai1.isActiveBool = true;
 			}
 			if (randomChoice == 3)
 			{
-				mRef.riceYokai1.x = mRef.farmTown1.x
-				mRef.riceYokai1.y = mRef.farmTown1.y
+				mRef.yokai1.x = mRef.farmTown1.x
+				mRef.yokai1.y = mRef.farmTown1.y
 				townDisabled = "farmTown1";
-				mRef.riceYokai1.isActiveBool = true;
+				mRef.yokai1.isActiveBool = true;
 			}
 			if (randomChoice == 4)
 			{
-				mRef.riceYokai1.x = mRef.farmTown2.x
-				mRef.riceYokai1.y = mRef.farmTown2.y
+				mRef.yokai1.x = mRef.farmTown2.x
+				mRef.yokai1.y = mRef.farmTown2.y
 				townDisabled = "farmTown2"
-				mRef.riceYokai1.isActiveBool = true;
+				mRef.yokai1.isActiveBool = true;
 			}
 		}
 

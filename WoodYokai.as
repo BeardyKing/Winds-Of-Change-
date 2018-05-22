@@ -25,6 +25,7 @@
 			if(isActiveBool == false)
 			{
 				// do something here I guess
+				
 				this.x = 1000;
 			}
 		}

@@ -14,6 +14,11 @@
 		var woodTotal: Number = 0;
 		var fishTotal: Number = 0;
 		var riceTotal: Number = 0;
+
+		/*var woodTotal: Number = 70;
+		var fishTotal: Number = 70;
+		var riceTotal: Number = 70;*/
+
 		var tradecartCounter: Number = 0
 
 		var fishIsPoisoned: Boolean = false;
@@ -36,18 +41,30 @@
 
 		public function Loop(e: Event)
 		{
-			if(mRef.fire11.objState == "onFire" || mRef.fire8.objState == "onFire" || mRef.fire7.objState == "onFire" )
+
+			trace(woodTotal + " wood Total")
+			trace(fishTotal + " fishTotal")
+			trace(riceTotal + " rice Total")
+
+			woodTotal += 0.2
+			fishTotal += 0.2
+			riceTotal += 0.2
+			// FIGHTER CART CODE
+
+			if (mRef.fire11.objState == "onFire" || mRef.fire8.objState == "onFire" || mRef.fire7.objState == "onFire")
 			{
 				objHealth -= 3 / stage.frameRate;
 				isOnFire = true;
-				
+
 			}
-			else 
+			else
 			{
 				isOnFire = false;
 			}
 			if (mRef.objState == "play")
 			{
+				FighterCart();
+
 
 				//riceTotal = Math.round((riceTotal * 10) / 10)
 				////trace("rice total = " + riceTotal );
@@ -56,10 +73,39 @@
 				mRef.woodText1.text = woodTotal.toString();
 				////trace(fishTotal + this.name);
 				////trace("aaaaa")
+			}
+			// loop
+		}
+		//loop
 
+		public function FighterCart()
+		{
+			if (riceTotal >= 50 && fishTotal >= 50 && woodTotal >= 50 )
+			{
 
+				// spawn FighterCart
+				if (mRef.fighterCart1.isActiveBool == false)
+				{
+					mRef.fighterCart1.isActiveBool = true;
+					mRef.fighterCart1.x = this.x
+					mRef.fighterCart1.y = this.y
+
+					riceTotal -= 50
+					fishTotal -= 50
+					woodTotal -= 50
+				}
+				else if (mRef.fighterCart2.isActiveBool == false)
+				{
+					mRef.fighterCart2.isActiveBool = true;
+					mRef.fighterCart2.x = this.x
+					mRef.fighterCart2.y = this.y
+					riceTotal -= 50
+					fishTotal -= 50
+					woodTotal -= 50
+				}
 			}
 		}
+
 		public function AddTradeCart(objName: String)
 		{
 			if (objName == "farmTown1")
@@ -102,8 +148,8 @@
 				mRef.bTradeWood3.y = this.y;
 				mRef.bTradeWood3.rotation = 90;
 			}
-			
-			if(objName == "bFishingTown1")
+
+			if (objName == "bFishingTown1")
 			{
 				//trace(objName + " added trade cart")
 				mRef.bFishingTown1.hasTradeCartActive = true;
@@ -111,8 +157,8 @@
 				mRef.bTradeFish1.y = this.y;
 				mRef.bTradeFish1.rotation = 90;
 			}
-			
-			if(objName == "bFishingTown2")
+
+			if (objName == "bFishingTown2")
 			{
 				//trace(objName + " added trade cart")
 				mRef.bFishingTown2.hasTradeCartActive = true;
@@ -120,8 +166,8 @@
 				mRef.bTradeFish2.y = this.y;
 				mRef.bTradeFish2.rotation = 90;
 			}
-			
-			if(objName == "bFishingTown3")
+
+			if (objName == "bFishingTown3")
 			{
 				//trace(objName + " added trade cart")
 				mRef.bFishingTown3.hasTradeCartActive = true;

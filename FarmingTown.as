@@ -54,7 +54,8 @@
 				}
 				if (this.name == "farmTown1")
 				{
-					if (mRef.fire1_Start5.objState == "onFire")
+					// sorry for lazy code its nearing deadline <3
+					if (mRef.fire1_Start5.objState == "onFire" || mRef.yokaiManager1.townDisabled == "farmTown1")
 					{
 						isOnFireBool = true;
 						mRef.f1.alpha =  0.5
@@ -72,9 +73,9 @@
 					}
 				}
 				
-				if (this.name == "farmTown2")
+				if (this.name == "farmTown2" )
 				{
-					if (mRef.fire2.objState == "onFire")
+					if (mRef.fire2.objState == "onFire" || mRef.yokaiManager1.townDisabled == "farmTown2")
 					{
 						isOnFireBool = true;
 						

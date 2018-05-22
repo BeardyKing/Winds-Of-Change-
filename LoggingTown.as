@@ -46,7 +46,7 @@
 						mRef.bCity.AddTradeCart(this.name)
 					}
 
-					if (mRef.fire1_Start1.objState == "onFire")
+					if (mRef.fire1_Start1.objState == "onFire" || mRef.yokaiManager1.townDisabled == "bLoggingTown1")
 					{
 						isOnFireBool = true;
 						
@@ -85,7 +85,7 @@
 						mRef.bCity.AddTradeCart(this.name)
 					}
 
-					if (mRef.fire1_Start7.objState == "onFire")
+					if (mRef.fire1_Start7.objState == "onFire" || mRef.yokaiManager1.townDisabled == "bLoggingTown3")
 					{
 						isOnFireBool = true;
 						

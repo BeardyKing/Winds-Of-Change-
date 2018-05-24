@@ -19,7 +19,13 @@
 		var hypotDist: Number = 10;
 		var isInWater: Boolean = false;
 
+		var objHealth: Number = 100;
+
 		var isActiveBool: Boolean = false
+		var dmgCounter: Number = 0;
+		var resetCounter: Number = 0;
+
+		var overwriteAll: Boolean = false;
 
 		public function FighterCart()
 		{
@@ -31,49 +37,96 @@
 
 		public function Loop(e: Event)
 		{
-			trace(objState + " objState " + this.name)
-			trace(fDist1 + " fDist1 " + this.name)
-			if (objState == "idle")
+
+			//trace(objState + " objState " + this.name)
+			//trace(fDist1 + " fDist1 " + this.name)
+			if (overwriteAll == false)
 			{
-				if (isActiveBool == true)
+
+				if (objState == "idle")
+				{
+					if (isActiveBool == true)
+					{
+						this.alpha = 1;
+						objState = "moving"
+					}
+				}
+
+
+				if (objState == "moving")
+				{
+					if (this.alpha != 1)
+					{
+						this.alpha = 1;
+					}
+					Node1();
+					Node2();
+					Node3();
+					Node4();
+					Node5();
+					Node6();
+					Node7();
+					Node8();
+					Node9();
+				}
+
+				if (objState == "landed")
+				{
+					this.alpha -= 0.03;
+					if (this.alpha <= 0)
+					{
+						this.alpha = 0;
+						isActiveBool = false;
+						objState = "reset";
+						objHealth = 100;
+						
+					}
+
+				}
+				if (objState == "reset")
+				{
+					this.x = 1000;
+					nodeNumber = 1;
+					objState = "idle"
+
+				}
+			}
+			if (overwriteAll == true)
+			{
+				
+				resetCounter += 1;
+				if (resetCounter >= (stage.frameRate / 4))
+				{
+					overwriteAll = false;
+				}
+				dmgCounter += 1;
+				if (dmgCounter >= 0 && dmgCounter <= 7)
+				{
+
+					// change this to red box later
+					this.alpha = 1
+				}
+				if (dmgCounter >= 7 && dmgCounter <= 14)
+				{
+					this.alpha = 0.3;
+				}
+				if (dmgCounter >= 15)
+				{
+					dmgCounter = 0;
+				}
+				objHealth -= 100 / (stage.frameRate * 2)
+				if(objHealth <= 0 )
 				{
 					this.alpha = 1;
-					objState = "moving"
+					objState = "landed"
 				}
 			}
 
 
-			if (objState == "moving")
-			{
-				Node1();
-				Node2();
-				Node3();
-				Node4();
-				Node5();
-				Node6();
-				Node7();
-				Node8();
-				Node9();
-			}
 
-			if (objState == "landed")
-			{
-				this.alpha -= 0.03;
-				if (this.alpha <= 0)
-				{
-					this.alpha = 0;
-					isActiveBool = false;
-					objState = "reset";
-				}
 
-			}
-			if (objState == "reset")
-			{
 
-				nodeNumber = 1;
-				objState = "idle"
-
-			}
+			trace(overwriteAll + " overwriteAll " + this.name)
 
 			//loop
 		}
@@ -266,7 +319,7 @@
 
 				if (fDist1 <= hypotDist)
 				{
-					mRef.bFighter1.PlaceSamuari(mRef.rCity.x, mRef.rCity.y, "rCity");
+					mRef.bFighter1.PlaceSamuari(mRef.rCity.x, (mRef.rCity.y + 40), "rCity");
 					objState = "landed";
 					nodeNumber += 1;
 					isInWater = false;

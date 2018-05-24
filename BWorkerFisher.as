@@ -28,6 +28,9 @@
 		var dirHasBeenChanged: Boolean = false;
 		var dirHasBeenChangedCounter: Number = 180;
 
+		var overwriteAll: Boolean = false;
+		var resetCounter: Number = 0;
+
 		public function BWorkerFisher()
 		{
 			//////trace("inside " + this.name);
@@ -42,8 +45,10 @@
 			if (mRef.objState == "play")
 			{
 				//const if's
-				if (this.name == "bFisher1" && isAlive == true)
+				if (this.name == "bFisher1" && isAlive == true && overwriteAll == false)
 				{
+					this.alpha = 1;
+					this.speed = 0.3;
 					if (mRef.bFishingTown1.isOnFireBool == true)
 					{
 						isAlive = false;
@@ -135,10 +140,24 @@
 
 					}
 				}
+				if (overwriteAll == true && this.name == "bFisher1")
+				{
+					resetCounter += 1;
+					if (resetCounter >= (stage.frameRate / 4))
+					{
+						overwriteAll = false;
+					}
+					
+					this.alpha = 0.5;
+					this.speed = 0;
+				}
+
 
 				/////////////////////////////////////////// FISH 3 ////////////////////////////////////////////
-				if (this.name == "bFisher3" && isAlive == true)
+				if (this.name == "bFisher3" && isAlive == true && overwriteAll == false )
 				{
+					this.alpha = 1;
+					this.speed = 0.3;
 
 					if (objState == "idle")
 					{
@@ -215,9 +234,21 @@
 
 					}
 				}
+				if (overwriteAll == true && this.name == "bFisher3")
+				{
+					trace(resetCounter + " " + this.name)
+					resetCounter += 1;
+					if (resetCounter >= (stage.frameRate / 4))
+					{
+						overwriteAll = false;
+					}
+					
+					this.alpha = 0.5;
+					this.speed = 0;
+				}
 
 			}
-		// loop end
+			// loop end
 		}
 		// loop end
 

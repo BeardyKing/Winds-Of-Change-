@@ -21,6 +21,8 @@
 		var timerTick: Number = 0;
 		
 		var townDisabled : String = "none"
+		
+		var objHealth : Number = 100;
 
 
 		public function YokaiManager()
@@ -36,6 +38,7 @@
 		{
 			if (mRef.objState == "play")
 			{
+				trace(objState + "  " +this.name)
 				/*trace("inside " + this.name)*/
 
 				if (objState == "boot")
@@ -68,6 +71,10 @@
 				{
 
 				}
+				if(objState == "dealingDamage")
+				{
+					
+				}
 
 
 				if (objState == "reset")
@@ -89,10 +96,10 @@
 			randomChoice = Math.round(Math.random() * 3) + 1;
 
 			// TESTING
-			randomSpawnTime = Math.round(Math.random() * 60) + 45;
-
-			trace(randomChoice + " randomChoice " + this.name)
-			trace(randomSpawnTime + " randomSpawnTime " + this.name)
+			randomSpawnTime = Math.round(Math.random() * 20) + 25;
+			//randomSpawnTime = 1;
+			//trace(randomChoice + " randomChoice " + this.name)
+			//trace(randomSpawnTime + " randomSpawnTime " + this.name)
 		}
 
 

@@ -38,7 +38,10 @@
 				mRef.RedfishText1.text = fishTotal.toString() + "Red Team fish";
 				mRef.RedwoodText1.text = woodTotal.toString() + "Red Team wood";
 				
-
+				if(objHealth <= 0)
+				{
+					mRef.objState = "win";
+				}
 
 			}
 		//Loop

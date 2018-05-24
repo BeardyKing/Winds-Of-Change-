@@ -75,10 +75,10 @@
 
 		var alphaCounter: Number = 0;
 		var alphaBoolSwitch: Boolean = false;
-		var testingActive : Boolean = false;
-		
-		var animCounter : Number = 4;
-		var animCounter2 : Number = 0;
+		var testingActive: Boolean = false;
+
+		var animCounter: Number = 4;
+		var animCounter2: Number = 0;
 
 
 		public function cloudObjBoi()
@@ -90,12 +90,12 @@
 			mRef.testCounter += 1;
 
 		}
-		
-		public function KeyDown (kDown : KeyboardEvent)
+
+		public function KeyDown(kDown: KeyboardEvent)
 		{
-			if(kDown.keyCode == Keyboard.Q)
+			if (kDown.keyCode == Keyboard.Q)
 			{
-			testingActive = !testingActive;
+				testingActive = !testingActive;
 			}
 		}
 
@@ -128,22 +128,29 @@
 			if (mRef.objState == "play")
 			{
 
+
+
 				GlobalDirMove();
 				AnimationHandler();
 				StateHandeler();
 				// TESTING
 				//cloudState = "greyStorm"
 				// TESTING
+				if (cloudState == "greyStorm")
+				{
+					HitTestFishingBoat();
+					HitTestFighters();
+				}
 			}
-			
+
 			if (this.name == "cloudBoi1")
 			{
-				if(testingActive == true)
+				if (testingActive == true)
 				{
-				// TESTING
-				cloudState = "greyStorm"
-				this.x = stage.mouseX;
-				this.y = stage.mouseY;
+					// TESTING
+					cloudState = "greyStorm"
+					this.x = stage.mouseX;
+					this.y = stage.mouseY;
 				}
 				//
 			}
@@ -230,17 +237,89 @@
 			HitTestFire();
 			HitTestRicePaddy();
 			HitTestFireYokai();
+
 		}
-		
+		public function HitTestFishingBoat()
+		{
+
+
+			if (this.hitTestObject(mRef.bFisher1) == true)
+			{
+				mRef.bFisher1.alpha = 0.5;
+				mRef.bFisher1.speed = 0;
+				mRef.bFisher1.resetCounter = 0;
+				mRef.bFisher1.overwriteAll = true
+			}
+
+
+			if (this.hitTestObject(mRef.bFisher3) == true)
+			{
+				mRef.bFisher3.alpha = 0.5;
+				mRef.bFisher3.speed = 0;
+				mRef.bFisher3.resetCounter = 0;
+				mRef.bFisher3.overwriteAll = true
+			}
+		}
+
+		public function HitTestFighters()
+		{
+
+			if (this.hitTestObject(mRef.fighterCart1) == true)
+			{
+				if (mRef.fighterCart1.objHealth > 1)
+				{
+					mRef.fighterCart1.resetCounter = 0;
+					mRef.fighterCart1.overwriteAll = true
+				}
+			}
+
+
+			if (this.hitTestObject(mRef.fighterCart2) == true)
+			{
+				if (mRef.fighterCart2.objHealth > 1)
+				{
+					mRef.fighterCart2.resetCounter = 0;
+					mRef.fighterCart2.overwriteAll = true
+				}
+			}
+
+
+			if (this.hitTestObject(mRef.bFighter1) == true)
+			{
+				if (mRef.bFighter1.objHealth > 1)
+				{
+					mRef.bFighter1.resetCounter = 0;
+					mRef.bFighter1.overwriteAll = true
+				}
+			}
+
+			if (this.hitTestObject(mRef.bFighter2) == true)
+			{
+				if (mRef.bFighter2.objHealth > 1)
+				{
+					mRef.bFighter2.resetCounter = 0;
+					mRef.bFighter2.overwriteAll = true
+				}
+			}
+
+
+		}
+
 		public function HitTestFireYokai()
 		{
 			if (this.hitTestObject(mRef.yokai1) == true)
 			{
 				if (mRef.yokai1.isActiveBool == true)
 				{
-					mRef.yokai1.isActiveBool = false;
-					mRef.yokaiManager1.objState = "reset";
-					mRef.yokaiManager1.townDisabled = "none";
+					if (mRef.yokai1.objHealth > 1)
+					{
+						trace("IS THIS HAPPENING " + this.name)
+						
+						mRef.yokai1.objState = "dealingDamage";
+						mRef.yokai1.resetCounter = 0;
+						//mRef.yokai1.isActiveBool = false;
+						//mRef.yokaiManager1.townDisabled = "none";
+					}
 				}
 			}
 		}
@@ -303,17 +382,17 @@
 					mRef.expandBox8.objState = "dead"
 				}
 			}
-			
+
 			//expandConnector1
-			
+
 			if (this.hitTestObject(mRef.expandConnector1) == true)
 			{
-			//	if (mRef.expandConnector1.isActiveBool == true)
-			//	{
-					mRef.expandConnector1.objState = "idle"
+				//	if (mRef.expandConnector1.isActiveBool == true)
+				//	{
+				mRef.expandConnector1.objState = "idle"
 				//}
 			}
-			
+
 		}
 
 
@@ -966,7 +1045,7 @@
 
 			randomChangeLightGrey = Math.round(Math.random() * 15 + 2);
 			randomChangeGrey = Math.round(Math.random() * 20 + 2)
-			randomChangeGreyStorm = Math.round(Math.random() * 10 + 8)
+			randomChangeGreyStorm = Math.round(Math.random() * 10 + 15)
 			randomChangeReset = Math.round(Math.random() * 8 + 3)
 
 			// SET SPAWN TESTING
@@ -1273,12 +1352,12 @@
 
 
 		}
-		
+
 		public function DoAnim()
 		{
-			trace(this.currentFrame);
-			trace( animCounter2 + " animCounter2 " + this.name)
-			trace("hello from me" + this.name)
+			//trace(this.currentFrame);
+			//trace(animCounter2 + " animCounter2 " + this.name)
+			//trace("hello from me" + this.name)
 			// frame 4 to 7
 			animCounter += 1;
 			if (animCounter >= 3)
@@ -1619,18 +1698,22 @@
 			if (this.x > 800)
 			{
 				objState = "init"
+				cloudState = "white"
 			}
 			if (this.x < 0)
 			{
 				objState = "init"
+				cloudState = "white"
 			}
 			if (this.y > 600)
 			{
 				objState = "init"
+				cloudState = "white"
 			}
 			if (this.y < 0)
 			{
 				objState = "init"
+				cloudState = "white"
 			}
 			//
 		}

@@ -114,7 +114,7 @@
 				{
 					dmgCounter = 0;
 				}
-				objHealth -= 100 / (stage.frameRate * 2)
+				objHealth -= 100 / (stage.frameRate * 4)
 				if(objHealth <= 0 )
 				{
 					this.alpha = 1;

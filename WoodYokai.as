@@ -51,7 +51,7 @@
 				}
 				if (resetCounter >= 4)
 				{
-					objState = "idle"
+					objState = "reset"
 				}
 			}
 			if (objState == "reset")
@@ -60,7 +60,7 @@
 				objState = "idle"
 				isActiveBool = false;
 				mRef.yokaiManager1.townDisabled = "none";
-				mRef.yokaiManager1.objState = "idle";
+				mRef.yokaiManager1.objState = "reset";
 			}
 
 			// loop 

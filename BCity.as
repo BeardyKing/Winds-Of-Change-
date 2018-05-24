@@ -50,9 +50,9 @@
 			trace(fishTotal + " fishTotal")
 			trace(riceTotal + " rice Total")*/
 
-			woodTotal += 0.5
-			fishTotal += 0.5
-			riceTotal += 0.5
+			//woodTotal += 0.5
+			//fishTotal += 0.5
+			//riceTotal += 0.5
 			// FIGHTER CART CODE
 
 			if (mRef.fire11.objState == "onFire" || mRef.fire8.objState == "onFire" || mRef.fire7.objState == "onFire")

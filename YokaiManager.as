@@ -96,7 +96,7 @@
 			randomChoice = Math.round(Math.random() * 3) + 1;
 
 			// TESTING
-			randomSpawnTime = Math.round(Math.random() * 20) + 25;
+			randomSpawnTime = Math.round(Math.random() * 10) + 10 ;
 			//randomSpawnTime = 1;
 			//trace(randomChoice + " randomChoice " + this.name)
 			//trace(randomSpawnTime + " randomSpawnTime " + this.name)

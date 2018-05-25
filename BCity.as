@@ -31,6 +31,10 @@
 		var isBeingCaptued: Boolean = false;
 		var captureCounter: Number = 0;
 
+		var infoCountDown: Number = 0;
+		var infoCountDownSeconds: Number = 5;
+		var infoBool: Boolean = true;
+
 		public function BCity()
 		{
 			mRef = MovieClip(this.parent);
@@ -41,7 +45,7 @@
 
 		public function Loop(e: Event)
 		{
-			if(objHealth <= 0)
+			if (objHealth <= 0)
 			{
 				mRef.objState = "lose"
 			}
@@ -50,9 +54,9 @@
 			trace(fishTotal + " fishTotal")
 			trace(riceTotal + " rice Total")*/
 
-			//woodTotal += 0.5
-			//fishTotal += 0.5
-			//riceTotal += 0.5
+			/*woodTotal += 0.2
+			fishTotal += 0.2
+			riceTotal += 0.2*/
 			// FIGHTER CART CODE
 
 			if (mRef.fire11.objState == "onFire" || mRef.fire8.objState == "onFire" || mRef.fire7.objState == "onFire")
@@ -84,28 +88,61 @@
 
 		public function FighterCart()
 		{
-			if (riceTotal >= 50 && fishTotal >= 50 && woodTotal >= 50 )
+			if (riceTotal >= 50 && fishTotal >= 50 && woodTotal >= 50)
 			{
-
-				// spawn FighterCart
-				if (mRef.fighterCart1.isActiveBool == false)
+				if (mRef.fighterCart1.isActiveBool == false || mRef.fighterCart2.isActiveBool == false)
 				{
-					mRef.fighterCart1.isActiveBool = true;
-					mRef.fighterCart1.x = this.x
-					mRef.fighterCart1.y = this.y
 
-					riceTotal -= 50
-					fishTotal -= 50
-					woodTotal -= 50
+					infoCountDown += 1;
+					mRef.infoTB1.text = "OPENING THE GATES IN :" + infoCountDownSeconds;
+					if (infoCountDown >= stage.frameRate)
+					{
+						infoCountDown = 0;
+						infoCountDownSeconds -= 1;
+
+						trace("AAAAAA")
+						if (infoCountDownSeconds <= 0)
+						{
+							infoBool = false;
+						}
+
+					}
 				}
-				else if (mRef.fighterCart2.isActiveBool == false)
+				if (infoBool == false)
 				{
-					mRef.fighterCart2.isActiveBool = true;
-					mRef.fighterCart2.x = this.x
-					mRef.fighterCart2.y = this.y
-					riceTotal -= 50
-					fishTotal -= 50
-					woodTotal -= 50
+
+					// spawn FighterCart
+					if (mRef.fighterCart1.isActiveBool == false)
+					{
+						infoCountDownSeconds = 5;
+						mRef.infoTB1.text = "";
+
+						mRef.fighterCart1.isActiveBool = true;
+						mRef.fighterCart1.x = this.x
+						mRef.fighterCart1.y = this.y
+
+						riceTotal -= 50
+						fishTotal -= 50
+						woodTotal -= 50
+
+						infoCountDown = 0;
+						infoBool = true
+					}
+					else if (mRef.fighterCart2.isActiveBool == false)
+					{
+						infoCountDownSeconds = 5;
+						mRef.infoTB1.text = "";
+						mRef.fighterCart2.isActiveBool = true;
+						mRef.fighterCart2.x = this.x
+						mRef.fighterCart2.y = this.y
+
+						riceTotal -= 50
+						fishTotal -= 50
+						woodTotal -= 50
+
+						infoCountDown = 0;
+						infoBool = true
+					}
 				}
 			}
 		}

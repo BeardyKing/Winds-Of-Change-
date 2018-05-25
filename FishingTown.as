@@ -19,7 +19,7 @@
 		var hitByWhirlwind: Boolean = false;
 		var maxFish: Number = 50;
 		var workerIsAlive: Boolean = true;
-		var teamState: String = ""
+		var teamState: String = "blue"
 		var isOnFireBool: Boolean = false;
 		var captureCouunter: Number = 0;
 		var isBeingCaptured: Boolean = false;

@@ -66,8 +66,8 @@
 					if (riceSendBool == true)
 					{
 						////trace(this.name)
-						mRef.rCity.riceTotal += 0.01
-						currentRiceAmount -= 0.001
+						mRef.rCity.riceTotal += 0.011
+						currentRiceAmount -= 0.0011
 					}
 				}
 				

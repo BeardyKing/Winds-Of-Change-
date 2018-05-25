@@ -38,7 +38,7 @@
 		{
 			if (mRef.objState == "play")
 			{
-				trace(objState + "  " +this.name)
+				//trace(objState + "  " +this.name)
 				/*trace("inside " + this.name)*/
 
 				if (objState == "boot")

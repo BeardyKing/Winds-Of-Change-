@@ -59,10 +59,27 @@
 
 			if (woodTotal >= 50 && fishTotal >= 50 && riceTotal >= 50)
 			{
-				woodTotal -= 50;
-				fishTotal -= 50;
-				riceTotal -= 50;
-				mRef.infoTB1.text = "KOREA IS MOUNTING AN INVASION";
+				if (mRef.redFighterCart1.isActiveBool == false)
+					{
+						mRef.redFighterCart1.isActiveBool = true;
+						mRef.redFighterCart1.x = this.x
+						mRef.redFighterCart1.y = this.y
+						
+						riceTotal -= 50
+						fishTotal -= 50
+						woodTotal -= 50
+					}
+					else if (mRef.redFighterCart2.isActiveBool == false)
+					{
+						mRef.redFighterCart2.isActiveBool = true;
+						mRef.redFighterCart2.x = this.x
+						mRef.redFighterCart2.y = this.y
+
+						riceTotal -= 50
+						fishTotal -= 50
+						woodTotal -= 50
+					}
+					mRef.infoTB1.text = "KOREA IS MOUNTING AN INVASION";
 				//  add attack cart
 			}
 			if (mRef.infoTB1.text == "KOREA IS MOUNTING AN INVASION")

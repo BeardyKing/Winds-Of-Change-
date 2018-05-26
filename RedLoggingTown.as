@@ -55,8 +55,8 @@
 					}
 					if (woodSendBool == true)
 					{
-						mRef.rCity.woodTotal += 0.006
-						currentWoodAmount -= 0.006
+						mRef.rCity.woodTotal += 0.0055
+						currentWoodAmount -= 0.0055
 					}
 				}
 				if (this.name == "rLog2")
@@ -71,8 +71,8 @@
 					}
 					if (woodSendBool == true)
 					{
-						mRef.rCity.woodTotal += 0.006
-						currentWoodAmount -= 0.006
+						mRef.rCity.woodTotal += 0.004
+						currentWoodAmount -= 0.004
 					}
 				}
 

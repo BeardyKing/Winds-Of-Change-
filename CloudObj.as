@@ -49,7 +49,7 @@
 			{
 
 				animCounter += 1;
-				if (animCounter >= 2)
+				if (animCounter >= 3)
 				{
 					animCounter = 0;
 					nextFrame();
@@ -358,7 +358,7 @@
 			// end idle
 			if (objState == "waiting")
 			{
-				this.alpha += 0.02
+				this.alpha += 0.04
 				if (this.alpha > 1)
 				{
 					this.alpha = 1

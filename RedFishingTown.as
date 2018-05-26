@@ -77,8 +77,8 @@
 						}
 						if (foodSendBool == true)
 						{
-							mRef.rCity.fishTotal += 0.006
-							currentFishAmount -= 0.006
+							mRef.rCity.fishTotal += 0.0062
+							currentFishAmount -= 0.0062
 						}
 
 					}
@@ -95,8 +95,8 @@
 						}
 						if (foodSendBool == true)
 						{
-							mRef.rCity.fishTotal += 0.006
-							currentFishAmount -= 0.006
+							mRef.rCity.fishTotal += 0.0065
+							currentFishAmount -= 0.0065
 						}
 					}
 

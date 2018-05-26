@@ -15,7 +15,7 @@
 		var hypotDist: Number = 0;
 
 		var mouseDownTimer: Number = 0;
-		var maxTimer: Number = 5;
+		var maxTimer: Number = 2;
 
 		var windCounter: Number = 0;
 		var maxWind: Number = 15;
@@ -117,7 +117,7 @@
 					{
 						mouseDownTimer = 0
 						windCounter += 1;
-						////trace("add cloud" + windCounter.toString());
+						////trace("add cloud" + windCounterwindCounter.toString());
 
 					}
 				}

@@ -31,6 +31,23 @@
 
 		}
 
+		public function ResetFunction()
+		{
+			objState = "boot";
+			objHealth= 100;
+			currentWoodAmount= 0;
+			hasTradeCartActive = false;
+			hasYokaiEvent= false;
+			yokaiRandomChance = 800;
+			hitByWhirlwind = false;
+			maxWood = 50;
+			hasThreeWorkers= true;
+			teamState= "na"
+			isOnFireBool= false;
+			captureCounter = 0;
+			isBeingCaptured= false;
+		}
+
 		public function Loop(e: Event)
 		{
 			if (mRef.objState == "play")
@@ -50,19 +67,19 @@
 					if (mRef.fire1_Start1.objState == "onFire" || mRef.yokaiManager1.townDisabled == "bLoggingTown1")
 					{
 						isOnFireBool = true;
-						
+
 						mRef.tree11.objState = "drought";
 						mRef.tree12.objState = "drought";
 						mRef.tree13.objState = "drought";
 						mRef.tree14.objState = "drought";
 						mRef.tree15.objState = "drought";
-						
-						
-						
+
+
+
 					}
 					else
 					{
-						
+
 						mRef.tree11.objState = "growing";
 						mRef.tree12.objState = "growing";
 						mRef.tree13.objState = "growing";
@@ -72,8 +89,8 @@
 						mRef.bwl7.isAlive = true;
 						mRef.bwl8.isAlive = true;
 						mRef.bwl9.isAlive = true;
-						
-						
+
+
 					}
 
 
@@ -89,25 +106,25 @@
 					if (mRef.fire1_Start7.objState == "onFire" || mRef.yokaiManager1.townDisabled == "bLoggingTown3")
 					{
 						isOnFireBool = true;
-						
+
 						mRef.tree1.objState = "drought";
 						mRef.tree2.objState = "drought";
 						mRef.tree3.objState = "drought";
 						mRef.tree4.objState = "drought";
 						mRef.tree5.objState = "drought";
-						
+
 					}
 					else
 					{
-						
+
 						mRef.tree1.objState = "growing";
 						mRef.tree2.objState = "growing";
 						mRef.tree3.objState = "growing";
 						mRef.tree4.objState = "growing";
 						mRef.tree5.objState = "growing";
-						
+
 						isOnFireBool = false
-						
+
 						mRef.bwl1.isAlive = true;
 						mRef.bwl2.isAlive = true;
 						mRef.bwl3.isAlive = true;

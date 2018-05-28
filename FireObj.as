@@ -22,8 +22,8 @@
 		var singlePassFireTotal: Boolean = false;
 		var singlePassFireActive: Boolean = false;
 		var singlePassMinusFireActive: Boolean = false;
-		var introSinglePass : Boolean = false;
-		
+		var introSinglePass: Boolean = false;
+
 		public function FireObj()
 		{
 
@@ -41,9 +41,28 @@
 		}
 		public function Loop(e: Event)
 		{
-			if(this.name == "fireIntro1")
+			if (mRef.playBtn1.fireResetBool == true)
 			{
-				if(introSinglePass == false)
+
+				objState = "init"
+
+				animSwitch = false;
+				MainGlobalDir = 45;
+				isActive = false;
+				singlePass = false;
+				animCounter = 0;
+				animCounter2 = 0;
+
+				singlePassFireTotal = false;
+				singlePassFireActive = false;
+				singlePassMinusFireActive = false;
+				introSinglePass = false;
+				mRef.playBtn1.fireResetBool = false
+			}
+			
+			if (this.name == "fireIntro1")
+			{
+				if (introSinglePass == false)
 				{
 					isActive = true;
 					introSinglePass = true;
@@ -51,10 +70,10 @@
 					objState = "onFire"
 				}
 			}
-			
-			if(this.name == "fireIntro2")
+
+			if (this.name == "fireIntro2")
 			{
-				if(introSinglePass == false)
+				if (introSinglePass == false)
 				{
 					isActive = true;
 					introSinglePass = true;
@@ -62,7 +81,7 @@
 					objState = "onFire"
 				}
 			}
-			
+
 			if (singlePassFireTotal == false)
 			{
 				singlePassFireTotal = true;
@@ -128,7 +147,7 @@
 			if (this.name == "fire5" || this.name == "fire7" ||
 				this.name == "fire8" || this.name == "fire9" ||
 				this.name == "fire11" || this.name == "fire12" ||
-			    this.name == "fire3" )
+				this.name == "fire3")
 			{
 				if (this.hitTestObject(mRef.expandConnector1) == true)
 				{
@@ -140,9 +159,8 @@
 				}
 			}
 			if (this.name != "fire5" || this.name != "fire7" ||
-				  this.name != "fire8" || this.name != "fire9" || 
-				  this.name != "fire11" || this.name != "fire12" 
-				|| this.name == "fire3" )
+				this.name != "fire8" || this.name != "fire9" ||
+				this.name != "fire11" || this.name != "fire12" || this.name == "fire3")
 			{
 				if (this.hitTestObject(mRef.expandBox1) == true)
 				{

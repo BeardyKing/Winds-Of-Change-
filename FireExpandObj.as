@@ -21,8 +21,24 @@
 
 			mRef = MovieClip(this.root);
 		}
+		public function ResetFunction()
+		{
+			expandCounter = 0;
+			expandBool = false;
+			isActiveBool = false;
+			scaleSpeed = 0.006;
+			objState = "init"
+		}
+
 		public function Loop(e: Event)
 		{
+			
+			if(mRef.playBtn1.expandReset1 == true)
+			{
+				ResetFunction();
+				mRef.playBtn1.expandReset1 = false;
+			}
+
 			////trace(objState + "objState " + this.name)
 			if (objState == "init")
 			{
@@ -418,14 +434,14 @@
 						}
 					}
 				}
-				if(this.scaleX  >= 10|| this.scaleY >= 10)
+				if (this.scaleX >= 10 || this.scaleY >= 10)
 				{
 					objState = "dead";
 				}
 				this.alpha = 0;
 			}
 
-			if(objState == "dead")
+			if (objState == "dead")
 			{
 				this.scaleX = 1;
 				this.scaleY = 1;
@@ -433,17 +449,17 @@
 				isActiveBool = false;
 				objState = "init"
 				//this.x = 1000;
-				
-				
-				
+
+
+
 				// add counter to fire to check if all are dead;
-				
+
 			}
-			if(objState == "reset")
+			if (objState == "reset")
 			{
-				
+
 			}
-			
+
 			this.alpha = 0;
 
 			// loop

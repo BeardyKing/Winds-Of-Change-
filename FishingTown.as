@@ -35,6 +35,24 @@
 			// constructor code
 		}
 
+		public function ResetFunction()
+		{
+			objState = "boot";
+			objHealth = 0;
+			currentFishAmount = 0;
+			isActive = false;
+			hasTradeCartActive = false;
+			hasYokaiEvent = false;
+			yokaiRandomChance = 800;
+			hitByWhirlwind = false;
+			maxFish = 50;
+			workerIsAlive = true;
+			teamState = "blue"
+			isOnFireBool = false;
+			captureCouunter = 0;
+			isBeingCaptured = false;
+		}
+
 		public function Loop(e: Event)
 		{
 			//
@@ -46,7 +64,7 @@
 				}
 				if (this.name == "bFishingTown1")
 				{
-					if(mRef.fire_Fish1.objState == "onFire")
+					if (mRef.fire_Fish1.objState == "onFire")
 					{
 						isOnFireBool = true;
 					}
@@ -55,25 +73,25 @@
 						isOnFireBool = false
 						mRef.bFisher1.isAlive = true;
 					}
-						if (currentFishAmount >= 10 && hasTradeCartActive == false)
+					if (currentFishAmount >= 10 && hasTradeCartActive == false)
 					{
 						mRef.bCity.AddTradeCart(this.name)
 					}
 				}
-				
-				
+
+
 				if (this.name == "bFishingTown3")
 				{
-					
+
 					////trace(currentFishAmount + "   " + hasTradeCartActive)
 					if (currentFishAmount >= 0 && hasTradeCartActive == false)
 					{
 						mRef.bCity.AddTradeCart(this.name)
 					}
 				}
-				
-				
-				
+
+
+
 				if (objState == "boot")
 				{
 					mRef.bCity.tradecartCounter += 1;

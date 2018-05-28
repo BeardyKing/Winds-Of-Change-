@@ -17,6 +17,11 @@
 		var animCounter: Number = 0;
 		var animCounterMax: Number = 8;
 		var animBool: Boolean = false;
+		
+		var bigResetBool : Boolean = false;
+		var fireResetBool : Boolean = false;
+		var expandReset1 : Boolean = false;
+		var tradeReset : Boolean = false;
 
 
 		public function PlayButton()
@@ -109,15 +114,73 @@
 		public function MouseUp(mu: MouseEvent)
 		{
 			//trace("Start Game")
-			if (mRef.fireIntro1.isActive == false && mRef.fireIntro2.isActive == false)
+			if (mRef.objState == "start")
+			{
+				if (mRef.fireIntro1.isActive == false && mRef.fireIntro2.isActive == false)
+				{
+					mRef.objState = "play"
+					mRef.intro1.x = -1000;
+					mRef.intro1.y = -1000
+					this.x = -1000;
+					this.y = -1000;
+					mRef.playBar1.y = this.y;
+					mRef.playBar1.x = this.x;
+				}
+			}
+			if (mRef.objState == "win" || mRef.objState == "lose")
 			{
 				mRef.objState = "play"
+				mRef.win1.x = -1000;
+				mRef.win1.y = -1000;
 				mRef.intro1.x = -1000;
 				mRef.intro1.y = -1000
+				
+				mRef.lose1.x = -1000;
+				mRef.lose1.y = -1000;
 				this.x = -1000;
 				this.y = -1000;
 				mRef.playBar1.y = this.y;
 				mRef.playBar1.x = this.x;
+				
+				
+				/////// HELL RESET ///////////
+				// bcity reset
+				mRef.bCity.ResetFunction();
+				// rcity reset
+				mRef.rCity.ResetFunction();
+				// for cloudObjBoi
+				bigResetBool = true;
+				// fireObjReset
+				fireResetBool = true;
+				// expandObj
+				expandReset1 = true;
+				// expandConnector
+				mRef.expandConnector1.ResetFunction();
+				// bfighter1 & 2
+				mRef.bFighter1.ResetFunction();
+				mRef.bFighter2.ResetFunction();
+				// tradecart reset
+				tradeReset = true
+				//bfarm town
+				mRef.farmTown1.ResetFunction();
+				mRef.farmTown2.ResetFunction();
+				//bFishingTown
+				mRef.bFishingTown1.ResetFunction();
+				mRef.bFishingTown3.ResetFunction();
+				//bloggingTown 
+				mRef.bLoggingTown3.ResetFunction();
+				mRef.bLoggingTown1.ResetFunction();
+				//rFarmTown
+				mRef.rFarmTown2.ResetFunction();
+				mRef.rFarmTown1.ResetFunction();
+				//rLoggingTown
+				mRef.rLog1.ResetFunction();
+				mRef.rLog2.ResetFunction();
+				//rFishTown
+				mRef.rFishTown2.ResetFunction();
+				mRef.rFishTown1.ResetFunction();
+				
+
 			}
 		}
 	}

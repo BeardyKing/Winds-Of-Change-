@@ -44,6 +44,30 @@
 
 		}
 
+		public function ResetFunction()
+		{
+			objState = "boot"
+			objHealth = 100;
+			currentRiceAmount = 0;
+			isActive = false;
+			riceTotalIsPoisoned = false;
+			riceTotalPoisonTimer = 1000;
+			hasTradeCartActive = false;
+			hasYokaiEvent = false;
+			yokaiRandomChance = 800;
+			hitByWhirlwind = false;
+			maxRice = 50
+			hasThreeWorker = true;
+			teamState = "toSet"
+			isOnFire = false;
+			captureCounter = 0;
+			isBeingCaptured = false;
+
+
+			frameTimer = 0;
+			riceSendBool = false;
+		}
+
 		public function Loop(e: Event)
 		{
 			////trace(currentRiceAmount + " " + this.name + "currentRiceAmount")
@@ -71,8 +95,8 @@
 						currentRiceAmount -= 0.0011
 					}
 				}
-				
-				
+
+
 				if (objState == "boot")
 				{
 					mRef.bCity.tradecartCounter += 1;

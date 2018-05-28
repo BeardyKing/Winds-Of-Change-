@@ -15,13 +15,27 @@
 		var expandBool: Boolean = false;
 		var singlePass: Boolean = false;
 		var scaleSpeed: Number = 0.006
-		var isActiveBool : Boolean = false;
+		var isActiveBool: Boolean = false;
+
 		public function ExpandBoxConnector()
 		{
 			// constructor code
 			mRef = MovieClip(this.parent);
 			this.addEventListener(Event.ENTER_FRAME, Loop)
 		}
+
+		public function ResetFunction()
+		{
+			startBeingUsed = false;
+			objState = "init"
+
+			expandCounter = 0;
+			expandBool = false;
+			singlePass = false;
+			scaleSpeed = 0.006
+			isActiveBool = false;
+		}
+
 		public function Loop(e: Event)
 		{
 			//trace(objState + " objState " + this.name)
@@ -32,7 +46,7 @@
 			if (objState == "idle")
 			{
 				this.x = mRef.fire2.x;
-					this.y = mRef.fire2.y;
+				this.y = mRef.fire2.y;
 				this.alpha = 0;
 				this.scaleX = 1
 				this.scaleY = 1
@@ -43,7 +57,7 @@
 				isActiveBool = true;
 				if (singlePass == false)
 				{
-					
+
 					singlePass = true;
 					this.x = mRef.fire2.x;
 					this.y = mRef.fire2.y;
@@ -73,10 +87,10 @@
 					//this.x = 1000
 				}
 			}
-			
+
 			if (objState == "reset")
 			{
-				
+
 				objState = "idle"
 			}
 

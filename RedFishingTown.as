@@ -39,6 +39,29 @@
 			// constructor code
 		}
 
+		public function ResetFunction()
+		{
+			
+			objState = "boot";
+			objHealth = 100;
+			currentFishAmount = 0;
+			isActive= false;
+			hasTradeCartActive= false;
+			hasYokaiEvent = false;
+			yokaiRandomChance = 800;
+			hitByWhirlwind= false;
+			maxFish  = 50;
+			workerIsAlive= true;
+			teamState= "red"
+			isOnFireBoolean= false;
+			captureCouunter= 0;
+			isBeingCaptured= false;
+			hasBeenCaptured= false;
+
+			frameTimer = 0;
+			foodSendBool= false;
+		}
+
 		public function Loop(e: Event)
 		{
 			if (isBeingCaptured == true)

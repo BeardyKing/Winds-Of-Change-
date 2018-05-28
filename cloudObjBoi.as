@@ -132,6 +132,7 @@
 				{
 					mRef.fireIntro1.objState = "dead"
 					mRef.fireIntro1.isActive = false
+					mRef.fireIntro1.x = 1000;
 				}
 
 			}
@@ -142,15 +143,94 @@
 				{
 					mRef.fireIntro2.objState = "dead"
 					mRef.fireIntro2.isActive = false
+					mRef.fireIntro2.x = 1000;
 				}
 
 			}
 		}
 
 
+		public function ResetFunction()
+		{
 
+			hasBeenHit = false;
+			angleDegLocal = 0;
+			objState = "init";
+			speed = 0;
+			minusAmount = 0.1;
+
+			singlePass1 = false;
+			singlePass2 = false;
+			singlePass3 = false;
+			singlePass4 = false;
+			singlePass5 = false;
+			singlePass6 = false;
+			singlePass7 = false;
+			singlePass8 = false;
+			singlePass9 = false;
+			singlePass10 = false;
+			singlePass11 = false;
+			singlePass12 = false;
+			singlePass13 = false;
+			singlePass14 = false;
+			singlePass15 = false;
+
+			singlePass1_2 = false;
+			singlePass2_2 = false;
+			singlePass3_2 = false;
+			singlePass4_2 = false;
+			singlePass5_2 = false;
+			singlePass6_2 = false;
+			singlePass7_2 = false;
+			singlePass8_2 = false;
+			singlePass9_2 = false;
+			singlePass10_2 = false;
+			singlePass11_2 = false;
+			singlePass12_2 = false;
+			singlePass13_2 = false;
+			singlePass14_2 = false;
+			singlePass15_2 = false;
+
+			singlePassRandom = false;
+
+
+			randomPosOrNeg = 0;
+			randomAngleDeg = 0;
+
+			objStateCounter = 0;
+			objStateCounterSeconds = 0;
+
+
+			cloudState= "white"
+
+			randomChangeLightGrey: Number;
+			randomChangeGrey: Number;
+			randomChangeGreyStorm: Number;
+			randomChangeReset: Number;
+
+			randomXPos = 0;
+			randomYPos = 0;
+
+			tickCounter = 0;
+			frameSkipBool = false;
+
+			alphaCounter = 0;
+			alphaBoolSwitch = false;
+			testingActive = false;
+
+			animCounter = 4;
+			animCounter2 = 0;
+
+			introSinglePass = false;
+		}
 		public function Loop(e: Event)
 		{
+			if (mRef.playBtn1.bigResetBool == true)
+			{
+				ResetFunction();
+				mRef.playBtn1.bigResetBool = false
+			}
+
 			if (mRef.objState == "start")
 			{
 				if (mRef.fireIntro1.isActive == true || mRef.fireIntro2.isActive == true)
@@ -256,7 +336,7 @@
 				else
 				{
 					this.alpha -= 0.05;
-					if(this.alpha <= 0)
+					if (this.alpha <= 0)
 					{
 						this.alpha = 0;
 						this.x = 1000;

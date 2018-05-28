@@ -41,6 +41,26 @@
 
 		}
 
+		public function ResetFunction()
+		{
+			objState = "boot"
+			objHealth = 100;
+			currentRiceAmount = 0;
+			isActive = false;
+			riceTotalIsPoisoned = false;
+			riceTotalPoisonTimer = 1000;
+			hasTradeCartActive = false;
+			hasYokaiEvent = false;
+			yokaiRandomChance = 800;
+			hitByWhirlwind = false;
+			maxRice = 50
+			hasThreeWorker = true;
+			teamState = "toSet"
+			isOnFireBool = false;
+			captureCounter = 0;
+			isBeingCaptured = false;
+		}
+
 		public function Loop(e: Event)
 		{
 			if (mRef.objState == "play")
@@ -59,11 +79,11 @@
 					if (mRef.fire1_Start5.objState == "onFire" || mRef.yokaiManager1.townDisabled == "farmTown1")
 					{
 						isOnFireBool = true;
-						mRef.f1.alpha =  0.5
-						mRef.f2.alpha =  0.5
-						mRef.f3.alpha =  0.5
-						mRef.f4.alpha =  0.5
-						mRef.f5.alpha =  0.5
+						mRef.f1.alpha = 0.5
+						mRef.f2.alpha = 0.5
+						mRef.f3.alpha = 0.5
+						mRef.f4.alpha = 0.5
+						mRef.f5.alpha = 0.5
 					}
 					else
 					{
@@ -73,13 +93,13 @@
 						mRef.bwf3.isAlive = true;
 					}
 				}
-				
-				if (this.name == "farmTown2" )
+
+				if (this.name == "farmTown2")
 				{
 					if (mRef.fire2.objState == "onFire" || mRef.yokaiManager1.townDisabled == "farmTown2")
 					{
 						isOnFireBool = true;
-						
+
 						mRef.f6.objState = "drought"
 						mRef.f7.objState = "drought"
 						mRef.f8.objState = "drought"
@@ -89,7 +109,7 @@
 					else
 					{
 						isOnFireBool = false
-						
+
 						mRef.bwf4.isAlive = true;
 						mRef.bwf5.isAlive = true;
 						mRef.bwf6.isAlive = true;

@@ -35,8 +35,35 @@
 			this.addEventListener(Event.ENTER_FRAME, Loop);
 		}
 
+		public function ResetFunction()
+		{
+			nodeNumber = 1;
+			objState = "idle"
+
+			speed = 0.2;
+			objAngle = 0;
+			angleRad = 0;
+			fDist1 = 0;
+			hypotDist = 10;
+			isInWater = false;
+
+			objHealth = 100;
+
+			isActiveBool = false
+			dmgCounter = 0;
+			resetCounter = 0;
+
+			overwriteAll = false;
+			mRef.playBtn1.tradeReset = false
+		}
+
 		public function Loop(e: Event)
 		{
+			if (mRef.playBtn1.tradeReset == true)
+			{
+				ResetFunction();
+			}
+
 
 			//trace(objState + " objState " + this.name)
 			//trace(fDist1 + " fDist1 " + this.name)
@@ -79,7 +106,7 @@
 						isActiveBool = false;
 						objState = "reset";
 						objHealth = 100;
-						
+
 					}
 
 				}
@@ -93,7 +120,7 @@
 			}
 			if (overwriteAll == true)
 			{
-				
+
 				resetCounter += 1;
 				if (resetCounter >= (stage.frameRate / 4))
 				{
@@ -115,7 +142,7 @@
 					dmgCounter = 0;
 				}
 				objHealth -= 100 / (stage.frameRate * 4)
-				if(objHealth <= 0 )
+				if (objHealth <= 0)
 				{
 					this.alpha = 1;
 					objState = "landed"

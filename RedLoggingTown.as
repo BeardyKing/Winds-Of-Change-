@@ -22,7 +22,7 @@
 		var isOnFire: Boolean = false;
 		var captureCounter: Number = 0;
 		var isBeingCaptured: Boolean = false;
-		
+
 		var frameTimer: Number = 0;
 		var woodSendBool: Boolean = false;
 
@@ -35,6 +35,26 @@
 
 		}
 
+		public function ResetFunction()
+		{
+			objState = "boot";
+			objHealth = 100;
+			currentWoodAmount = 0;
+			hasTradeCartActive = false;
+			hasYokaiEvent = false;
+			yokaiRandomChance = 800;
+			hitByWhirlwind = false;
+			maxWood = 50;
+			hasThreeWorkers = true;
+			teamState = "na"
+			isOnFire = false;
+			captureCounter = 0;
+			isBeingCaptured = false;
+
+			frameTimer = 0;
+			woodSendBool = false;
+		}
+
 		public function Loop(e: Event)
 		{
 			if (mRef.objState == "play")
@@ -43,7 +63,7 @@
 				{
 					currentWoodAmount = maxWood
 				}
-				
+
 				if (this.name == "rLog1")
 				{
 					if (currentWoodAmount > 1)

@@ -15,9 +15,9 @@
 		var globalMoveSpeedTest: Number = 0.2;
 		var i: Number = 0;
 		var testCounter: Number = 0
-		
-		var flashingBool : Boolean = false;
-		var flashingCounter : Number = 0;
+
+		var flashingBool: Boolean = false;
+		var flashingCounter: Number = 0;
 
 		public function Main()
 		{
@@ -33,41 +33,41 @@
 
 		public function FlashingObj()
 		{
-			if(infoTB1.text != "")
+			if (infoTB1.text != "")
 			{
 				flashingCounter += 1;
-				if(flashingCounter >= stage.frameRate/8)
+				if (flashingCounter >= stage.frameRate / 8)
 				{
 					flashingCounter = 0;
 					flashingBool = !flashingBool
 				}
-				if(flashingBool == false)
+				if (flashingBool == false)
 				{
 					infoTB1.alpha = 1;
-					if(infoTB1.text == "OPENING THE GATES IN :" + bCity.infoCountDownSeconds)
+					if (infoTB1.text == "OPENING THE GATES IN :" + bCity.infoCountDownSeconds)
 					{
 						swordIcon1.alpha = 1;
 					}
-					if(infoTB1.text == "KOREA IS MOUNTING AN INVASION")
+					if (infoTB1.text == "KOREA IS MOUNTING AN INVASION")
 					{
 						swordIcon2.alpha = 1;
 					}
 				}
-				if(flashingBool == true)
+				if (flashingBool == true)
 				{
-					if(infoTB1.text == "OPENING THE GATES IN :" + bCity.infoCountDownSeconds)
+					if (infoTB1.text == "OPENING THE GATES IN :" + bCity.infoCountDownSeconds)
 					{
 						swordIcon1.alpha = 0.4;
 						trace("this works alpha 0.4")
 					}
-					if(infoTB1.text == "KOREA IS MOUNTING AN INVASION")
+					if (infoTB1.text == "KOREA IS MOUNTING AN INVASION")
 					{
 						swordIcon2.alpha = 0.4;
 					}
 					infoTB1.alpha = 0.4;
 				}
 			}
-			if(infoTB1.text == "" && infoTB1.alpha < 1)
+			if (infoTB1.text == "" && infoTB1.alpha < 1)
 			{
 				infoTB1.alpha = 1;
 				flashingBool = false;
@@ -76,32 +76,47 @@
 				swordIcon1.alpha = 0;
 				swordIcon2.alpha = 0;
 			}
-			if(infoTB1.text == "")
+			if (infoTB1.text == "")
 			{
 				swordIcon1.alpha = 0;
 				swordIcon2.alpha = 0;
 			}
-			
+
 		}
-		
+
 		public function Loop(e: Event)
 		{
-			
+
 			FlashingObj();
-			
-			
-			
+
+
+
 			if (objState == "lose")
 			{
-				intro1.x = 0;
-				intro1.y = 0;
+				lose1.x = 0;
+				lose1.y = 0;
+				playBtn1.singlePass = false;
 				//this.parent.intro1.y = 0;
 			}
 			if (objState == "win")
 			{
-				intro1.x = 0;
-				intro1.y = 0;
+				win1.x = 0;
+				win1.y = 0;
+				playBtn1.singlePass = false;
+
 			}
+			if (objState == "play")
+			{
+				intro1.x = -1000;
+				intro1.y = -1000
+				
+				playBar1.y = 1000
+				playBar1.x = 1000
+				
+				playBtn1.x = 1000;
+				playBtn1.y = 1000;
+			}
+
 
 			////trace(globalDir + "globalDir")
 			//	//trace(globalMoveSpeedTest + "globalMoveSpeedTest ")

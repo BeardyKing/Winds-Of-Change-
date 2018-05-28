@@ -20,7 +20,7 @@
 		var objHealth: Number = 100;
 		var resetCounter: Number = 0;
 		var overwriteAll: Boolean = false;
-		var dmgCounter : Number = 0;
+		var dmgCounter: Number = 0;
 
 		public function BFighter()
 		{
@@ -31,8 +31,27 @@
 
 
 		}
+
+		public function ResetFunction()
+		{
+
+			objState = "notActive"
+			isActiveBool = false;
+			nodeToAttack = ""
+			fDist1 = 0;
+			speed = 0.2;
+			objAngle = 0;
+			hypotDist = 10;
+			angleRad = 0;
+			objHealth = 100;
+			resetCounter = 0;
+			overwriteAll = false;
+			dmgCounter = 0;
+
+		}
 		public function Loop(e: Event)
 		{
+			
 			if (overwriteAll == false)
 			{
 				if (objState == "active")
@@ -116,7 +135,7 @@
 
 				}
 			}
-			if(overwriteAll == true)
+			if (overwriteAll == true)
 			{
 				resetCounter += 1;
 				if (resetCounter >= (stage.frameRate / 4))
@@ -138,11 +157,11 @@
 				{
 					dmgCounter = 0;
 				}
-				
+
 				objHealth -= 100 / (stage.frameRate * 2)
-				if(objHealth <= 0 )
+				if (objHealth <= 0)
 				{
-					this.alpha  -= 0.05;
+					this.alpha -= 0.05;
 					objState = "notActive"
 					overwriteAll = false;
 					objHealth = 100;
@@ -150,8 +169,8 @@
 					resetCounter = 0;
 				}
 			}
-			trace("objState " + objState + " " +this.name)
-			
+			trace("objState " + objState + " " + this.name)
+
 			//loop
 		}
 		//loop

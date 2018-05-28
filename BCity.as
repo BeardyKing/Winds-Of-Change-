@@ -36,10 +36,10 @@
 		var infoCountDown: Number = 0;
 		var infoCountDownSeconds: Number = 5;
 		var infoBool: Boolean = true;
-		
-		var eDown : Boolean = false;
-		
-		
+
+		var eDown: Boolean = false;
+
+
 
 		public function BCity()
 		{
@@ -51,6 +51,36 @@
 
 		}
 		
+		
+
+		public function ResetFunction()
+		{
+			objState= "boot"
+
+			woodTotal = 0;
+			fishTotal = 0;
+			riceTotal = 0;
+
+
+			tradecartCounter = 0
+
+			fishIsPoisoned = false;
+			riceIsPoisoned = false;
+			bitByWhirlwind = false;
+			isOnFire = false;
+
+
+			objHealth = 100;
+			isBeingCaptued = false;
+			captureCounter = 0;
+
+			infoCountDown = 0;
+			infoCountDownSeconds = 5;
+			infoBool = true;
+
+			eDown = false;
+		}
+
 		public function KeyDown(kDown: KeyboardEvent)
 		{
 			trace("AAAAA")
@@ -59,10 +89,17 @@
 
 				eDown = !eDown;
 			}
+			
+			if (kDown.keyCode == Keyboard.Z)
+			{
+
+				objHealth = 0;
+			}
 		}
 
 		public function Loop(e: Event)
 		{
+
 			if (objHealth <= 0)
 			{
 				mRef.objState = "lose"
@@ -71,11 +108,11 @@
 			/*trace(woodTotal + " wood Total")
 			trace(fishTotal + " fishTotal")
 			trace(riceTotal + " rice Total")*/
-			if(eDown == true)
+			if (eDown == true)
 			{
-			woodTotal += 0.2
-			fishTotal += 0.2
-			riceTotal += 0.2
+				woodTotal += 0.2
+				fishTotal += 0.2
+				riceTotal += 0.2
 			}
 			// FIGHTER CART CODE
 

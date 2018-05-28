@@ -179,6 +179,8 @@
 				//rFishTown
 				mRef.rFishTown2.ResetFunction();
 				mRef.rFishTown1.ResetFunction();
+				// main
+				mRef.globalDir = -2.5;
 				
 
 			}

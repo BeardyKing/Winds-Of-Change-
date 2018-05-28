@@ -37,6 +37,28 @@
 
 		public function Loop(e: Event)
 		{
+			if (mRef.objState == "win" || mRef.objState == "lose")
+			{
+				nodeNumber = 1;
+				objState = "idle"
+
+				speed = 0.2;
+				objAngle = 0;
+				angleRad = 0;
+				fDist1 = 0;
+				hypotDist = 10;
+				isInWater = false;
+
+				objHealth = 100;
+
+				isActiveBool = false
+				dmgCounter = 0;
+				resetCounter = 0;
+
+				overwriteAll = false;
+				this.x = -1000;
+			}
+
 
 			//trace(objState + " objState " + this.name)
 			//trace(fDist1 + " fDist1 " + this.name)

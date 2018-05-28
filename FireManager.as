@@ -61,7 +61,7 @@
 				
 				// TESTING spawnCounter & Selection;				
 				//randomSpawnTimer = 1;
-				//randomSelection = 8;
+				//randomSelection = 6;
 				
 				
 				if (randomSelection == 0)

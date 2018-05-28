@@ -41,11 +41,10 @@
 		}
 		public function Loop(e: Event)
 		{
-			if (mRef.playBtn1.fireResetBool == true)
+			if (mRef.objState == "win" || mRef.objState == "lose" )
 			{
 
-				objState = "init"
-
+				objState = "idle"
 				animSwitch = false;
 				MainGlobalDir = 45;
 				isActive = false;
@@ -227,6 +226,8 @@
 					}
 				}
 			}
+			
+			
 
 		}
 

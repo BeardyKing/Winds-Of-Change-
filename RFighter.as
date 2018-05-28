@@ -20,7 +20,7 @@
 		var objHealth: Number = 100;
 		var resetCounter: Number = 0;
 		var overwriteAll: Boolean = false;
-		var dmgCounter : Number = 0;
+		var dmgCounter: Number = 0;
 
 		public function RFighter()
 		{
@@ -33,6 +33,23 @@
 		}
 		public function Loop(e: Event)
 		{
+			if (mRef.objState == "win" || mRef.objState == "lose")
+			{
+				objState= "notActive"
+				isActiveBool= false;
+				nodeToAttack= ""
+				fDist1 = 0;
+				speed = 0.2;
+				objAngle = 0;
+				hypotDist = 10;
+				angleRad= 0;
+				objHealth = 100;
+				resetCounter= 0;
+				overwriteAll = false;
+				dmgCounter= 0;
+				this.x = 1000;
+			}
+
 			//trace(nodeToAttack + " nodeToAttack " + this.name)
 			if (overwriteAll == false)
 			{
@@ -52,7 +69,7 @@
 						if (mRef.bFishingTown1.teamState == "blue")
 						{
 							//trace("inside teamstate check")
-							
+
 							fDist1 = Math.sqrt((this.x - mRef.nodeFarm15_1.x) *
 								(this.x - mRef.nodeFarm15_1.x) +
 								(this.y - mRef.nodeFarm15_1.y) *
@@ -121,14 +138,14 @@
 
 				}
 			}
-			if(overwriteAll == true)
+			if (overwriteAll == true)
 			{
 				resetCounter += 1;
 				if (resetCounter >= (stage.frameRate / 4))
 				{
 					overwriteAll = false;
 				}
-				dmgCounter += 1; 
+				dmgCounter += 1;
 				if (dmgCounter >= 0 && dmgCounter <= 7)
 				{
 
@@ -143,11 +160,11 @@
 				{
 					dmgCounter = 0;
 				}
-				
+
 				objHealth -= 100 / (stage.frameRate * 2)
-				if(objHealth <= 0 )
+				if (objHealth <= 0)
 				{
-					this.alpha  -= 0.05;
+					this.alpha -= 0.05;
 					objState = "notActive"
 					overwriteAll = false;
 					objHealth = 100;
@@ -155,7 +172,7 @@
 					resetCounter = 0;
 				}
 			}
-			
+
 			//loop
 		}
 		//loop
@@ -175,8 +192,8 @@
 						trace(objName);
 						trace(objName);
 						trace(objName);*/
-			
-			
+
+
 			this.x = xLoc;
 			this.y = yLoc;
 			isActiveBool = true;

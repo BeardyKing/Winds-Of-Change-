@@ -54,12 +54,13 @@
 			resetCounter = 0;
 
 			overwriteAll = false;
+			this.x = 1000;
 			mRef.playBtn1.tradeReset = false
 		}
 
 		public function Loop(e: Event)
 		{
-			if (mRef.playBtn1.tradeReset == true)
+			if (mRef.objState == "win" || mRef.objState == "lose")
 			{
 				ResetFunction();
 			}

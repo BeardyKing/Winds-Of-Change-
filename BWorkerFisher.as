@@ -42,6 +42,45 @@
 
 		public function Loop(e: Event)
 		{ // loop start
+
+			if (mRef.objState == "win" || mRef.objState == "lose")
+			{
+				if (this.name == "bFisher1")
+				{
+					this.x = mRef.bFishingTown1.x
+					this.y = mRef.bFishingTown1.y
+				}
+				if (this.name == "bFisher3")
+				{
+					this.x = mRef.bFishingTown3.x
+					this.y = mRef.bFishingTown3.y
+				}
+
+				objState= "idle";
+
+				maxFish= 15
+				isAlive = true;
+				currentFishAmount= 0;
+				objHealth = 100;
+				hitByWhirlwind = false;
+				hitByStorm= false;
+				fishingHomeTownName= "";
+				isPoisoned = false;
+				currentFishingSpotName = "";
+				speed= 0.3;
+				resetSpeed= speed
+				objAngle = 0;
+				angleRad= 0;
+				isCollecting= false;
+				dirHasBeenChanged= false;
+				dirHasBeenChangedCounter= 180;
+
+				overwriteAll= false;
+				resetCounter= 0;
+
+
+
+			}
 			if (mRef.objState == "play")
 			{
 				//const if's
@@ -147,18 +186,18 @@
 					{
 						overwriteAll = false;
 					}
-					
+
 					this.alpha = 0.5;
 					this.speed = 0;
 				}
 
 
 				/////////////////////////////////////////// FISH 3 ////////////////////////////////////////////
-				if (this.name == "bFisher3" && isAlive == true && overwriteAll == false )
+				if (this.name == "bFisher3" && isAlive == true && overwriteAll == false)
 				{
 					this.alpha = 1;
 					this.speed = 0.3;
-					if(this.x < 520)
+					if (this.x < 520)
 					{
 						objState = "idle"
 						this.x = mRef.bFishingTown3.x;
@@ -166,7 +205,7 @@
 						objAngle = 0;
 						angleRad = 0;
 						trace(this.name + " has been destroyed and replaced")
-						
+
 					}
 
 					if (objState == "idle")
@@ -252,7 +291,7 @@
 					{
 						overwriteAll = false;
 					}
-					
+
 					this.alpha = 0.5;
 					this.speed = 0;
 				}

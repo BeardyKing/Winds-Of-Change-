@@ -82,6 +82,8 @@
 
 		var introSinglePass: Boolean = false;
 
+		var changeStateSinglePass: Boolean = false;
+
 
 		public function cloudObjBoi()
 		{
@@ -201,7 +203,7 @@
 			objStateCounterSeconds = 0;
 
 
-			cloudState= "white"
+			cloudState = "white"
 
 			randomChangeLightGrey: Number;
 			randomChangeGrey: Number;
@@ -222,10 +224,12 @@
 			animCounter2 = 0;
 
 			introSinglePass = false;
+
+
 		}
 		public function Loop(e: Event)
 		{
-			if (mRef.playBtn1.bigResetBool == true)
+			if (mRef.objState == "win" || mRef.objState == "lose")
 			{
 				ResetFunction();
 				mRef.playBtn1.bigResetBool = false
@@ -233,6 +237,7 @@
 
 			if (mRef.objState == "start")
 			{
+
 				if (mRef.fireIntro1.isActive == true || mRef.fireIntro2.isActive == true)
 				{
 					/*DoAnim();
@@ -345,6 +350,13 @@
 			}
 			if (mRef.objState == "play")
 			{
+
+				if (changeStateSinglePass == false)
+				{
+					changeStateSinglePass = true;
+					cloudState = "white";
+
+				}
 
 
 

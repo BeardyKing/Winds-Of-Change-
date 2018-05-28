@@ -56,6 +56,10 @@
 
 		public function Loop(e: Event)
 		{
+			if(mRef.objState == "win" || mRef.objState == "lose" )
+			{
+				objState = "reset";
+			}
 			trace(objHealth);
 			//trace("Inside " + this.name)
 			if (isActiveBool == false)

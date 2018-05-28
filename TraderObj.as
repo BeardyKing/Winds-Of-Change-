@@ -33,7 +33,20 @@
 
 		public function Loop(e: Event)
 		{
-			
+			if (mRef.objState == "win" || mRef.objState == "lose")
+			{
+				nodeNumber= 1;
+				singlePass= false;
+				speed = 0.2;
+				objAngle = 0;
+				angleRad= 0;
+				goingToTown= true;
+				fDist1= 0;
+				currentResourceAmount= 0;
+				hypotDist= 10;
+				this.x = 1000;
+			}
+
 			if (this.name == "bTradeRice1")
 			{
 				if (mRef.farmTown1.isOnFireBool == true)

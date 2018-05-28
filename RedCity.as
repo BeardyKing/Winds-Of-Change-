@@ -27,7 +27,7 @@
 
 		public function RedCity()
 		{
-			this.alpha = 0;
+			//this.alpha = 0;
 			mRef = MovieClip(this.parent);
 			stage.addEventListener(KeyboardEvent.KEY_DOWN, KeyDown)
 
@@ -47,6 +47,7 @@
 			isBeingCaptued = false;
 			captureCounter = 0;
 			timer = 0;
+			mRef.infoTB1.text = ""
 		}
 
 		public function KeyDown(kDown: KeyboardEvent)

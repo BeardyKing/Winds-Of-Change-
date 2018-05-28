@@ -33,7 +33,7 @@
 		public function Loop(e: Event)
 		{
 			
-			if(mRef.playBtn1.expandReset1 == true)
+			if(mRef.objState == "win" || mRef.objState == "lose" )
 			{
 				ResetFunction();
 				mRef.playBtn1.expandReset1 = false;

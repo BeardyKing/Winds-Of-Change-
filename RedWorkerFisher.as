@@ -39,9 +39,43 @@
 
 		public function Loop(e: Event)
 		{ // loop s
+
+			if (mRef.objState == "win" || mRef.objState == "lose")
+			{
+				if (this.name == "rFisher1_1")
+				{
+					this.x = mRef.rFishTown1.x
+					this.y = mRef.rFishTown1.y
+				}
+				if (this.name == "rFisher2_1")
+				{
+					this.x = mRef.rFishTown2.x
+					this.y = mRef.rFishTown2.y
+				}
+				objState= "idle";
+
+				maxFish= 15
+				isAlive = true;
+				currentFishAmount = 0;
+				objHealth= 100;
+				hitByWhirlwind= false;
+				hitByStorm = false;
+				fishingHomeTownName = "";
+				isPoisoned = false;
+				currentFishingSpotName= "";
+				speed= 0.3;
+				resetSpeed = speed
+				objAngle = 0;
+				angleRad = 0;
+				isCollecting= false;
+				dirHasBeenChanged= false;
+				dirHasBeenChangedCounter = 180;
+
+
+			}
 			if (mRef.objState == "play")
 			{
-				
+
 				//this.rotation = objAngle - 45;
 				if (this.name == "rFisher1_1")
 				{
@@ -76,7 +110,7 @@
 
 					if (objState == "collectingFish")
 					{
-						
+
 						this.gotoAndStop(2);
 
 						if (this.hitTestObject(mRef.redFishPoint1) == true)
@@ -97,7 +131,7 @@
 						//		objState = "goToFishingSpot"
 						//	}
 						//}
-						
+
 					}
 
 					if (objState == "goToFishingTown")
@@ -135,7 +169,7 @@
 
 					}
 				}
-				
+
 				if (this.name == "rFisher2_1")
 				{
 
@@ -169,7 +203,7 @@
 
 					if (objState == "collectingFish")
 					{
-						
+
 						this.gotoAndStop(2);
 
 						if (this.hitTestObject(mRef.redFishPoint2) == true)
@@ -190,7 +224,7 @@
 						//		objState = "goToFishingSpot"
 						//	}
 						//}
-						
+
 					}
 
 					if (objState == "goToFishingTown")
@@ -228,7 +262,7 @@
 
 					}
 				}
-				
+
 			}
 			// loop f
 		}
@@ -264,7 +298,7 @@
 
 				mRef.redFishPoint1.x = newRandomX + mRef.redWaterObj1.x
 				mRef.redFishPoint1.y = newRandomY + mRef.redWaterObj1.y
-				
+
 				/*//trace(newRandomX + " " + this.name);
 				//trace(newRandomY + " " + this.name);
 				//trace("")

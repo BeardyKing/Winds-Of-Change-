@@ -286,19 +286,25 @@
 
 			if (this.hitTestObject(mRef.bFighter1) == true)
 			{
-				if (mRef.bFighter1.objHealth > 1)
+				if (mRef.bFighter1.objHealth >= 3)
 				{
+					if(mRef.bFighter1.objState != "notActive")
+					{
 					mRef.bFighter1.resetCounter = 0;
 					mRef.bFighter1.overwriteAll = true
+					}
 				}
 			}
 
 			if (this.hitTestObject(mRef.bFighter2) == true)
 			{
-				if (mRef.bFighter2.objHealth > 1)
+				if (mRef.bFighter2.objHealth >= 3)
 				{
+					if(mRef.bFighter2.objState != "notActive")
+					{
 					mRef.bFighter2.resetCounter = 0;
 					mRef.bFighter2.overwriteAll = true
+					}
 				}
 			}
 
@@ -1360,7 +1366,7 @@
 			//trace("hello from me" + this.name)
 			// frame 4 to 7
 			animCounter += 1;
-			if (animCounter >= 3)
+			if (animCounter >= 4)
 			{
 				animCounter = 0;
 				animCounter2 += 1;

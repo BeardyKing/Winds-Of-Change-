@@ -33,7 +33,7 @@
 			{
 				this.x = mRef.fire2.x;
 					this.y = mRef.fire2.y;
-				this.alpha = 0.3;
+				this.alpha = 0;
 				this.scaleX = 1
 				this.scaleY = 1
 				isActiveBool = false
@@ -84,7 +84,7 @@
 			{
 				objState = "expand";
 			}
-			this.alpha = 0.5
+			this.alpha = 0
 			//loop
 		}
 		//loop

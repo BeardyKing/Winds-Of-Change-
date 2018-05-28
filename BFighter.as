@@ -150,6 +150,7 @@
 					resetCounter = 0;
 				}
 			}
+			trace("objState " + objState + " " +this.name)
 			
 			//loop
 		}

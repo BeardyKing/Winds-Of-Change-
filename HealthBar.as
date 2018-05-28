@@ -51,7 +51,7 @@
 			
 			if(this.name == "yokaiHealth")
 			{
-				this.scaleX = mRef.objHealth / 100;
+				this.scaleX = mRef.objHealth / 127.8778;
 				if(this.scaleX <= 0)
 				{
 					this.scaleX = 0;
@@ -59,7 +59,7 @@
 			}
 			if(this.name == "fighterHealth")
 			{
-				this.scaleX = mRef.objHealth / 100;
+				this.scaleX = mRef.objHealth / 200;
 				if(this.scaleX <= 0)
 				{
 					this.scaleX = 0;
@@ -67,7 +67,7 @@
 			}
 			if(this.name == "cartHealth")
 			{
-				this.scaleX = mRef.objHealth / 100;
+				this.scaleX = mRef.objHealth / 200
 				if(this.scaleX <= 0)
 				{
 					this.scaleX = 0;

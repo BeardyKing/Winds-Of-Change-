@@ -97,7 +97,7 @@
 						{
 							isActiveBool = false;
 							//trace("DEAL DAMAGE")
-							mRef.bCity.objHealth -= 0.1;
+							mRef.bCity.objHealth -= 0.06;
 							if (mRef.bCity.objHealth <= 0)
 							{
 								objState = "notActive"
@@ -128,7 +128,7 @@
 				{
 					overwriteAll = false;
 				}
-				dmgCounter += 1;
+				dmgCounter += 1; 
 				if (dmgCounter >= 0 && dmgCounter <= 7)
 				{
 

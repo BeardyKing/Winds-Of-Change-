@@ -444,7 +444,7 @@
 				
 			}
 			
-			this.alpha = 0.3;
+			this.alpha = 0;
 
 			// loop
 		}

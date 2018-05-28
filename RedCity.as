@@ -27,6 +27,7 @@
 
 		public function RedCity()
 		{
+			this.alpha = 0;
 			mRef = MovieClip(this.parent);
 			stage.addEventListener(KeyboardEvent.KEY_DOWN, KeyDown)
 

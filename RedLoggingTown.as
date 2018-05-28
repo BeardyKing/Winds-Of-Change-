@@ -29,6 +29,7 @@
 
 		public function RedLoggingTown()
 		{
+			this.alpha = 0;
 			this.addEventListener(Event.ENTER_FRAME, Loop);
 			mRef = MovieClip(this.parent)
 

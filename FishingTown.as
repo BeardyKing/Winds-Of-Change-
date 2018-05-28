@@ -27,6 +27,7 @@
 
 		public function FishingTown()
 		{
+			this.alpha = 0;
 			mRef = MovieClip(this.parent);
 
 			this.addEventListener(Event.ENTER_FRAME, Loop);

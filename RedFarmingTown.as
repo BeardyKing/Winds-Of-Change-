@@ -35,6 +35,7 @@
 
 		public function RedFarmingTown()
 		{
+			this.alpha = 0;
 			// constructor code
 			mRef = MovieClip(this.parent);
 

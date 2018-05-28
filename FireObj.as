@@ -22,6 +22,8 @@
 		var singlePassFireTotal: Boolean = false;
 		var singlePassFireActive: Boolean = false;
 		var singlePassMinusFireActive: Boolean = false;
+		var introSinglePass : Boolean = false;
+		
 		public function FireObj()
 		{
 
@@ -39,6 +41,28 @@
 		}
 		public function Loop(e: Event)
 		{
+			if(this.name == "fireIntro1")
+			{
+				if(introSinglePass == false)
+				{
+					isActive = true;
+					introSinglePass = true;
+					this.alpha = 1;
+					objState = "onFire"
+				}
+			}
+			
+			if(this.name == "fireIntro2")
+			{
+				if(introSinglePass == false)
+				{
+					isActive = true;
+					introSinglePass = true;
+					this.alpha = 1;
+					objState = "onFire"
+				}
+			}
+			
 			if (singlePassFireTotal == false)
 			{
 				singlePassFireTotal = true;

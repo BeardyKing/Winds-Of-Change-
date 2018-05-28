@@ -80,6 +80,8 @@
 		var animCounter: Number = 4;
 		var animCounter2: Number = 0;
 
+		var introSinglePass: Boolean = false;
+
 
 		public function cloudObjBoi()
 		{
@@ -122,9 +124,145 @@
 
 		}
 
+		public function HitTestIntroFire()
+		{
+			if (this.hitTestObject(mRef.fireIntro1) == true)
+			{
+				if (mRef.fireIntro1.isActive == true)
+				{
+					mRef.fireIntro1.objState = "dead"
+					mRef.fireIntro1.isActive = false
+				}
+
+			}
+
+			if (this.hitTestObject(mRef.fireIntro2) == true)
+			{
+				if (mRef.fireIntro2.isActive == true)
+				{
+					mRef.fireIntro2.objState = "dead"
+					mRef.fireIntro2.isActive = false
+				}
+
+			}
+		}
+
+
 
 		public function Loop(e: Event)
 		{
+			if (mRef.objState == "start")
+			{
+				if (mRef.fireIntro1.isActive == true || mRef.fireIntro2.isActive == true)
+				{
+					/*DoAnim();
+				HitTestCheckTwo();
+				HitTestCheck();*/
+
+					this.x -= Math.cos(angleDegLocal) * speed;
+					this.y += Math.sin(angleDegLocal) * speed;
+					if (this.x < 200)
+					{
+						introSinglePass = false
+						speed = 0;
+					}
+
+					if (this.x > 650)
+					{
+						introSinglePass = false
+						speed = 0;
+					}
+
+					if (this.y < 100)
+					{
+						introSinglePass = false
+						speed = 0;
+
+					}
+
+					if (this.y > 300)
+					{
+						introSinglePass = false
+						speed = 0;
+
+					}
+
+					DoAnim();
+					HitTestCheckTwo();
+					HitTestCheck();
+					HitTestIntroFire();
+					if (this.name == "cloudBoi_intro1")
+					{
+						if (introSinglePass == false)
+						{
+							introSinglePass = true;
+							this.x = 400 + 25;
+							this.y = 223.9 - 40;
+						}
+					}
+
+					if (this.name == "cloudBoi_intro2")
+					{
+						if (introSinglePass == false)
+						{
+							introSinglePass = true;
+							this.x = 400 - 25;
+							this.y = 223.9 - 40;
+
+						}
+					}
+
+					if (this.name == "cloudBoi_intro3")
+					{
+						if (introSinglePass == false)
+						{
+							introSinglePass = true;
+							this.x = 400 + 25;
+							this.y = 223.9 - 10;
+						}
+					}
+
+					if (this.name == "cloudBoi_intro4")
+					{
+						if (introSinglePass == false)
+						{
+							introSinglePass = true;
+							this.x = 400 + 25;
+							this.y = 223.9 - 40;
+						}
+					}
+
+					if (this.name == "cloudBoi_intro5")
+					{
+						if (introSinglePass == false)
+						{
+							introSinglePass = true;
+							this.x = 400 - 25;
+							this.y = 223.9 - 40;
+
+						}
+					}
+
+					if (this.name == "cloudBoi_intro6")
+					{
+						if (introSinglePass == false)
+						{
+							introSinglePass = true;
+							this.x = 400 - 25;
+							this.y = 223.9 - 10;
+						}
+					}
+				}
+				else
+				{
+					this.alpha -= 0.05;
+					if(this.alpha <= 0)
+					{
+						this.alpha = 0;
+						this.x = 1000;
+					}
+				}
+			}
 			if (mRef.objState == "play")
 			{
 
@@ -288,10 +426,10 @@
 			{
 				if (mRef.bFighter1.objHealth >= 3)
 				{
-					if(mRef.bFighter1.objState != "notActive")
+					if (mRef.bFighter1.objState != "notActive")
 					{
-					mRef.bFighter1.resetCounter = 0;
-					mRef.bFighter1.overwriteAll = true
+						mRef.bFighter1.resetCounter = 0;
+						mRef.bFighter1.overwriteAll = true
 					}
 				}
 			}
@@ -300,10 +438,10 @@
 			{
 				if (mRef.bFighter2.objHealth >= 3)
 				{
-					if(mRef.bFighter2.objState != "notActive")
+					if (mRef.bFighter2.objState != "notActive")
 					{
-					mRef.bFighter2.resetCounter = 0;
-					mRef.bFighter2.overwriteAll = true
+						mRef.bFighter2.resetCounter = 0;
+						mRef.bFighter2.overwriteAll = true
 					}
 				}
 			}
@@ -320,7 +458,7 @@
 					if (mRef.yokai1.objHealth > 1)
 					{
 						trace("IS THIS HAPPENING " + this.name)
-						
+
 						mRef.yokai1.objState = "dealingDamage";
 						mRef.yokai1.resetCounter = 0;
 						//mRef.yokai1.isActiveBool = false;

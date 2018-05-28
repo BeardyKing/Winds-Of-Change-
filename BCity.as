@@ -3,6 +3,8 @@
 
 	import flash.display.MovieClip;
 	import flash.events.Event;
+	import flash.ui.Keyboard;
+	import flash.events.KeyboardEvent;
 
 
 	public class BCity extends MovieClip
@@ -35,6 +37,8 @@
 		var infoCountDownSeconds: Number = 5;
 		var infoBool: Boolean = true;
 		
+		var eDown : Boolean = false;
+		
 		
 
 		public function BCity()
@@ -42,7 +46,18 @@
 			mRef = MovieClip(this.parent);
 
 			this.addEventListener(Event.ENTER_FRAME, Loop)
+			stage.addEventListener(KeyboardEvent.KEY_DOWN, KeyDown);
 
+		}
+		
+		public function KeyDown(kDown: KeyboardEvent)
+		{
+			trace("AAAAA")
+			if (kDown.keyCode == Keyboard.E)
+			{
+
+				eDown = !eDown;
+			}
 		}
 
 		public function Loop(e: Event)
@@ -55,10 +70,12 @@
 			/*trace(woodTotal + " wood Total")
 			trace(fishTotal + " fishTotal")
 			trace(riceTotal + " rice Total")*/
-
-			/*woodTotal += 0.2
+			if(eDown == true)
+			{
+			woodTotal += 0.2
 			fishTotal += 0.2
-			riceTotal += 0.2*/
+			riceTotal += 0.2
+			}
 			// FIGHTER CART CODE
 
 			if (mRef.fire11.objState == "onFire" || mRef.fire8.objState == "onFire" || mRef.fire7.objState == "onFire")

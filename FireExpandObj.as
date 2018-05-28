@@ -11,7 +11,7 @@
 		var expandCounter: Number = 0;
 		var expandBool: Boolean = false;
 		var isActiveBool: Boolean = false;
-		var scaleSpeed: Number = 0.01;
+		var scaleSpeed: Number = 0.006;
 		var objState: String = "init"
 
 		public function FireExpandObj()

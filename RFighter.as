@@ -33,7 +33,7 @@
 		}
 		public function Loop(e: Event)
 		{
-			trace(nodeToAttack + " nodeToAttack " + this.name)
+			//trace(nodeToAttack + " nodeToAttack " + this.name)
 			if (overwriteAll == false)
 			{
 				if (objState == "active")
@@ -48,10 +48,10 @@
 					}
 					if (nodeToAttack == "bFishingTown1")
 					{
-						trace("aaaaaaaaaaaaaaaa")
+						//trace("aaaaaaaaaaaaaaaa")
 						if (mRef.bFishingTown1.teamState == "blue")
 						{
-							trace("inside teamstate check")
+							//trace("inside teamstate check")
 							
 							fDist1 = Math.sqrt((this.x - mRef.nodeFarm15_1.x) *
 								(this.x - mRef.nodeFarm15_1.x) +
@@ -66,7 +66,8 @@
 							{
 								mRef.bFishingTown1.teamState = "red"
 								isActiveBool = false;
-								trace("DEAL DAMAGE")
+								//trace("DEAL DAMAGE")
+								//trace("DEAL DAMAGE")
 								// DEAL DAMAGE
 							}
 						}
@@ -95,7 +96,7 @@
 						if (fDist1 <= hypotDist)
 						{
 							isActiveBool = false;
-							trace("DEAL DAMAGE")
+							//trace("DEAL DAMAGE")
 							mRef.bCity.objHealth -= 0.1;
 							if (mRef.bCity.objHealth <= 0)
 							{
@@ -161,7 +162,7 @@
 
 		public function PlaceSamuari(xLoc, yLoc, objName)
 		{
-			trace(objName);
+			/*trace(objName);
 						trace(objName);
 						trace(objName);
 						trace(objName);
@@ -173,7 +174,7 @@
 						trace(objName);
 						trace(objName);
 						trace(objName);
-						trace(objName);
+						trace(objName);*/
 			
 			
 			this.x = xLoc;

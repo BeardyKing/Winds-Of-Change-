@@ -14,7 +14,7 @@
 		var expandCounter: Number = 0;
 		var expandBool: Boolean = false;
 		var singlePass: Boolean = false;
-		var scaleSpeed: Number = 0.05
+		var scaleSpeed: Number = 0.006
 		var isActiveBool : Boolean = false;
 		public function ExpandBoxConnector()
 		{

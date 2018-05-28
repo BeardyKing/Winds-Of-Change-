@@ -1041,7 +1041,7 @@
 								//trace("aa")
 								speed = 0;
 								currentResourceAmount += 0.1
-								mRef.bFishingTown2.currentFishAmount -= 0.1;
+								mRef.bFishingTown3.currentFishAmount -= 0.1;
 
 							}
 						}

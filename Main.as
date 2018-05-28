@@ -21,6 +21,8 @@
 
 		public function Main()
 		{
+			swordIcon1.alpha = 0;
+			swordIcon2.alpha = 0;
 			// constructor code
 			this.addEventListener(Event.ENTER_FRAME, Loop);
 
@@ -42,10 +44,27 @@
 				if(flashingBool == false)
 				{
 					infoTB1.alpha = 1;
+					if(infoTB1.text == "OPENING THE GATES IN :" + bCity.infoCountDownSeconds)
+					{
+						swordIcon1.alpha = 1;
+					}
+					if(infoTB1.text == "KOREA IS MOUNTING AN INVASION")
+					{
+						swordIcon2.alpha = 1;
+					}
 				}
 				if(flashingBool == true)
 				{
-					infoTB1.alpha = 0.2;
+					if(infoTB1.text == "OPENING THE GATES IN :" + bCity.infoCountDownSeconds)
+					{
+						swordIcon1.alpha = 0.4;
+						trace("this works alpha 0.4")
+					}
+					if(infoTB1.text == "KOREA IS MOUNTING AN INVASION")
+					{
+						swordIcon2.alpha = 0.4;
+					}
+					infoTB1.alpha = 0.4;
 				}
 			}
 			if(infoTB1.text == "" && infoTB1.alpha < 1)
@@ -54,7 +73,15 @@
 				flashingBool = false;
 				flashingCounter = 0;
 				trace("singlePass from " + this.name)
+				swordIcon1.alpha = 0;
+				swordIcon2.alpha = 0;
 			}
+			if(infoTB1.text == "")
+			{
+				swordIcon1.alpha = 0;
+				swordIcon2.alpha = 0;
+			}
+			
 		}
 		
 		public function Loop(e: Event)

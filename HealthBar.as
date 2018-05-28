@@ -25,7 +25,7 @@
 			{
 				if (mRef.bCity.objHealth < 30 && mRef.bCity.isOnFire == false)
 				{
-					trace("GETTING HP BACK" + this.name)
+					//trace("GETTING HP BACK" + this.name)
 					healthBarTimer -= 1;
 					if (healthBarTimer == 0)
 					{
@@ -52,14 +52,26 @@
 			if(this.name == "yokaiHealth")
 			{
 				this.scaleX = mRef.objHealth / 100;
+				if(this.scaleX <= 0)
+				{
+					this.scaleX = 0;
+				}
 			}
 			if(this.name == "fighterHealth")
 			{
 				this.scaleX = mRef.objHealth / 100;
+				if(this.scaleX <= 0)
+				{
+					this.scaleX = 0;
+				}
 			}
 			if(this.name == "cartHealth")
 			{
 				this.scaleX = mRef.objHealth / 100;
+				if(this.scaleX <= 0)
+				{
+					this.scaleX = 0;
+				}
 			}
 			if(this.name == "rCityHealth")
 			{
@@ -73,6 +85,10 @@
 				{
 					this.alpha = 0;
 					mRef.mRef.rCity.redHp.alpha = 0
+				}
+				if(this.scaleX <= 0)
+				{
+					this.scaleX = 0;
 				}
 			}
 

@@ -1705,7 +1705,7 @@
 				objState = "init"
 				cloudState = "white"
 			}
-			if (this.y > 600)
+			if (this.y > 500)
 			{
 				objState = "init"
 				cloudState = "white"

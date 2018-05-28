@@ -14,6 +14,10 @@
 		var objHealth: Number = 100;
 
 		var resetCounter: Number = 0;
+		
+		var animCounter : Number =  0;
+		var animCounter2 : Number = 0;
+		
 
 
 		public function WoodYokai()
@@ -25,6 +29,30 @@
 			this.addEventListener(Event.ENTER_FRAME, Loop);
 
 		}
+		
+		public function DoAnim()
+		{
+			this.alpha += 0.05;
+			if (this.alpha >= 1)
+			{
+				this.alpha = 1;
+			}
+
+
+			animCounter += 1;
+			if (animCounter >= 4)
+			{
+				animCounter = 0;
+				animCounter2 += 1;
+			}
+
+			this.gotoAndStop(animCounter2);
+			if (this.currentFrame >= 4)
+			{
+				animCounter2 = 1;
+			}
+		}
+		
 
 		public function Loop(e: Event)
 		{
@@ -35,6 +63,10 @@
 				// do something here I guess
 
 				this.x = 1000;
+			}
+			if(isActiveBool == true)
+			{
+				DoAnim();
 			}
 			if (objHealth <= 1)
 			{
@@ -56,6 +88,7 @@
 			}
 			if (objState == "reset")
 			{
+				this.alpha = 0;
 				objHealth = 100;
 				objState = "idle"
 				isActiveBool = false;

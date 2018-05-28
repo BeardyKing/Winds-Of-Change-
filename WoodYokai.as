@@ -51,7 +51,7 @@
 				}
 				if (resetCounter >= 4)
 				{
-					objState = "reset"
+					objState = "idle"
 				}
 			}
 			if (objState == "reset")

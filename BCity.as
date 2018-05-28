@@ -34,6 +34,8 @@
 		var infoCountDown: Number = 0;
 		var infoCountDownSeconds: Number = 5;
 		var infoBool: Boolean = true;
+		
+		
 
 		public function BCity()
 		{

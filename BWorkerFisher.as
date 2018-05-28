@@ -158,6 +158,16 @@
 				{
 					this.alpha = 1;
 					this.speed = 0.3;
+					if(this.x < 520)
+					{
+						objState = "idle"
+						this.x = mRef.bFishingTown3.x;
+						this.y = mRef.bFishingTown3.y;
+						objAngle = 0;
+						angleRad = 0;
+						trace(this.name + " has been destroyed and replaced")
+						
+					}
 
 					if (objState == "idle")
 					{

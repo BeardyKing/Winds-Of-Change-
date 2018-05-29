@@ -66,12 +66,12 @@
 		{
 			//trace(wDown)
 			// TESTING
-			if (wDown == true)
+			/*if (wDown == true)
 			{
 				woodTotal += 0.2
 				fishTotal += 0.2
 				riceTotal += 0.2
-			}
+			}*/
 
 
 			if (woodTotal >= 50 && fishTotal >= 50 && riceTotal >= 50)

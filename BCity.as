@@ -106,12 +106,13 @@
 			/*trace(woodTotal + " wood Total")
 			trace(fishTotal + " fishTotal")
 			trace(riceTotal + " rice Total")*/
-			if (eDown == true)
+			// TESTING
+			/*if (eDown == true)
 			{
 				woodTotal += 0.2
 				fishTotal += 0.2
 				riceTotal += 0.2
-			}
+			}*/
 			// FIGHTER CART CODE
 
 			if (mRef.fire11.objState == "onFire" || mRef.fire8.objState == "onFire" || mRef.fire7.objState == "onFire")

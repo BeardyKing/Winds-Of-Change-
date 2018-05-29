@@ -377,19 +377,20 @@
 				}
 			}
 
-			if (this.name == "cloudBoi1")
-			{
-				if (testingActive == true)
-				{
-					// TESTING
-					cloudState = "greyStorm"
-					this.x = stage.mouseX;
-					this.y = stage.mouseY;
-					//mRef.fire8.objState = "onFire"
+			//TESTING
+			//if (this.name == "cloudBoi1")
+			//{
+			//	if (testingActive == true)
+			//	{
+			//		// TESTING
+			//		cloudState = "greyStorm"
+			//		this.x = stage.mouseX;
+			//		this.y = stage.mouseY;
+			//		//mRef.fire8.objState = "onFire"
 
-				}
-				//
-			}
+			//	}
+			//	//
+			//}
 
 			if (mRef.objState == "play")
 			{

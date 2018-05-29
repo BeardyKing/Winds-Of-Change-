@@ -21,7 +21,7 @@
 			if(mRef.objState == "start")
 			{
 				this.x = 600;
-				this.y = 475;
+				this.y = 375;
 				animCounter += 1;
 			if (animCounter >= 4)
 			{
@@ -37,7 +37,7 @@
 			}
 			if(mRef.objState != "start" && this.x != 1000)
 			{
-				this.x = 1000
+				this.x = 1500
 			}
 			
 		}

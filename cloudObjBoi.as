@@ -381,8 +381,23 @@
 					cloudState = "greyStorm"
 					this.x = stage.mouseX;
 					this.y = stage.mouseY;
+					//mRef.fire8.objState = "onFire"
+
 				}
 				//
+			}
+
+			if (mRef.objState == "play")
+			{
+				if (this.name == "cloudBoi_intro1" ||
+					this.name == "cloudBoi_intro2" ||
+					this.name == "cloudBoi_intro3" ||
+					this.name == "cloudBoi_intro4" ||
+					this.name == "cloudBoi_intro5" ||
+					this.name == "cloudBoi_intro6")
+				{
+					this.x = 1000;
+				}
 			}
 		}
 

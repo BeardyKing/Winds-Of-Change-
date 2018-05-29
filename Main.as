@@ -47,6 +47,9 @@
 					if (infoTB1.text == "OPENING THE GATES IN :" + bCity.infoCountDownSeconds)
 					{
 						swordIcon1.alpha = 1;
+						rFifty.alpha = 1;
+						wFifty.alpha = 1;
+						fFifty.alpha = 1;
 					}
 					if (infoTB1.text == "KOREA IS MOUNTING AN INVASION")
 					{
@@ -58,6 +61,9 @@
 					if (infoTB1.text == "OPENING THE GATES IN :" + bCity.infoCountDownSeconds)
 					{
 						swordIcon1.alpha = 0.4;
+						rFifty.alpha = 0.4;
+						wFifty.alpha = 0.4;
+						fFifty.alpha = 0.4;
 						trace("this works alpha 0.4")
 					}
 					if (infoTB1.text == "KOREA IS MOUNTING AN INVASION")
@@ -75,11 +81,17 @@
 				trace("singlePass from " + this.name)
 				swordIcon1.alpha = 0;
 				swordIcon2.alpha = 0;
+				rFifty.alpha = 1;
+				wFifty.alpha = 1;
+				fFifty.alpha = 1;
 			}
 			if (infoTB1.text == "")
 			{
 				swordIcon1.alpha = 0;
 				swordIcon2.alpha = 0;
+				rFifty.alpha = 1;
+				wFifty.alpha = 1;
+				fFifty.alpha = 1;
 			}
 
 		}
@@ -109,10 +121,10 @@
 			{
 				intro1.x = -1000;
 				intro1.y = -1000
-				
+
 				playBar1.y = 1000
 				playBar1.x = 1000
-				
+
 				playBtn1.x = 1000;
 				playBtn1.y = 1000;
 			}

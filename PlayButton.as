@@ -104,6 +104,12 @@
 			{
 				this.y = yHolder + 2;
 			}
+			
+			if (mRef.objState == "win" || mRef.objState == "lose")
+			{
+				this.alpha = 1;
+				mRef.playBar1.alpha = 1;
+			}
 		}
 
 		public function MouseDown(md: MouseEvent)

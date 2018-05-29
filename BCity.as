@@ -50,12 +50,12 @@
 			stage.addEventListener(KeyboardEvent.KEY_DOWN, KeyDown);
 
 		}
-		
-		
+
+
 
 		public function ResetFunction()
 		{
-			objState= "boot"
+			objState = "boot"
 
 			woodTotal = 0;
 			fishTotal = 0;
@@ -89,7 +89,7 @@
 
 				eDown = !eDown;
 			}
-			
+
 			if (kDown.keyCode == Keyboard.Z)
 			{
 
@@ -133,9 +133,9 @@
 
 				//riceTotal = Math.round((riceTotal * 10) / 10)
 				////trace("rice total = " + riceTotal );
-				mRef.riceText1.text = riceTotal.toString();
-				mRef.fishText1.text = fishTotal.toString();
-				mRef.woodText1.text = woodTotal.toString();
+				mRef.riceText1.text = Math.floor(riceTotal).toString();
+				mRef.fishText1.text = Math.floor(fishTotal).toString();
+				mRef.woodText1.text = Math.floor(woodTotal).toString();
 				////trace(fishTotal + this.name);
 				////trace("aaaaa")
 			}
@@ -182,6 +182,10 @@
 						fishTotal -= 50
 						woodTotal -= 50
 
+						mRef.minus1.SetActive();
+						mRef.minus2.SetActive();
+						mRef.minus3.SetActive();
+
 						infoCountDown = 0;
 						infoBool = true
 					}
@@ -196,6 +200,10 @@
 						riceTotal -= 50
 						fishTotal -= 50
 						woodTotal -= 50
+						mRef.minus1.SetActive();
+						mRef.minus2.SetActive();
+						mRef.minus3.SetActive();
+
 
 						infoCountDown = 0;
 						infoBool = true

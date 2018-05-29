@@ -56,12 +56,12 @@
 			}
 			if (objState == "newRandom")
 			{
-				randomSelection = Math.round(Math.random() * 7);
-				randomSpawnTimer = Math.round((Math.random() * 15) + 20);
+				//randomSelection = Math.round(Math.random() * 7);
+				//randomSpawnTimer = Math.round((Math.random() * 15) + 20);
 				
 				// TESTING spawnCounter & Selection;				
-				//randomSpawnTimer = 1;
-				//randomSelection = 6;
+				randomSpawnTimer = 1;
+				randomSelection = 8;
 				
 				
 				if (randomSelection == 0)

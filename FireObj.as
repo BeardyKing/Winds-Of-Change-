@@ -88,6 +88,7 @@
 			}
 
 			HitTestFunction();
+			FighterHitTest();
 
 
 
@@ -253,6 +254,19 @@
 			if (this.currentFrame >= 20)
 			{
 				animCounter2 = 1;
+			}
+		}
+		
+		public function FighterHitTest()
+		{
+			if(this.hitTestObject(mRef.fighterCart1) == true)
+			{
+				mRef.fighterCart1.objHealth -= 0.006;
+			}
+			
+			if(this.hitTestObject(mRef.fighterCart2) == true)
+			{
+				mRef.fighterCart2.objHealth -= 0.006	;
 			}
 		}
 

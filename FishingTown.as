@@ -56,6 +56,8 @@
 		public function Loop(e: Event)
 		{
 			//
+
+			mRef.bAsset1.alpha = 0;
 			if (mRef.objState == "play")
 			{
 				if (currentFishAmount > maxFish)
@@ -64,24 +66,37 @@
 				}
 				if (this.name == "bFishingTown1")
 				{
-					if (mRef.fire_Fish1.objState == "onFire")
+					trace("teamState " + teamState + " " + this.name)
+					if (teamState == "red")
 					{
-						isOnFireBool = true;
+						mRef.rAsset1.alpha = 1;
+
 					}
-					else
+					if (teamState == "blue")
 					{
-						isOnFireBool = false
-						mRef.bFisher1.isAlive = true;
-					}
-					if (currentFishAmount >= 10 && hasTradeCartActive == false)
-					{
-						mRef.bCity.AddTradeCart(this.name)
+						mRef.rAsset1.alpha = 0;
+
+						if (mRef.fire_Fish1.objState == "onFire")
+						{
+							isOnFireBool = true;
+						}
+						else
+						{
+							isOnFireBool = false
+							mRef.bFisher1.isAlive = true;
+						}
+						if (currentFishAmount >= 10 && hasTradeCartActive == false)
+						{
+							mRef.bCity.AddTradeCart(this.name)
+						}
 					}
 				}
 
 
 				if (this.name == "bFishingTown3")
 				{
+
+
 
 					////trace(currentFishAmount + "   " + hasTradeCartActive)
 					if (currentFishAmount >= 0 && hasTradeCartActive == false)
@@ -99,6 +114,8 @@
 					//trace(this.name)
 				}
 			}
+
+
 			// loop
 		}
 		// loop

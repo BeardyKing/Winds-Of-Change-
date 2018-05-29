@@ -41,7 +41,7 @@
 		}
 		public function Loop(e: Event)
 		{
-			if (mRef.objState == "win" || mRef.objState == "lose" )
+			if (mRef.objState == "win" || mRef.objState == "lose")
 			{
 
 				objState = "idle"
@@ -58,7 +58,7 @@
 				introSinglePass = false;
 				mRef.playBtn1.fireResetBool = false
 			}
-			
+
 			if (this.name == "fireIntro1")
 			{
 				if (introSinglePass == false)
@@ -227,8 +227,8 @@
 					}
 				}
 			}
-			
-			
+
+
 
 		}
 
@@ -256,17 +256,22 @@
 				animCounter2 = 1;
 			}
 		}
-		
+
 		public function FighterHitTest()
 		{
-			if(this.hitTestObject(mRef.fighterCart1) == true)
+			if (objState == "onFire")
 			{
-				mRef.fighterCart1.objHealth -= 0.006;
+				if (this.hitTestObject(mRef.fighterCart1) == true)
+				{
+					mRef.fighterCart1.objHealth -= 0.006;
+				}
 			}
-			
-			if(this.hitTestObject(mRef.fighterCart2) == true)
+			if (objState == "onFire")
 			{
-				mRef.fighterCart2.objHealth -= 0.006	;
+				if (this.hitTestObject(mRef.fighterCart2) == true)
+				{
+					mRef.fighterCart2.objHealth -= 0.006;
+				}
 			}
 		}
 

@@ -29,8 +29,8 @@
 			if (mRef.fire8.objState == "onFire" ||
 				mRef.fire11.objState == "onFire" ||
 				mRef.fire12.objState == "onFire" ||
-				mRef.rFighter1.overwriteAll == true ||
-				mRef.rFighter2.overwriteAll == true)
+				mRef.rFighter1.dealingDamage == true ||
+				mRef.rFighter2.dealingDamage == true)
 			{
 				DoAnim();
 			}

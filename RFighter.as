@@ -21,6 +21,7 @@
 		var resetCounter: Number = 0;
 		var overwriteAll: Boolean = false;
 		var dmgCounter: Number = 0;
+		var dealingDamage : Boolean = false ;
 
 		public function RFighter()
 		{
@@ -112,11 +113,13 @@
 
 						if (fDist1 <= hypotDist)
 						{
+							dealingDamage = true;
 							isActiveBool = false;
 							//trace("DEAL DAMAGE")
 							mRef.bCity.objHealth -= 0.06;
 							if (mRef.bCity.objHealth <= 0)
 							{
+								dealingDamage = false;
 								objState = "notActive"
 								isActiveBool = false;
 								nodeToAttack = ""

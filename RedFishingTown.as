@@ -41,25 +41,25 @@
 
 		public function ResetFunction()
 		{
-			
+
 			objState = "boot";
 			objHealth = 100;
 			currentFishAmount = 0;
-			isActive= false;
-			hasTradeCartActive= false;
+			isActive = false;
+			hasTradeCartActive = false;
 			hasYokaiEvent = false;
 			yokaiRandomChance = 800;
-			hitByWhirlwind= false;
-			maxFish  = 50;
-			workerIsAlive= true;
-			teamState= "red"
-			isOnFireBoolean= false;
-			captureCouunter= 0;
-			isBeingCaptured= false;
-			hasBeenCaptured= false;
+			hitByWhirlwind = false;
+			maxFish = 50;
+			workerIsAlive = true;
+			teamState = "red"
+			isOnFireBoolean = false;
+			captureCouunter = 0;
+			isBeingCaptured = false;
+			hasBeenCaptured = false;
 
 			frameTimer = 0;
-			foodSendBool= false;
+			foodSendBool = false;
 		}
 
 		public function Loop(e: Event)
@@ -78,18 +78,20 @@
 			//
 			if (mRef.objState == "play")
 			{
-				if (teamState == "blue")
-				{
 
-				}
-				if (teamState == "red")
+				if (currentFishAmount > maxFish)
 				{
-					if (currentFishAmount > maxFish)
+					currentFishAmount = maxFish
+				}
+				if (this.name == "rFishTown1")
+				{
+					if (teamState == "blue")
 					{
-						currentFishAmount = maxFish
+						mRef.bAsset1.alpha = 1;
 					}
-					if (this.name == "rFishTown1")
+					if (teamState == "red")
 					{
+						mRef.bAsset1.alpha = 0;
 						////trace(currentFishAmount)
 						if (currentFishAmount > 1)
 						{
@@ -106,32 +108,33 @@
 						}
 
 					}
+				}
 
-					if (this.name == "rFishTown2")
+				if (this.name == "rFishTown2")
+				{
+					if (currentFishAmount > 1)
 					{
-						if (currentFishAmount > 1)
-						{
-							foodSendBool = true;
-						}
-						else
-						{
-							foodSendBool = false;
-						}
-						if (foodSendBool == true)
-						{
-							mRef.rCity.fishTotal += 0.0065
-							currentFishAmount -= 0.0065
-						}
+						foodSendBool = true;
 					}
-
-					if (objState == "boot")
+					else
 					{
-						//mRef.bCity.tradecartCounter += 1;
-						objState = "idle";
-						//trace(this.name)
+						foodSendBool = false;
+					}
+					if (foodSendBool == true)
+					{
+						mRef.rCity.fishTotal += 0.0065
+						currentFishAmount -= 0.0065
 					}
 				}
+
+				if (objState == "boot")
+				{
+					//mRef.bCity.tradecartCounter += 1;
+					objState = "idle";
+					//trace(this.name)
+				}
 			}
+
 			// loop
 		}
 		// loop

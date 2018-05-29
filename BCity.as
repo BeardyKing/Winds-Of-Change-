@@ -61,14 +61,12 @@
 			fishTotal = 0;
 			riceTotal = 0;
 
-
 			tradecartCounter = 0
 
 			fishIsPoisoned = false;
 			riceIsPoisoned = false;
 			bitByWhirlwind = false;
 			isOnFire = false;
-
 
 			objHealth = 100;
 			isBeingCaptued = false;
@@ -151,7 +149,7 @@
 				{
 
 					infoCountDown += 1;
-					mRef.infoTB1.text = "OPENING THE GATES IN :" + infoCountDownSeconds;
+					mRef.infoTB1.text = "YOU ARE ATTACKING IN :" + infoCountDownSeconds;
 					if (infoCountDown >= stage.frameRate)
 					{
 						infoCountDown = 0;

@@ -18,10 +18,10 @@
 		
 		public function Loop (e : Event)
 		{
-			if(mRef.objState == "start")
+			if(mRef.objState == "start" && mRef.fireIntro1.isActive == true || mRef.fireIntro2.isActive == true)
 			{
-				this.x = 600;
-				this.y = 375;
+				this.x = 400;
+				this.y = 500;
 				animCounter += 1;
 			if (animCounter >= 4)
 			{
@@ -34,6 +34,14 @@
 			{
 				animCounter2 = 1;
 			}
+			}
+			else
+			{
+				this.alpha -= 0.05;
+				if(this.alpha < 0 )
+				{
+					this.alpha = 0;
+				}
 			}
 			if(mRef.objState != "start" && this.x != 1000)
 			{

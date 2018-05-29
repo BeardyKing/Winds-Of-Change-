@@ -250,18 +250,21 @@
 					{
 						introSinglePass = false
 						speed = 0;
+						ResetHitTest();
 					}
 
 					if (this.x > 650)
 					{
 						introSinglePass = false
 						speed = 0;
+						ResetHitTest();
 					}
 
 					if (this.y < 100)
 					{
 						introSinglePass = false
 						speed = 0;
+						ResetHitTest();
 
 					}
 
@@ -269,6 +272,7 @@
 					{
 						introSinglePass = false
 						speed = 0;
+						ResetHitTest();
 
 					}
 

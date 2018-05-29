@@ -44,7 +44,7 @@
 				if (flashingBool == false)
 				{
 					infoTB1.alpha = 1;
-					if (infoTB1.text == "OPENING THE GATES IN :" + bCity.infoCountDownSeconds)
+					if (infoTB1.text == "YOU ARE ATTACKING IN :" + bCity.infoCountDownSeconds)
 					{
 						swordIcon1.alpha = 1;
 						rFifty.alpha = 1;
@@ -58,7 +58,7 @@
 				}
 				if (flashingBool == true)
 				{
-					if (infoTB1.text == "OPENING THE GATES IN :" + bCity.infoCountDownSeconds)
+					if (infoTB1.text == "YOU ARE ATTACKING IN :" + bCity.infoCountDownSeconds)
 					{
 						swordIcon1.alpha = 0.4;
 						rFifty.alpha = 0.4;

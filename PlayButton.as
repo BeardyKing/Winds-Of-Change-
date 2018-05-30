@@ -22,6 +22,7 @@
 		var fireResetBool : Boolean = false;
 		var expandReset1 : Boolean = false;
 		var tradeReset : Boolean = false;
+		var canBeClicked : Boolean = false;
 
 
 		public function PlayButton()
@@ -82,6 +83,7 @@
 				{
 					this.alpha = 1;
 					mRef.playBar1.alpha = 1;
+					canBeClicked = true;
 				}
 			}
 
@@ -122,7 +124,7 @@
 			//trace("Start Game")
 			if (mRef.objState == "start")
 			{
-				if (mRef.fireIntro1.isActive == false && mRef.fireIntro2.isActive == false)
+				if (mRef.fireIntro1.isActive == false && mRef.fireIntro2.isActive == false && canBeClicked == true)
 				{
 					mRef.objState = "play"
 					mRef.intro1.x = -1000;

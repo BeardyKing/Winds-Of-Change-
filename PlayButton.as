@@ -188,6 +188,15 @@
 				// main
 				mRef.globalDir = -2.5;
 				
+				mRef.f6.objState ="growing"
+				mRef.f7.objState ="growing"
+				mRef.f8.objState ="growing"
+				mRef.f9.objState ="growing"
+				mRef.f10.objState ="growing"
+				
+				mRef.fighterCart1.objHealth = 100;
+				mRef.fighterCart2.objHealth = 100;
+				
 
 			}
 		}

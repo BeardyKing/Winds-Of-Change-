@@ -38,7 +38,7 @@
 				}
 
 				this.gotoAndStop(animCounter2);
-				if (this.currentFrame >= 25)
+				if (this.currentFrame >= 36)
 				{
 					animCounter2 = 1;
 				}

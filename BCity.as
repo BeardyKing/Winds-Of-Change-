@@ -91,7 +91,7 @@
 			if (kDown.keyCode == Keyboard.Z)
 			{
 
-				objHealth = 0;
+				//objHealth = 0;
 			}
 		}
 
@@ -176,6 +176,8 @@
 						mRef.fighterCart1.isActiveBool = true;
 						mRef.fighterCart1.x = this.x
 						mRef.fighterCart1.y = this.y
+												mRef.fighterCart1.objHealth = 100;
+
 
 						riceTotal -= 50
 						fishTotal -= 50
@@ -192,6 +194,7 @@
 					{
 						infoCountDownSeconds = 5;
 						mRef.infoTB1.text = "";
+						mRef.fighterCart2.objHealth = 100;
 						mRef.fighterCart2.isActiveBool = true;
 						mRef.fighterCart2.x = this.x
 						mRef.fighterCart2.y = this.y

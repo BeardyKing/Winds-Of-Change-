@@ -100,11 +100,11 @@
 					{
 						isOnFireBool = true;
 
-						mRef.f6.objState = "drought"
-						mRef.f7.objState = "drought"
-						mRef.f8.objState = "drought"
-						mRef.f9.objState = "drought"
-						mRef.f10.objState = "drought"
+						mRef.f6.alpha = 0.5
+						mRef.f7.alpha = 0.5
+						mRef.f8.alpha = 0.5
+						mRef.f9.alpha = 0.5
+						mRef.f10.alpha = 0.5
 					}
 					else
 					{

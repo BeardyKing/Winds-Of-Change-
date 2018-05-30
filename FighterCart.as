@@ -38,7 +38,7 @@
 		public function ResetFunction()
 		{
 			nodeNumber = 1;
-			objState = "idle"
+			objState = "reset"
 
 			speed = 0.2;
 			objAngle = 0;
@@ -64,6 +64,8 @@
 			{
 				ResetFunction();
 			}
+			
+			trace(objHealth +" objHealth "+ this.name)
 
 
 			//trace(objState + " objState " + this.name)
